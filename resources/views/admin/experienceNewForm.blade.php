@@ -15,7 +15,7 @@
 
 
                 <button id="enviarFormulario"
-                    class="flex items-center justify-center w-1/2 px-5 py-2 text-sm tracking-wide text-white transition-colors duration-200 bg-blue-500 rounded-lg shrink-0 sm:w-auto gap-x-2 hover:bg-blue-600 dark:hover:bg-blue-500 dark:bg-blue-600">
+                    class="flex items-center justify-center w-1/2 px-5 py-2 text-sm tracking-wide text-white transition-colors duration-200 bg-blue-500 rounded-lg shrink-0 sm:w-auto gap-x-2 hover:bg-blue-600 dark:hover:bg-blue-500 dark:bg-blue-600" type="submit">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                         style="fill: rgba(255, 255, 255, 1);">
                         <path
@@ -31,7 +31,7 @@
         </div>
 
         <!-- component -->
-        <form id="formulario" method="post" action="{{route('admin.storeExperience')}}">
+        <form id="formulario" method="post" action="{{route('admin.storeExperience')}}" enctype="multipart/form-data">
             @csrf
             <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col my-2">
                 <div class="-mx-3 md:flex mb-6">

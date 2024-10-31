@@ -32,8 +32,13 @@
                                         class="text-lg text-white hover:text-red-900">Agenda</a>
                                 </div>
                             </li>
+                            {{-- espacio --}}
+                            nbsp;
+                            nbsp;
                             <li>
-                                {{-- <a href="{{ route('contacto') }}" class="text-gray-800 hover:text-gray-600">Contacto</a> --}}
+                                <div class="row-start-4 text-xl text-center pt-4">
+                                <a href="{{ route('experiencias.show') }}" class="text-lg text-white hover:text-red-900">Experiencias</a>
+                                </div>
                             </li>
                         </ul>
                     </nav>

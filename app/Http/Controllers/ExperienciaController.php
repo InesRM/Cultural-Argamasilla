@@ -56,9 +56,17 @@ class ExperienciaController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Experiencia $experiencia)
+    public function show()
     {
-        //
+        //Mostrar todas las experiencias independientemente de que el usuario esté identificado o no
+        $experiencias = Experiencia::with(['empresa'])
+            ->orderBy('fechaInicio', 'asc')
+            ->get();
+        foreach ($experiencias as $experiencia) {
+            $experiencia->fechaInicio =  Carbon::parse($experiencia->fechaInicio)->locale('es')->format('d/m/Y');
+        }
+
+        return view('experiencias', compact('experiencias'));
     }
 
     /**
@@ -95,6 +103,13 @@ class ExperienciaController extends Controller
         $experiencia->precio = $request->precio;
         $experiencia->imagen = $request->imagen;
         $experiencia->empresa_id = $request->empresa_id;
+
+
+        // Guardar la imagen en la carpeta public/images
+        $imagen = $request->file('imagen');
+        $nombreImagen = time() . "_" . $imagen->getClientOriginalName();
+        $imagen->move(public_path('images'), $nombreImagen);
+        $experiencia->imagen = $nombreImagen;
 
         $experiencia->save();
 

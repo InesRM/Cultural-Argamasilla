@@ -20,8 +20,15 @@ use Illuminate\Support\Facades\Auth;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+//Agenda de eventos pública
 Route::get('/agenda', [AgendaController::class, 'index'])->name('agenda');
+
+//Experiencias públicas
+
+Route::get('/experiencias', [ExperienciaController::class, 'show'])->name('experiencias.show');
+
+//Auth acceso a los distintos dashboards según el rol
+
 Route::get('/', function () {
 
     if (isset(Auth::user()->rol) && Auth::user()->rol == 'admin') {
