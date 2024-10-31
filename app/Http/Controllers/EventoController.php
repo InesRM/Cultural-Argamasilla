@@ -126,27 +126,42 @@ class EventoController extends Controller
      * Store a newly created resource in storage.
      */
     public function storeEvent(Request $request)
-    {
-        $evento = new Evento();
+{
+    $evento = new Evento();
 
-        $evento->nombre = $request->nombre;
-        $evento->fecha = $request->fecha;
-        $evento->hora = $request->hora;
-        $evento->descripcion = $request->descripcion;
-        $evento->ciudad = $request->ciudad;
-        $evento->direccion = $request->direccion;
-        $evento->estado = 'creado';
-        $evento->aforoMax = $request->aforoMax;
-        $evento->tipo = $request->tipo;
-        $evento->numMaxEntradasPersona = $request->numMaxEntradasPersona;
-        $evento->categoria_id = $request->categoria_id;
-        $evento->imagen = $request->imagen;
-        $evento->user_id = $request->user_id;
+    $evento->nombre = $request->nombre;
+    $evento->fecha = $request->fecha;
+    $evento->hora = $request->hora;
+    $evento->descripcion = $request->descripcion;
+    $evento->ciudad = $request->ciudad;
+    $evento->direccion = $request->direccion;
+    $evento->estado = 'creado';
+    $evento->aforoMax = $request->aforoMax;
+    $evento->tipo = $request->tipo;
+    $evento->numMaxEntradasPersona = $request->numMaxEntradasPersona;
+    $evento->categoria_id = $request->categoria_id;
+    $evento->imagen = $request->imagen;
+    $evento->user_id = $request->user_id;
 
-        $evento->save();
+    //restringir el tipo de imagen que se puede subir
+    $request->validate([
+        'imagen' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+    ]);
 
-        return redirect(route('admin.events'));
-    }
+    // Guardar la imagen en la carpeta public/images
+    $imagen = $request->file('imagen');
+    $nombreImagen = time() . "_" . $imagen->getClientOriginalName();
+    $imagen->move(public_path('images'), $nombreImagen);
+    $evento->imagen = $nombreImagen;
+
+
+
+    $evento->save();
+
+    return redirect(route('admin.events'));
+}
+
+
 
     /**
      * Display the specified resource.
