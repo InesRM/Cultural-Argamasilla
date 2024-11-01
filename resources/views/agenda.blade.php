@@ -69,22 +69,22 @@
 
                     <div class="p-6">
                         <h3 class="text-lg font-bold mb-2">Detalles del Evento</h3>
-                        <div class="text-gray-700 mb-2">
+                        <div class="text-white mb-2">
                             <span class="font-bold">Fecha:</span> {{ $evento->fecha }}
                         </div>
-                        <div class="text-gray-700 mb-2">
+                        <div class="text-white mb-2">
                             <span class="font-bold">Hora:</span> {{ $evento->hora }}
                         </div>
-                        <div class="text-gray-700 mb-2">
+                        <div class="text-white mb-2">
                             <span class="font-bold">Ciudad:</span> {{ $evento->ciudad }}
                         </div>
-                        <div class="text-gray-700 mb-2">
+                        <div class="text-white mb-2">
                             <span class="font-bold">Dirección:</span> {{ $evento->direccion }}
                         </div>
-                        <div class="text-gray-700 mb-2">
+                        <div class="text-white mb-2">
                             <span class="font-bold">Aforo Máximo:</span> {{ $evento->aforoMax }}
                         </div>
-                        <div class="text-gray-700">
+                        <div class="text-white">
                             <span class="font-bold">Estado:</span> {{ $evento->estado }}
                         </div>
                     </div>
