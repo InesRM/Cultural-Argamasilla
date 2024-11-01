@@ -8,19 +8,50 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
-<body class="bg-black font-sans leading-normal tracking-normal">
+<body class="bg-black font-sans leading-normal tracking-normal banner2">
      <!-- Header -->
      <header class="bg-white shadow p-6 banner">
-        <h2 class="font-bold text-xl text-white leading-tight text-center">
-            {{ __('Agenda De Eventos') }}
-        </h2>
+        {{-- foto de agenda --}}
+        {{-- <img src="{{ asset('images/agenda.jpg') }}" alt="Agenda de Eventos" class="w-24 h-12"> --}}
+        <nav>
+            <ul class="flex space-x-4">
+                <li>
+                    <div class="row-start-6 text-xl text-center pt-4">
+                        <a href="{{ route('agenda') }}"
+                            class="text-lg text-white hover:text-red-900">Agenda</a>
+                    </div>
+                </li>
+                {{-- espacio --}}
+                &nbsp;
+                <li>
+                    <div class="row-start-6 text-xl text-center pt-4">
+                        <a href="{{ route('experiencias.show') }}"
+                            class="text-lg text-white hover:text-red-900">Experiencias</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
     </header>
     <div class="container mx-auto p-6">
-
-        <form action="{{ route('agenda') }}" method="get" class="flex flex-col md:flex-row md:justify-center items-center mb-8">
+        <div class="py-8 px-4">
+            <div class="flex flex-col md:flex-row items-start">
+                <!-- Sidebar Section -->
+                <div class="w-full md:w-1/3 mb-8 md:mb-0 md:pr-8 bg-white">
+                    <p class="text-blue-500 uppercase tracking-wide">Programación Cultural</p>
+                    <h3 class="text-3xl font-bold text-gray-800 leading-snug mb-4">Agenda De Eventos</h3>
+                    <p class="text-gray-600 mb-4">Explora los próximos eventos que se han programado para ti.</p>
+                    <div class="container mx-auto p-4">
+                        <a href="{{ url()->previous() }}"
+                            class="inline-block bg-green-500 text-white hover:bg-blue-500 rounded-lg px-4 py-2 transition">
+                            &larr; Volver
+                        </a>
+                    </div>
+                </div>
+            </div>
+        <form action="{{ route('agenda') }}" method="get" class="flex flex-col md:flex-row md:justify-center items-center mb-8 bg-black p-2">
             @csrf
             <label for="categoria" class="text-white mr-2">Categoría:</label>
-            <select name="categoria" class="rounded border-gray-300 shadow-sm mr-4 p-2">
+            <select name="categoria" class="rounded border-black shadow-sm mr-4 p-2">
                 <option value="">Todas las categorías</option>
                 @foreach ($categorias as $categoria)
                     <option value="{{ $categoria->id }}" @if ($categoriaFiltro == $categoria->id) selected @endif>
@@ -30,7 +61,7 @@
             </select>
 
             <label for="tiempo" class="text-white mr-2">Tiempo:</label>
-            <select name="tiempo" class="rounded border-gray-300 shadow-sm p-2">
+            <select name="tiempo" class="rounded border-black shadow-sm p-2">
                 <option value="">Cualquier momento</option>
                 <option value="semana" @if ($filtroTiempo === 'semana') selected @endif>Esta semana</option>
                 <option value="mes" @if ($filtroTiempo === 'mes') selected @endif>Este mes</option>
@@ -95,15 +126,18 @@
         <div class="mt-6">
             {{ $eventos->links() }}
         </div>
-        <div class="mt-4 text-center">
-            <button onclick="history.back()" class="bg-yellow-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
-                Volver
-            </button>
-        </div>
+
     </div>
     <style>
         .banner {
             background: url('{{ asset('images/cueva.jpg') }}');
+            background-repeat: no-repeat;
+            background-size: cover
+        }
+    </style>
+    <style>
+        .banner2 {
+            background: url('{{ asset('images/brujula2.jpg') }}');
             background-repeat: no-repeat;
             background-size: cover
         }

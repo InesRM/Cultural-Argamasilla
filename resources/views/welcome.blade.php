@@ -23,9 +23,7 @@
                 -center justify-between py-4">
                     <img src="{{ asset('/images/escudo-argamasilla.png') }}" class="w-12 h-auto" alt="Inicio">
                     <nav>
-                        <ul class="flex space
-
-                    -x-4">
+                        <ul class="flex space-x-4">
                             <li>
                                 <div class="row-start-6 text-xl text-center pt-4">
                                     <a href="{{ route('agenda') }}"
@@ -37,7 +35,8 @@
                             nbsp;
                             <li>
                                 <div class="row-start-4 text-xl text-center pt-4">
-                                <a href="{{ route('experiencias.show') }}" class="text-lg text-white hover:text-red-900">Experiencias</a>
+                                    <a href="{{ route('experiencias.show') }}"
+                                        class="text-lg text-white hover:text-red-900">Experiencias</a>
                                 </div>
                             </li>
                         </ul>
