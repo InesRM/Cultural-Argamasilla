@@ -31,8 +31,8 @@
                                 </div>
                             </li>
                             {{-- espacio --}}
-                            nbsp;
-                            nbsp;
+                            &nbsp;
+                            &nbsp;
                             <li>
                                 <div class="row-start-4 text-xl text-center pt-4">
                                     <a href="{{ route('experiencias.show') }}"
