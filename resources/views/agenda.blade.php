@@ -8,13 +8,18 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
-<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+<body class="bg-black font-sans leading-normal tracking-normal">
+     <!-- Header -->
+     <header class="bg-white shadow p-6 banner">
+        <h2 class="font-bold text-xl text-white leading-tight text-center">
+            {{ __('Agenda De Eventos') }}
+        </h2>
+    </header>
     <div class="container mx-auto p-6">
-        <h1 class="text-4xl font-bold text-center text-gray-800 mb-6">Agenda de Eventos</h1>
 
         <form action="{{ route('agenda') }}" method="get" class="flex flex-col md:flex-row md:justify-center items-center mb-8">
             @csrf
-            <label for="categoria" class="text-gray-700 mr-2">Categoría:</label>
+            <label for="categoria" class="text-white mr-2">Categoría:</label>
             <select name="categoria" class="rounded border-gray-300 shadow-sm mr-4 p-2">
                 <option value="">Todas las categorías</option>
                 @foreach ($categorias as $categoria)
@@ -24,7 +29,7 @@
                 @endforeach
             </select>
 
-            <label for="tiempo" class="text-gray-700 mr-2">Tiempo:</label>
+            <label for="tiempo" class="text-white mr-2">Tiempo:</label>
             <select name="tiempo" class="rounded border-gray-300 shadow-sm p-2">
                 <option value="">Cualquier momento</option>
                 <option value="semana" @if ($filtroTiempo === 'semana') selected @endif>Esta semana</option>
@@ -96,6 +101,13 @@
             </button>
         </div>
     </div>
+    <style>
+        .banner {
+            background: url('{{ asset('images/cueva.jpg') }}');
+            background-repeat: no-repeat;
+            background-size: cover
+        }
+    </style>
 
     <script src="//unpkg.com/alpinejs" defer></script>
 </body>
