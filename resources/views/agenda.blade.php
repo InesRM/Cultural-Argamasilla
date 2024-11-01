@@ -13,12 +13,21 @@
      <header class="bg-white shadow p-6 banner">
         {{-- foto de agenda --}}
         {{-- <img src="{{ asset('images/agenda.jpg') }}" alt="Agenda de Eventos" class="w-24 h-12"> --}}
+        <h1 class="font-bold text-xl text-white leading-tight text-center">
+            {{ __('Agenda De Eventos') }}
+        </h1>
+        <img src="{{ asset('/images/escudo-argamasilla.png') }}" class="w-12 h-auto" alt="Inicio">
         <nav>
-            <ul class="flex space-x-4">
-                <li>
+            <ul class="flex space-x-4  bg-gray-800 bg-opacity-90">
+                {{-- <li>
+                    <div class="row-start-6 text-xl text-center pt-4">
+                        <a href="{{ route('welcome') }}"
+                            class="text-lg text-white hover:text-blue-900">Inicio</a>
+                    </div>
+                <li> --}}
                     <div class="row-start-6 text-xl text-center pt-4">
                         <a href="{{ route('agenda') }}"
-                            class="text-lg text-white hover:text-red-900">Agenda</a>
+                            class="text-lg text-white hover:text-blue-900">Agenda</a>
                     </div>
                 </li>
                 {{-- espacio --}}
@@ -26,7 +35,7 @@
                 <li>
                     <div class="row-start-6 text-xl text-center pt-4">
                         <a href="{{ route('experiencias.show') }}"
-                            class="text-lg text-white hover:text-red-900">Experiencias</a>
+                            class="text-lg text-white hover:text-blue-900">Experiencias</a>
                     </div>
                 </li>
             </ul>

@@ -20,6 +20,13 @@ use Illuminate\Support\Facades\Auth;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+//Rutas públicas
+//Ruta a la página de inicio
+// Route::get('/', function () {
+//     return view('welcome');
+// })->name('welcome');
+
 //Agenda de eventos pública
 Route::get('/agenda', [AgendaController::class, 'index'])->name('agenda');
 

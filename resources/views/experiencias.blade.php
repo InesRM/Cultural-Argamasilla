@@ -15,6 +15,25 @@
         <h2 class="font-bold text-xl text-white leading-tight text-center">
             {{ __('Empresas y Experiencias') }}
         </h2>
+        <img src="{{ asset('/images/escudo-argamasilla.png') }}" class="w-12 h-auto" alt="Inicio">
+        <nav>
+            <ul class="flex space-x-4 bg-gray-800 bg-opacity-50">
+                <li>
+                    <div class="row-start-6 text-xl text-center pt-4">
+                        <a href="{{ route('agenda') }}"
+                            class="text-lg text-white hover:text-blue-900">Agenda</a>
+                    </div>
+                </li>
+                {{-- espacio --}}
+                &nbsp;
+                <li>
+                    <div class="row-start-6 text-xl text-center pt-4">
+                        <a href="{{ route('experiencias.show') }}"
+                            class="text-lg text-white hover:text-blue-900">Experiencias</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
     </header>
 
     <div class="container mx-auto p-8">
@@ -40,27 +59,21 @@
                         @php $contador = 0; @endphp
                         @foreach ($experiencias as $experiencia)
                             @php $contador++; @endphp
-                            <div class="flex mb-8 items-center {{ $contador % 2 == 0 ? 'flex-row-reverse' : '' }}">
-                                <div class="w-5/12"></div>
-                                <div class="w-5/12 {{ $contador % 2 == 0 ? 'text-right' : 'text-left' }}">
-                                    <div class="p-4">
-                                        <img src="{{ asset('/images/' . $experiencia->imagen) }}"
-                                            alt="Imagen de {{ $experiencia->nombre }}" class="w-full rounded-lg">
-                                    </div>
+                            <div class="grid md:grid-cols-2 mb-8 items-center {{ $contador % 2 == 0 ? 'md:grid-cols-2-reverse' : '' }} gap-4">
+                                <div class="p-4">
+                                    <img src="{{ asset('/images/' . $experiencia->imagen) }}" alt="Imagen de {{ $experiencia->nombre }}" class="w-full rounded-lg">
+                                </div>
+                                <div class="p-4">
                                     <p class="text-base text-blue-500 mb-2">{{ $experiencia->fechaInicio }}</p>
-                                    <h4 class="font-semibold text-lg md:text-xl text-gray-800 mb-2">
-                                        {{ $experiencia->nombre }}</h4>
+                                    <h4 class="font-semibold text-lg md:text-xl text-gray-800 mb-2">{{ $experiencia->nombre }}</h4>
                                     <p class="text-gray-600 mb-4">{{ $experiencia->descripcionLarga }}</p>
                                     <div class="flex space-x-4">
-
-                                        <a href="{{ $experiencia->empresa->web }}" target="_blank"
-                                            rel="noopener noreferrer"
-                                            class="bg-blue-500 hover:bg-green-500 text-white hover:text-blue-500 rounded-lg px-4 py-2 border border-blue-500 transition">
+                                        <a href="{{ $experiencia->empresa->web }}" target="_blank" rel="noopener noreferrer" class="bg-blue-500 hover:bg-green-500 text-white rounded-lg px-4 py-2 border border-blue-500 transition">
                                             Inscríbete
                                         </a>
-                                        <a href="#" x-data
-                                            x-on:click="$dispatch('open-modal', '{{ 'modal-' . $experiencia->id }}')"
-                                            class="bg-blue-500 hover:bg-green-500 text-white hover:text-white rounded-lg px-4 py-2 border border-blue-500 transition">Info</a>
+                                        <a href="#" x-data x-on:click="$dispatch('open-modal', '{{ 'modal-' . $experiencia->id }}')" class="bg-blue-500 hover:bg-green-500 text-white rounded-lg px-4 py-2 border border-blue-500 transition">
+                                            Info
+                                        </a>
                                     </div>
                                 </div>
                             </div>
