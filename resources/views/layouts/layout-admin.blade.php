@@ -18,15 +18,16 @@
 
 </head>
 
-<body class="text-gray-800 font-inter">
+<body class="font-inter">
     <!--sidenav -->
     <div class="fixed left-0 top-0 w-56 h-full bg-[#f8f4f3] p-4 z-50 sidebar-menu transition-transform">
         <a href="#" class="flex items-center pb-4 border-b border-b-gray-800">
 
-            <h2 class="font-bold text-2xl">Panel<span class="bg-[#f84525] text-white px-2 rounded-md">Admin</span></h2>
+            <img src="{{asset('/images/escudo-argamasilla.png')}}" alt="logo" class="w-8 h-12 rounded-full" />
+            <span class="text-lg font-bold ms-2">Gestión</span>
         </a>
         <ul class="mt-4">
-            <span class="text-gray-400 font-bold">ADMIN</span>
+            <span class="text-blue-600 font-bold">ADMINISTRADOR</span>
             <li class="mb-1 group">
                 <a href="{{route('admin.dashboard')}}" class="flex font-semibold items-center py-2 px-4 text-gray-900 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -348,7 +349,7 @@
             }
 
         })
-        //Fin mostrar selector de empresas si el rol seleccionado es de empresa
+        //Fin mostrar selector de empresas
     </script>
 
 </body>

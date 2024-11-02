@@ -3,11 +3,11 @@
     <!-- Content -->
 
     <!-- component -->
-    <section class="container px-4 mx-auto">
+    <section class="container px-4 mx-auto bg-blue-300">
         <div class="sm:flex sm:items-center sm:justify-between">
             <div>
                 <div class="flex items-center gap-x-3">
-                    <h2 class="text-lg font-medium text-gray-800 dark:text-white">Usuarios</h2>
+                    <h2 class="text-lg font-medium text-gray-800 dark:text-black">Total Usuarios:</h2>
 
                     <span
                         class="px-3 py-1 text-xs text-blue-600 bg-blue-100 rounded-full dark:bg-gray-800 dark:text-blue-400">{{$totalUsers}}
@@ -29,7 +29,7 @@
 
 
 
-                        <span class="ms-2">Crear usuario</span></a>
+                        <span class="ms-2">Nuevo Usuario</span></a>
                 </button>
             </div>
         </div>
@@ -45,39 +45,39 @@
                 <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
                     <div class="overflow-hidden border border-gray-200 dark:border-gray-700 md:rounded-lg">
                         <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-                            <thead class="bg-gray-50 dark:bg-gray-800">
+                            <thead class="bg-gray-50 dark:bg-gray-500">
 
                                 <tr>
                                     <th scope="col"
-                                        class="py-3.5 px-3 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                                        class="py-3.5 px-3 text-sm font-normal text-left rtl:text-right text-white">
                                         Usuario
                                     </th>
 
                                     <th scope="col"
-                                        class="px-3 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                                        class="px-3 py-3.5 text-sm font-normal text-left rtl:text-right text-white">
                                         Rol
                                     </th>
 
                                     <th scope="col"
-                                        class="px-3 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                                        class="px-3 py-3.5 text-sm font-normal text-left rtl:text-right text-white">
                                         Empresa a la que pertenece
                                     </th>
 
                                     <th scope="col"
-                                        class="px-3 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                                        class="px-3 py-3.5 text-sm font-normal text-left rtl:text-right text-white">
                                         Direccion
                                     </th>
 
                                     <th scope="col"
-                                        class="px-3 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                                        class="px-3 py-3.5 text-sm font-normal text-left rtl:text-right text-white">
                                         Eventos en los que está inscrito</th>
 
                                     <th scope="col"
-                                        class="px-3 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                                        class="px-3 py-3.5 text-sm font-normal text-left rtl:text-right text-white">
                                         Contacto</th>
 
                                     <th scope="col"
-                                        class="px-3 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                                        class="px-3 py-3.5 text-sm font-normal text-left rtl:text-right text-white">
                                         Opciones</th>
 
                                 </tr>
@@ -91,17 +91,17 @@
                                         <div>
                                             <h2 class="font-medium text-gray-800 dark:text-white ">{{$user->nombre}}
                                             </h2>
-                                            <p class="text-sm font-normal text-gray-600 dark:text-gray-400">
+                                            <p class="text-sm font-normal text-white">
                                                 {{ $user->apellidos}}
                                             </p>
                                         </div>
                                     </td>
                                     <td class="px-3 py-4 text-sm font-medium whitespace-nowrap">
-                                        <p>{{$user->rol}}</p>
+                                        <p class="text-white">{{$user->rol}}</p>
                                     </td>
                                     <td class="px-3 py-4 text-sm font-medium whitespace-nowrap">
                                         <div
-                                            class="inline px-3 py-1 text-sm font-normal text-gray-500 bg-gray-100 rounded-full dark:text-gray-400 gap-x-2 dark:bg-gray-800">
+                                            class="inline px-3 py-1 text-sm font-normal text-blue-600 rounded-full gap-x-2 dark:bg-gray-800">
                                             @if(strcmp($user->empresa->nombre, 'asistente')==0)
                                             No pertenece a ninguna
                                             @else
@@ -111,8 +111,8 @@
                                     </td>
                                     <td class="px-3 py-4 text-sm whitespace-nowrap">
                                         <div>
-                                            <h4 class="text-gray-700 dark:text-gray-200">{{$user->direccion}}</h4>
-                                            <p class="text-gray-500 dark:text-gray-400">{{$user->ciudad}}
+                                            <h4 class="text-white">{{$user->direccion}}</h4>
+                                            <p class="text-white">{{$user->ciudad}}
                                             </p>
                                         </div>
                                     </td>
@@ -137,7 +137,7 @@
                                                 </p>
                                                 @endif
                                                 @else
-                                                <p>No tiene inscripciones</p>
+                                                <p class="text-white">No tiene inscripciones</p>
                                                 @endif
                                         </div>
 
@@ -145,8 +145,8 @@
 
                                     <td class="px-3 py-4 text-sm whitespace-nowrap">
                                         <div>
-                                            <p>Teléfono: <a class="text-gray-500 dark:text-gray-400">{{$user->telefono}}</a></p>
-                                            <p>Email: <a class="text-blue-500 dark:text-gray-400">{{$user->email}}</a></p>
+                                            <p class="text-white">Teléfono: <a class="text-white">{{$user->telefono}}</a></p>
+                                            <p class="text-white">Email: <a class="text-white">{{$user->email}}</a></p>
                                         </div>
                                     </td>
 
@@ -157,18 +157,18 @@
                                                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z" />
                                                 </svg>
                                             </button>
-                                            <ul class="dropdown-menu shadow-md shadow-black/5 z-30 hidden py-1.5 rounded-md bg-white border border-gray-100 w-full max-w-[140px]">
+                                            <ul class="dropdown-menu shadow-md shadow-black/5 z-30 hidden py-1.5 rounded-md bg-blue-600 border border-gray-100 w-full max-w-[140px]">
                                                 @if(strcmp($user->empresa->nombre, 'asistente') !== 0)
                                                 <li>
-                                                    <a href="{{route('admin.companyDetails', ['id' => $user->empresa_id])}}" class="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-[#f84525] hover:bg-gray-50">Ver
+                                                    <a href="{{route('admin.companyDetails', ['id' => $user->empresa_id])}}" class="flex items-center text-[13px] py-1.5 px-4 text-white hover:text-[#f84525] hover:bg-gray-50">Ver
                                                         empresa</a>
                                                 </li>
                                                 @endif
                                                 <li>
-                                                    <a href="{{ route('admin.userDelete', ['id' => $user]) }}" class="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-[#f84525] hover:bg-gray-50">Eliminar</a>
+                                                    <a href="{{ route('admin.userDelete', ['id' => $user]) }}" class="flex items-center text-[13px] py-1.5 px-4 text-white hover:text-[#f84525] hover:bg-gray-50">Eliminar</a>
                                                 </li>
                                                 <li>
-                                                    <a href="{{route('admin.userUpdateForm', ['id' => $user])}}" class="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-[#f84525] hover:bg-gray-50">Modificar</a>
+                                                    <a href="{{route('admin.userUpdateForm', ['id' => $user])}}" class="flex items-center text-[13px] py-1.5 px-4 text-white hover:text-[#f84525] hover:bg-gray-50">Modificar</a>
                                                 </li>
                                             </ul>
                                         </ul>
@@ -178,7 +178,10 @@
 
                             </tbody>
                         </table>
-                        {{$users->links()}}
+                        {{-- {{$users->links()}} --}}
+                        <div class="bg-black text-white py-2 rounded-lg">
+                            {{ $users->links() }}
+                        </div>
                     </div>
                 </div>
             </div>
