@@ -6,7 +6,7 @@
         <div class="sm:flex sm:items-center sm:justify-between">
             <div>
                 <div class="flex items-center gap-x-3">
-                    <h2 class="text-lg font-medium text-gray-800 dark:text-white">Eventos</h2>
+                    <h2 class="text-lg font-medium text-gray-800 dark:text-black">Total Eventos</h2>
 
                     <span class="px-3 py-1 text-xs text-blue-600 bg-blue-100 rounded-full dark:bg-gray-800 dark:text-blue-400">{{$totalEvents}}
                         creados</span>
@@ -24,7 +24,7 @@
 
 
 
-                        <span class="ms-2">Crear evento</span></a>
+                        <span class="ms-2">Nuevo Evento</span></a>
                 </button>
             </div>
         </div>
@@ -40,32 +40,32 @@
                 <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
                     <div class="overflow-hidden border border-gray-200 dark:border-gray-700 md:rounded-lg">
                         <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-                            <thead class="bg-gray-50 dark:bg-gray-800">
+                            <thead class="bg-gray-50 dark:bg-gray-500">
 
                                 <tr>
-                                    <th scope="col" class="py-3.5 px-3 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                                    <th scope="col" class="py-3.5 px-3 text-sm font-normal text-left rtl:text-right text-white">
                                         Nombre
                                     </th>
 
-                                    <th scope="col" class="px-3 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                                    <th scope="col" class="px-3 py-3.5 text-sm font-normal text-left rtl:text-right text-white">
                                         Fecha
                                     </th>
 
-                                    <th scope="col" class="px-3 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                                    <th scope="col" class="px-3 py-3.5 text-sm font-normal text-left rtl:text-right text-white">
                                         Dirección
                                     </th>
 
-                                    <th scope="col" class="px-3 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                                    <th scope="col" class="px-3 py-3.5 text-sm font-normal text-left rtl:text-right text-white">
                                         Estado
                                     </th>
 
-                                    <th scope="col" class="px-3 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                                    <th scope="col" class="px-3 py-3.5 text-sm font-normal text-left rtl:text-right text-white">
                                         Aforo máximo</th>
 
-                                    <th scope="col" class="px-3 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                                    <th scope="col" class="px-3 py-3.5 text-sm font-normal text-left rtl:text-right text-white">
                                         Categoria</th>
 
-                                    <th scope="col" class="px-3 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                                    <th scope="col" class="px-3 py-3.5 text-sm font-normal text-left rtl:text-right text-white">
                                         Opciones</th>
 
                                 </tr>
@@ -85,31 +85,31 @@
                                     </td>
                                     <td class="px-3 py-4 text-sm font-medium whitespace-nowrap">
                                         <div>
-                                            <h2>{{$event->fecha}}</h2>
-                                            <p>{{$event->hora}}</p>
+                                            <h2 class="text-white">{{$event->fecha}}</h2>
+                                            <p class="text-white">{{$event->hora}}</p>
                                         </div>
                                     </td>
                                     <td class="px-3 py-4 text-sm font-medium whitespace-nowrap">
                                         <div>
                                             <h4 class="text-gray-700 dark:text-gray-200">{{$event->direccion}}</h4>
-                                            <p class="text-gray-500 dark:text-gray-400">{{$event->ciudad}}
+                                            <p class="text-white">{{$event->ciudad}}
                                             </p>
                                         </div>
                                     </td>
                                     <td class="px-3 py-4 text-sm whitespace-nowrap">
                                         <div>
-                                            <p>{{$event->estado}}</p>
+                                            <p class="text-white">{{$event->estado}}</p>
                                         </div>
                                     </td>
                                     <td class="px-3 py-4 text-sm whitespace-nowrap">
                                         <div>
-                                            <p>{{$event->aforoMax}}</p>
+                                            <p class="text-white">{{$event->aforoMax}}</p>
                                         </div>
                                     </td>
 
                                     <td class="px-3 py-4 text-sm whitespace-nowrap">
                                         <div>
-                                            <p>{{$event->categoria->nombre}}</p>
+                                            <p class="text-white">{{$event->categoria->nombre}}</p>
                                         </div>
                                     </td>
 

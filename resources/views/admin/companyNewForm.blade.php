@@ -5,7 +5,7 @@
         <div class="sm:flex sm:items-center sm:justify-between">
             <div>
                 <div class="flex items-center gap-x-3">
-                    <h2 class="text-lg font-medium text-gray-800 dark:text-white">Creación de una nueva empresa</h2>
+                    <h2 class="text-lg font-medium text-black">Datos De La Nueva Empresa</h2>
 
                 </div>
 

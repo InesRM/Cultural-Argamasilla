@@ -6,10 +6,10 @@
         <div class="sm:flex sm:items-center sm:justify-between">
             <div>
                 <div class="flex items-center gap-x-3">
-                    <h2 class="text-lg font-medium text-gray-800 dark:text-white">Experiencias</h2>
+                    <h2 class="text-lg font-medium text-black">Experiencias</h2>
 
                     <span
-                        class="px-3 py-1 text-xs text-blue-600 bg-blue-100 rounded-full dark:bg-gray-800 dark:text-blue-400">{{$totalExperiences}}
+                        class="px-3 py-1 text-xs text-blue-600 bg-blue-100 rounded-full dark:bg-gray-800 dark:text-blue-400">{{ $totalExperiences }}
                         creadas</span>
                 </div>
 
@@ -28,7 +28,7 @@
 
 
 
-                        <span class="ms-2">Crear experiencia</span></a>
+                        <span class="ms-2">Nueva Experiencia</span></a>
                 </button>
             </div>
         </div>
@@ -44,98 +44,99 @@
                 <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
                     <div class="overflow-hidden border border-gray-200 dark:border-gray-700 md:rounded-lg">
                         <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-                            <thead class="bg-gray-50 dark:bg-gray-800">
+                            <thead class="bg-gray-50 dark:bg-gray-500">
 
                                 <tr>
                                     <th scope="col"
-                                        class="py-3.5 px-3 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                                        class="py-3.5 px-3 text-sm font-normal text-left rtl:text-right text-white">
                                         Imagen
                                     </th>
                                     <th scope="col"
-                                        class="py-3.5 px-3 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                                        class="py-3.5 px-3 text-sm font-normal text-left rtl:text-right text-white">
                                         Nombre
                                     </th>
 
                                     <th scope="col"
-                                        class="px-3 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                                        class="px-3 py-3.5 text-sm font-normal text-left rtl:text-right text-white">
                                         Fechas
                                     </th>
 
                                     <th scope="col"
-                                        class="px-3 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                                        class="px-3 py-3.5 text-sm font-normal text-left rtl:text-right text-white">
                                         Descripcion
                                     </th>
 
                                     <th scope="col"
-                                        class="px-3 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                                        class="px-3 py-3.5 text-sm font-normal text-left rtl:text-right text-white">
                                         Precio
                                     </th>
 
                                     <th scope="col"
-                                        class="px-3 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                                        class="px-3 py-3.5 text-sm font-normal text-left rtl:text-right text-white">
                                         Empresa</th>
                                     <th scope="col"
-                                        class="px-3 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                                        class="px-3 py-3.5 text-sm font-normal text-left rtl:text-right text-white">
                                         Opciones</th>
 
                                 </tr>
                             </thead>
                             <tbody class="bg-white divide-y divide-gray-200 dark:divide-gray-700 dark:bg-gray-900">
 
-                                @foreach($experiencias as $experiencia)
+                                @foreach ($experiencias as $experiencia)
+                                    <tr>
+                                        <td class="px-3 py-4 text-sm font-medium whitespace-nowrap">
+                                            <div>
+                                                <img src="{{ asset('/images/' . $experiencia->imagen) }}"
+                                                    class="font-medium text-gray-800 text-white ">
 
-                                <tr>
-                                    <td class="px-3 py-4 text-sm font-medium whitespace-nowrap">
-                                        <div>
-                                            <img src="{{asset('/images/'. $experiencia->imagen)}}"
-                                                class="font-medium text-gray-800 dark:text-white ">
+                                            </div>
+                                        </td>
+                                        <td class="px-3 py-4 text-sm font-medium whitespace-nowrap">
+                                            <div>
+                                                <h2 class="font-medium text-white ">
+                                                    {{ $experiencia->nombre }}
+                                                </h2>
 
-                                        </div>
-                                    </td>
-                                    <td class="px-3 py-4 text-sm font-medium whitespace-nowrap">
-                                        <div>
-                                            <h2 class="font-medium text-gray-800 dark:text-white ">
-                                                {{$experiencia->nombre}}
-                                            </h2>
-
-                                        </div>
-                                    </td>
-                                    <td class="px-3 py-4 text-sm font-medium whitespace-nowrap">
-                                        <div>
-                                            <p>{{$experiencia->fechaInicio}}</p>
-                                            <p>{{$experiencia->fechaFin}}</p>
-                                        </div>
-                                    </td>
-                                    <td class="px-3 py-4 text-sm font-medium whitespace-nowrap">
-                                        <div>
-                                            <p class="text-gray-500 dark:text-gray-400">
-                                                {{$experiencia->descripcionCorta}}
-                                            </p>
-                                        </div>
-                                    </td>
-                                    <td class="px-3 py-4 text-sm whitespace-nowrap">
-                                        <div>
-                                            <p>{{$experiencia->precio}}</p>
-                                        </div>
-                                    </td>
-                                    <td class="px-3 py-4 text-sm whitespace-nowrap">
-                                        <div>
-                                            <p>{{$experiencia->empresa->nombre}}</p>
-                                        </div>
-                                    </td>
-                                    <td class="px-3 py-4 text-sm whitespace-nowrap">
-                                        <div>
-                                            <a href="{{ route('admin.experienceDelete', ['id' => $experiencia]) }}"
-                                                class="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-[#f84525] hover:bg-gray-50">Eliminar
-                                                Experiencia</a>
-                                        </div>
-                                    </td>
-                                </tr>
+                                            </div>
+                                        </td>
+                                        <td class="px-3 py-4 text-sm font-medium whitespace-nowrap">
+                                            <div>
+                                                <p class="text-white">{{ $experiencia->fechaInicio }}</p>
+                                                <p class="text-white">{{ $experiencia->fechaFin }}</p>
+                                            </div>
+                                        </td>
+                                        <td class="px-3 py-4 text-sm font-medium whitespace-nowrap">
+                                            <div>
+                                                <p class="text-white">
+                                                    {{ $experiencia->descripcionCorta }}
+                                                </p>
+                                            </div>
+                                        </td>
+                                        <td class="px-3 py-4 text-sm whitespace-nowrap">
+                                            <div>
+                                                <p class="text-white">
+                                                    {{ $experiencia->precio }}</p>
+                                            </div>
+                                        </td>
+                                        <td class="px-3 py-4 text-sm whitespace-nowrap">
+                                            <div>
+                                                <p class="text-white">
+                                                    {{ $experiencia->empresa->nombre }}</p>
+                                            </div>
+                                        </td>
+                                        <td class="px-3 py-4 text-sm whitespace-nowrap">
+                                            <div>
+                                                <a href="{{ route('admin.experienceDelete', ['id' => $experiencia]) }}"
+                                                    class="flex items-center text-[13px] py-1.5 px-4 text-white hover:text-[#f84525] hover:bg-gray-50">Eliminar
+                                                    Experiencia</a>
+                                            </div>
+                                        </td>
+                                    </tr>
                                 @endforeach
 
                             </tbody>
                         </table>
-                        {{$experiencias->links()}}
+                        {{ $experiencias->links() }}
                     </div>
                 </div>
             </div>
