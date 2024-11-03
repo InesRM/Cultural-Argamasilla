@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Experiencias</title>
+    <link rel="shortcut icon" href="{{ asset('/images/escudo-argamasilla.png') }}" type="image/x-icon">
     @vite('resources/css/app.css')
     <script src="//unpkg.com/alpinejs" defer></script>
 </head>

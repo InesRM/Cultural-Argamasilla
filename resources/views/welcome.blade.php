@@ -63,21 +63,21 @@
                                         Email
                                     </label>
                                     <input type="text" name="email" placeholder="Escribe tu email"
-                                        class="w-full bg-black py-3 px-12 border hover: border-gray-500 rounded shadow text-base font-sans" />
+                                        class="w-full bg-black py-3 px-12 border hover: border-gray-500 rounded-lg shadow text-base font-sans" />
                                 </div>
                                 <div class="pt-2 pr-20">
                                     <label class="text-sm font-sans font-medium" for="password">
                                         Contraseña
                                     </label>
                                     <input type="password" name="password" placeholder="Escribe tu contraseña"
-                                        class=" w-full bg-black py-3 px-12 border hover: border-gray-500 rounded shadow text-base font-sans" />
+                                        class=" w-full bg-black py-3 px-12 border hover: border-gray-500 rounded-lg shadow text-base font-sans" />
 
                                 </div>
                                 <a href="{{ route('register') }}" class="text-sm font-sans font-medium">¿No
                                     tienes cuenta? Registrate</a>
                                 <div class="text-sm font-sans font-medium w-full pr-20 pt-14">
                                     <button type="submit"
-                                        class="text-center w-full py-4 bg-blue-700 hover:bg-blue-400 rounded-md text-white">
+                                        class="text-center w-1/2 py-4 bg-blue-700 hover:bg-blue-400 rounded-lg text-white">
                                         Log in
                                     </button>
                                 </div>
