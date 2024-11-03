@@ -17,11 +17,12 @@
 
 <body class="font-sans antialiased">
     <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
-        <header class="bg-black shadow">
+        <header class="bg-black shadow bg-opacity-40">
             <div class="container mx-auto px-4">
-                <div class="flex items
-                -center justify-between py-4">
-                    <img src="{{ asset('/images/escudo-argamasilla.png') }}" class="w-12 h-auto" alt="Inicio">
+                <div class="flex items-center justify-between py-4">
+                    <a href="{{ route('welcome') }}">
+                        <img src="{{ asset('/images/escudo-argamasilla.png') }}" class="w-12 h-auto" alt="Inicio">
+                    </a>
                     <nav>
                         <ul class="flex space-x-4">
                             <li>

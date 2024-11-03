@@ -17,7 +17,9 @@
             {{ __('Agenda Cultural') }}
         </h1>
         <div class="flex items-left justify-between p-4">
-            <img src="{{ asset('/images/escudo-argamasilla.png') }}" class="w-12 h-auto" alt="Inicio">
+            <a href="{{ route('welcome') }}">
+                <img src="{{ asset('/images/escudo-argamasilla.png') }}" class="w-12 h-auto" alt="Inicio">
+            </a>
         </div>
         <nav class="w-full bg-gray-800 bg-opacity-40">
             <p class="text-white text-left font-serif font-bold italic">Argamasilla de Calatrava</p>
@@ -44,16 +46,9 @@
     </header>
     <div class="container mx-auto p-6">
         <div class="py-8 px-4">
-            <div class="flex flex-col md:flex-row items-start">
-                <!-- Sidebar Section -->
-                <div class="w-full md:w-1/3 mb-8 md:mb-0 md:pr-8 bg-white bg-opacity-40">
-                    <p class="text-blue-500 uppercase tracking-wide">Programación Cultural</p>
-                    <h3 class="text-3xl font-bold text-gray-800 leading-snug mb-4">Agenda De Eventos</h3>
-                    <p class="text-gray-600 mb-4">Explora los próximos eventos que se han programado para ti.</p>
-                </div>
-            </div>
+
             <form action="{{ route('agenda') }}" method="get"
-                class="flex flex-col md:flex-row md:justify-center items-center mb-8 bg-black p-2">
+                class="flex flex-col md:flex-row md:justify-center items-center mb-8 bg-black p-2 bg-opacity-40">
                 @csrf
                 <label for="categoria" class="text-white mr-2">Categoría:</label>
                 <select name="categoria" class="rounded border-black shadow-sm mr-4 p-2">
@@ -77,6 +72,16 @@
                     <i class="fas fa-search mr-2"></i> Filtrar
                 </button>
             </form>
+
+            <div class="flex flex-col md:flex-row items-center">
+                <!-- Sidebar Section -->
+                <div class="w-full md:w-1/3 mb-8 md:mb-0 md:pr-8 bg-white bg-opacity-50 p-4">
+                    <p class="text-blue-500 uppercase tracking-wide font-bold">Programación Cultural</p>
+                    <h3 class="text-3xl font-bold text-gray-800 leading-snug mb-4">Agenda De Eventos</h3>
+                    <p class="text-gray-600 mb-4">Explora los próximos eventos que se han programado para ti.</p>
+                </div>
+            </div>
+
 
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 @foreach ($eventos as $evento)
@@ -143,7 +148,7 @@
         </style>
         <style>
             .banner2 {
-                background: url('{{ asset('images/brujula2.jpg') }}');
+                background: url('{{ asset('images/office.jpg') }}');
                 background-repeat: no-repeat;
                 background-size: cover
             }

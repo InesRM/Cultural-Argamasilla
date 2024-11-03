@@ -16,7 +16,9 @@
             {{ __('Empresas y Experiencias') }}
         </h2>
         <div class="flex items-left justify-between p-4">
-        <img src="{{ asset('/images/escudo-argamasilla.png') }}" class="w-12 h-auto" alt="Inicio">
+            <a href="{{ route('welcome') }}">
+                <img src="{{ asset('/images/escudo-argamasilla.png') }}" class="w-12 h-auto" alt="Inicio">
+            </a>
         </div>
         <nav class="w-full bg-gray-800 bg-opacity-40">
             <p class="text-white text-left font-serif font-bold italic">Argamasilla de Calatrava</p>
