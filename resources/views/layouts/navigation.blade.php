@@ -12,9 +12,14 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('welcome')" :active="request()->routeIs('welcome')">
+                        {{ __('Inicio') }}
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('asistente.eventos')"
                         :active="Str::of(request()->route()->getName())->is(['asistente.eventos', 'asistente.eventos.semana', 'asistente.eventos.mes'])">
-                        {{ __('Agenda de eventos') }}
+                        {{ __('Agenda') }}
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
@@ -35,7 +40,7 @@
                 <x-dropdown align="right" width="48">
                     <x-slot name="trigger">
                         <button
-                            class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-white bg-white dark:bg-gray-800 hover:text-blue-700 dark:hover:text-blue-300 focus:outline-none transition ease-in-out duration-150">
+                            class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-white bg-blue-600 hover:text-blue-700 dark:hover:text-blue-300 focus:outline-none transition ease-in-out duration-150">
                             <div>{{ Auth::user()->nombre }}</div>
 
                             <div class="ms-1">
