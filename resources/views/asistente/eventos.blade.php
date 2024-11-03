@@ -22,7 +22,7 @@
                     @endforeach
                 </select>
                 <input type="hidden" name="ruta" value="{{ request()->path() }}">
-                <button class="ml-2 bg-blue-600 text-white rounded px-4 py-2 hover:bg-blue-700 transition" type="submit">
+                <button class="ml-2 bg-green-700 text-white rounded px-4 py-2 hover:bg-red-600 transition" type="submit">
                     Filtrar
                 </button>
             </form>
@@ -65,7 +65,7 @@
                                     </span>
                                     <div class="flex items-center space-x-2">
                                         @if($evento->fecha > now() && $evento->estado == 'creado')
-                                            <button class="inline-block bg-green-200 rounded border-2 border-green-700 px-2 py-1 text-sm font-semibold text-gray-700 hover:bg-green-300 transition"
+                                            <button class="inline-block bg-green-700 rounded border-2 border-black px-2 py-1 text-sm font-semibold text-white hover:bg-red-700 transition"
                                                     x-data
                                                     x-on:click="$dispatch('open-modal', '{{ 'modal-' . $evento->id }}')">
                                                 Inscribirse
