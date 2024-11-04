@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="shortcut icon" href="{{ asset('/images/escudo-argamasilla.png') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('/images/escudo-argamasilla.jpg') }}" type="image/x-icon">
     <title>Argamasilla-Cultural</title>
 
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -21,7 +21,7 @@
             <div class="container mx-auto px-4">
                 <div class="flex items-center justify-between py-4">
                     <a href="{{ route('welcome') }}">
-                        <img src="{{ asset('/images/escudo-argamasilla.png') }}" class="w-12 h-auto" alt="Inicio">
+                        <img src="{{ asset('/images/escudo-argamasilla.jpg') }}" class="w-12 h-auto" alt="Inicio">
                     </a>
                     <nav>
                         <ul class="flex space-x-4">

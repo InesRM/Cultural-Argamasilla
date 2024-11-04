@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agenda de Eventos</title>
-    <link rel="shortcut icon" href="{{ asset('/images/escudo-argamasilla.png') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('/images/escudo-argamasilla.jpg') }}" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
@@ -19,7 +19,7 @@
         </h1>
         <div class="flex items-left justify-between p-4">
             <a href="{{ route('welcome') }}">
-                <img src="{{ asset('/images/escudo-argamasilla.png') }}" class="w-12 h-auto" alt="Inicio">
+                <img src="{{ asset('/images/escudo-argamasilla.jpg') }}" class="w-12 h-auto" alt="Inicio">
             </a>
         </div>
         <nav class="w-full bg-gray-800 bg-opacity-40">

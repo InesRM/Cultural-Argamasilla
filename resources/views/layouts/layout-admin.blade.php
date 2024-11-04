@@ -23,7 +23,7 @@
     <div class="fixed left-0 top-0 w-56 h-full bg-[#f8f4f3] p-4 z-50 sidebar-menu transition-transform">
         <a href="#" class="flex items-center pb-4 border-b border-b-gray-800">
 
-            <img src="{{asset('/images/escudo-argamasilla.png')}}" alt="logo" class="w-8 h-12 rounded-full" />
+            <img src="{{asset('/images/escudo-argamasilla.jpg')}}" alt="logo" class="w-8 h-12 rounded-full" />
             <span class="text-lg font-bold ms-2">Gestión</span>
         </a>
         <ul class="mt-4">

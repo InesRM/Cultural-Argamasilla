@@ -6,7 +6,7 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('asistente.eventos') }}">
-                        <img src="{{asset('/images/escudo-argamasilla.png')}}" class="w-12 h-auto" alt="Inicio">
+                        <img src="{{asset('/images/escudo-argamasilla.jpg')}}" class="w-12 h-auto" alt="Inicio">
                     </a>
                 </div>
 

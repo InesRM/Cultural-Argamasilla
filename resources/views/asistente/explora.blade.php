@@ -13,7 +13,7 @@
                 <section class="relative  bg-blueGray-50">
                     <div class="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75">
                         <div class="absolute top-0 w-full h-full bg-center bg-cover"
-                            style="background-image: url({{asset('/images/collage.png')}});">
+                            style="background-image: url({{asset('/images/collage.jpg')}});">
                             <span id="blackOverlay" class="w-full h-full absolute opacity-45 bg-black"></span>
                         </div>
                         <div class="container relative mx-auto">
@@ -21,7 +21,7 @@
                                 <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
                                     <div class="pr-12">
                                         <h1 class="text-white font-semibold text-5xl">
-                                            Explora Taberno
+                                            Explora
                                         </h1>
                                         <p class="mt-4 text-lg text-white">
                                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident suscipit
@@ -332,8 +332,7 @@
                             Made with <a href="https://www.creative-tim.com/product/notus-js"
                                 class="text-blueGray-500 hover:text-gray-800" target="_blank">Notus
                                 JS</a> by <a href="https://www.creative-tim.com"
-                                class="text-blueGray-500 hover:text-blueGray-800" target="_blank">
-                                Ayuntamiento de Taberno</a>.
+                                class="text-blueGray-500 hover:text-blueGray-800" target="_blank"></a>.
                         </div>
                     </div>
                 </div>

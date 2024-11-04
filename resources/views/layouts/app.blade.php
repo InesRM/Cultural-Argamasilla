@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="shortcut icon" href="{{ asset('/images/escudo-argamasilla.png') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('/images/escudo-argamasilla.jpg') }}" type="image/x-icon">
     <title>{{ config('Argamasilla-Cultural') }}</title>
 
     <!-- Fonts -->
