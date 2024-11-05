@@ -22,8 +22,7 @@ style="background-image: url('{{ asset('/images/Argamasilla-reg.jpg') }}')">
         <div
         class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white dark:bg-gray-800 shadow-md overflow-hidden sm:rounded-lg">
             <a href="/">
-                <img src="{{asset('/images/user1.jpg')}}" alt="registro"
-                    class="rounded-full w-16 h-auto">
+                <img src="{{asset('/images/user1.jpg')}}" alt="registro"class="rounded-full w-16 h-auto">
             </a>
             {{ $slot }}
         </div>
