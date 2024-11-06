@@ -81,19 +81,22 @@
                                         Log in
                                     </button>
                                 </div>
-
                             </form>
+
+                            <div>
+                                {{-- Errores de inicio de sesión --}}
+                                @if ($errors->any())
+                                    <div class="alert alert-danger"
+                                        style="font-size: 14px; padding: 10px; border-radius: 5px; color: #721c24; background-color: #f8d7da; border: 1px solid #f5c6cb; margin: 20px">
+                                        <ul style="list-style-type: none; padding: 0; margin: 0">
+                                            @foreach ($errors->all() as $error)
+                                                <li>{{ $error }}</li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                @endif
+                            </div>
                         </div>
-                        {{-- <div class="row-start-6 text-xl">
-                            <a href="{{ route('agenda') }}" class="text-white hover:underline">
-                                Consultar Agenda de Eventos
-                            </a>
-                        </div> --}}
-                        {{-- <div class="row-start-6 text-xl">
-                            <a href="{{ route('agenda') }}" class="text-white hover:underline">
-                                Consultar Agenda de Eventos
-                            </a>
-                        </div> --}}
                     </div>
                 </div>
 

@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+        <h2 class="font-semibold text-xl text-black leading-tight">
             {{ __('Experiencias') }}
         </h2>
     </x-slot>
@@ -11,17 +11,18 @@
         <!-------------------------------------------------->
         <!-- component -->
         <section>
-            <div class=" dark:bg-gray-800 py-8">
+            <div class="bg-white py-8">
+                <img src="{{asset('/images/brujula.jpg')}}" alt="Experiencias" class="object-cover">
                 <div class="container mx-auto flex flex-col items-start md:flex-row my-12 md:my-24">
                     <div class="flex flex-col w-full sticky md:top-36 lg:w-1/3 mt-2 md:mt-12 px-8">
-                        <p class="ml-2 text-green-500 uppercase tracking-loose">Cronología</p>
-                        <p class="text-3xl md:text-4xl leading-normal md:leading-relaxed mb-2">Agenda de experiencias
+                        <p class="ml-2 text-blue-500 uppercase tracking-loose">Que hacer</p>
+                        <p class="text-3xl md:text-4xl leading-normal md:leading-relaxed mb-2">Experiencias
                         </p>
                         <p class="text-sm md:text-base mb-4">
-                            Echa un vistazo a la selección de experiencias agendadas para las proximas semanas.
+                            Echa un vistazo a la selección de experiencias que nuestra selección de empresas organizadoras de otras ciudades y localidades te proponen
                         </p>
-                        <a href="#" class="bg-transparent mr-auto hover:bg-green-500 text-green-500 rounded shadow hover:shadow-lg py-2 px-4 border border-green-500 hover:border-transparent">
-                            Explore Now</a>
+                        {{-- <a href="#" class="bg-purple-300 mr-auto hover:bg-blue-500 text-white rounded shadow hover:shadow-lg py-2 px-4 border border-blue-500 hover:border-transparent">
+                            Explora</a> --}}
                     </div>
                     <div class="ml-0 md:ml-12 lg:w-2/3 sticky">
                         <div class="container mx-auto w-full h-full">
@@ -40,7 +41,7 @@
                                 <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
                                     <div class="order-1 w-5/12"></div>
                                     <div class="order-1 w-5/12 px-1 py-4 text-right">
-                                        <p class="mb-3 text-base text-green-500">
+                                        <p class="mb-3 text-base text-blue-500">
                                             {{$experiencia->fechaInicio}}
                                         </p>
                                         <h4 class="mb-3 font-bold text-lg md:text-2xl">
@@ -49,10 +50,22 @@
                                         <p class="text-sm md:text-base leading-snug text-black-50 text-opacity-100 mb-4">
                                             {{$experiencia->descripcionLarga}}
                                         </p>
-                                        <div class="flex"><a href="{{$experiencia->empresa->web}}" class="bg-transparent mr-auto hover:bg-green-500 rounded shadow hover:shadow-lg py-2 px-4 border border-green-500 hover:border-transparent">
-                                                Inscribete</a>
-                                            <a href="#" x-data x-on:click="$dispatch('open-modal', '{{ 'modal-' . $experiencia->id }}')" class="bg-transparent mr-auto hover:bg-green-500 rounded shadow hover:shadow-lg py-2 px-4 border border-green-500 hover:border-transparent">
-                                                Info</a>
+                                        <div class="flex space-x-4">
+                                            <!-- Botón "Quiero Contactar" en verde -->
+                                            <a href="{{ $experiencia->empresa->web }}"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                class="bg-green-600 text-white mr-auto rounded-md shadow py-2 px-4 hover:bg-green-700 transition-colors">
+                                                Contactar
+                                             </a>
+
+                                            <!-- Botón "Info" en blanco con texto verde -->
+                                            <a href="#"
+                                               x-data
+                                               x-on:click="$dispatch('open-modal', '{{ 'modal-' . $experiencia->id }}')"
+                                               class="bg-blue-600 text-white border border-blue-600 rounded-md shadow py-2 px-4 hover:bg-white hover:text-blue-600 transition-colors">
+                                               Info
+                                            </a>
                                         </div>
 
                                     </div>
@@ -61,7 +74,7 @@
                                 <div class="mb-8 flex justify-between items-center w-full right-timeline">
                                     <div class="order-1 w-5/12"></div>
                                     <div class="order-1  w-5/12 px-1 py-4 text-left">
-                                        <p class="mb-3 text-base text-green-500">
+                                        <p class="mb-3 text-base text-blue-500">
                                             {{$experiencia->fechaInicio}}
                                         </p>
                                         <h4 class="mb-3 font-bold text-lg md:text-2xl">
@@ -70,10 +83,22 @@
                                         <p class="text-sm md:text-base leading-snug text-black-50 text-opacity-100 mb-4">
                                             {{$experiencia->descripcionLarga}}
                                         </p>
-                                        <div class="flex"><a href="{{$experiencia->empresa->web}}" class="bg-transparent mr-auto hover:bg-green-500 rounded shadow hover:shadow-lg py-2 px-4 border border-green-500 hover:border-transparent">
-                                                Inscribete</a>
-                                            <a href="#" x-data x-on:click="$dispatch('open-modal', '{{ 'modal-' . $experiencia->id }}')" class="bg-transparent mr-auto hover:bg-green-500 rounded shadow hover:shadow-lg py-2 px-4 border border-green-500 hover:border-transparent">
-                                                Info</a>
+                                        <div class="flex space-x-4">
+                                            <!-- Botón "Quiero Contactar" en verde -->
+                                            <a href="{{ $experiencia->empresa->web }}"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                class="bg-green-600 text-white mr-auto rounded-md shadow py-2 px-4 hover:bg-green-700 transition-colors">
+                                                Contactar
+                                             </a>
+
+                                            <!-- Botón "Info" en blanco con texto verde -->
+                                            <a href="#"
+                                               x-data
+                                               x-on:click="$dispatch('open-modal', '{{ 'modal-' . $experiencia->id }}')"
+                                               class="bg-blue-600 text-white border border-blue-600 rounded-md shadow py-2 px-4 hover:bg-white hover:text-blue-600 transition-colors">
+                                               Info
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -106,7 +131,6 @@
 
                                 @endforeach
                             </div>
-                            <img class="mx-auto -mt-36 md:-mt-36" src="{{asset('/images/celebracion.jpg')}}" />
                         </div>
                     </div>
                 </div>
