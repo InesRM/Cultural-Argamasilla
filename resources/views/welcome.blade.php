@@ -28,7 +28,7 @@
                             <li>
                                 <div class="row-start-6 text-xl text-center pt-4">
                                     <a href="{{ route('agenda') }}"
-                                        class="text-lg text-white hover:text-red-900">Agenda</a>
+                                        class="text-lg text-white hover:text-blue-400">Agenda</a>
                                 </div>
                             </li>
                             {{-- espacio --}}
@@ -37,7 +37,7 @@
                             <li>
                                 <div class="row-start-4 text-xl text-center pt-4">
                                     <a href="{{ route('experiencias.show') }}"
-                                        class="text-lg text-white hover:text-red-900">Experiencias</a>
+                                        class="text-lg text-white hover:text-blue-400">Experiencias</a>
                                 </div>
                             </li>
                         </ul>
@@ -106,7 +106,7 @@
 
             <style>
                 .banner {
-                    background: url('{{ asset('images/cueva.jpg') }}');
+                    background: url('{{ asset('images/cueva2.jpg') }}');
                     background-repeat: no-repeat;
                     background-size: cover
                 }

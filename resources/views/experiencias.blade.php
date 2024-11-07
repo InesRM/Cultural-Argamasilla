@@ -113,7 +113,7 @@
     </div>
     <style>
         .banner {
-            background: url('{{ asset('images/cueva.jpg') }}');
+            background: url('{{ asset('images/cueva2.jpg') }}');
             background-repeat: no-repeat;
             background-size: cover
         }

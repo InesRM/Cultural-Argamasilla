@@ -1,7 +1,16 @@
 <x-app-layout>
     <x-slot name="header">
+        <div class="flex flex-col md:flex-row items-center">
+            <!-- Sidebar Section -->
+            <div class="w-full md:w-1/3 mb-8 md:mb-0 md:pr-8 bg-white bg-opacity-50 p-4">
+                <p class="text-blue-500 uppercase tracking-wide font-bold">Programación Cultural</p>
+                <h3 class="text-3xl font-bold text-gray-800 leading-snug mb-4">Agenda De Eventos</h3>
+                <p class="text-gray-600 mb-4">Explora los próximos eventos que se han programado para ti e inscríbete, puedes solicitar hasta 5 entradas.</p>
+                <img src="{{ asset('/images/office2.jpg') }}" alt="Experiencias">
+            </div>
+        </div>
         <!-- Navigation Links -->
-        <div class="flex justify-between items-center p-6 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg shadow-lg">
+        <div class="flex justify-between items-center p-6 bg-gradient-to-r from-blue-200 to-purple-400 rounded-lg shadow-lg">
             <div class="flex space-x-8">
                 <x-subnav-link :href="route('asistente.eventos')" :active="request()->routeIs('asistente.eventos')">
                     {{ __('Todos') }}
@@ -13,6 +22,7 @@
                     {{ __('Este Mes') }}
                 </x-subnav-link>
             </div>
+
             <form action="{{ route(Route::currentRouteName()) }}" method="get" class="flex items-center">
                 @csrf
                 <label for="categoria" class="text-white mr-2">Categorías:</label>
@@ -29,12 +39,14 @@
         </div>
     </x-slot>
 
-    <div class="py-10 bg-gray-100">
+    <div class="py-10 bg-white">
+
+
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="bg-white shadow-xl rounded-lg p-8">
+            <div class="bg-gray-200 shadow-xl rounded-lg p-8">
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     @foreach ($eventos as $evento)
-                        <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition transform hover:-translate-y-1">
+                        <div class="bg-blue-100 rounded-lg shadow-md hover:shadow-lg transition transform hover:-translate-y-1">
                             <img class="w-full h-52 object-cover rounded-t-lg" src="{{ asset('/images/' . $evento->imagen) }}" alt="{{ $evento->nombre }}">
                             <div class="p-6">
                                 <h3 class="font-semibold text-lg text-gray-800">{{ $evento->nombre }}</h3>
@@ -43,7 +55,7 @@
                                 <p class="mt-3 text-gray-700">Fecha: {{ $evento->fecha }}</p>
 
                                 <div class="flex justify-between mt-4">
-                                    <span class="bg-gray-200 text-sm text-gray-700 rounded-full px-3 py-1">#{{ $evento->categoria->nombre }}</span>
+                                    <span class="bg-purple-400 text-sm text-white rounded-full px-3 py-1">#{{ $evento->categoria->nombre }}</span>
 
                                     <x-modal>
                                         <x-slot name="name">{{ 'modal-' . $evento->id }}</x-slot>

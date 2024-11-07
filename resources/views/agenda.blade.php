@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
-<body class="bg-black font-sans leading-normal tracking-normal banner2">
+<body class="bg-gray-100 font-sans leading-normal tracking-normal banner2">
     <!-- Header -->
     <header class="bg-white shadow p-6 banner">
         {{-- foto de agenda --}}
@@ -45,13 +45,13 @@
         </nav>
 
     </header>
-    <div class="container mx-auto p-6">
+    <div class="container mx-auto p-6 bg-white">
         <div class="py-8 px-4">
 
             <form action="{{ route('agenda') }}" method="get"
-                class="flex flex-col md:flex-row md:justify-center items-center mb-8 bg-black p-2 bg-opacity-40">
+                class="flex flex-col md:flex-row md:justify-center items-center mb-8 bg-blue-100 p-2">
                 @csrf
-                <label for="categoria" class="text-white mr-2">Categoría:</label>
+                <label for="categoria" class="text-blue-600 mr-2">Categoría:</label>
                 <select name="categoria" class="rounded border-black shadow-sm mr-4 p-2">
                     <option value="">Todas las categorías</option>
                     @foreach ($categorias as $categoria)
@@ -61,7 +61,7 @@
                     @endforeach
                 </select>
 
-                <label for="tiempo" class="text-white mr-2">Tiempo:</label>
+                <label for="tiempo" class="text-blue-600 mr-2">Fecha:</label>
                 <select name="tiempo" class="rounded border-black shadow-sm p-2">
                     <option value="">Cualquier momento</option>
                     <option value="semana" @if ($filtroTiempo === 'semana') selected @endif>Esta semana</option>
@@ -80,26 +80,27 @@
                     <p class="text-blue-500 uppercase tracking-wide font-bold">Programación Cultural</p>
                     <h3 class="text-3xl font-bold text-gray-800 leading-snug mb-4">Agenda De Eventos</h3>
                     <p class="text-gray-600 mb-4">Explora los próximos eventos que se han programado para ti.</p>
+                    <img src="{{ asset('/images/office2.jpg') }}" alt="Experiencias">
                 </div>
             </div>
 
 
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 @foreach ($eventos as $evento)
-                    <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="bg-blue-100 shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition duration-300">
                         <div class="img-container">
                             <img src="{{ asset('/images/' . $evento->imagen) }}" alt="{{ $evento->nombre }}">
                         </div>
                         <div class="p-4">
-                            <h2 class="text-xl font-semibold text-gray-800 mb-2">{{ $evento->nombre }}</h2>
+                            <h2 class="text-xl font-semibold text-blue-800 mb-2">{{ $evento->nombre }}</h2>
                             <p class="text-gray-600 text-base mb-3">
                                 {{ \Illuminate\Support\Str::limit($evento->descripcion, 100) }}</p>
                             <div class="flex items-center justify-between">
-                                <span class="bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">
+                                <span class="bg-blue-400 rounded-full px-3 py-1 text-sm font-semibold text-white">
                                     #{{ $evento->categoria->nombre }}
                                 </span>
                                 <button
-                                    class="bg-blue-600 hover:bg-blue-800 text-white font-semibold py-2 px-4 rounded transition"
+                                    class="bg-green-600 hover:bg-blue-800 text-white font-semibold py-2 px-4 rounded transition"
                                     x-data x-on:click="$dispatch('open-modal', '{{ 'detalles-' . $evento->id }}')">
                                     Info
                                 </button>
@@ -134,7 +135,7 @@
                     </x-modal>
                 @endforeach
             </div>
-
+        </div>
             <div class="mt-6">
                 {{ $eventos->links() }}
             </div>
@@ -142,18 +143,18 @@
         </div>
         <style>
             .banner {
-                background: url('{{ asset('images/cueva.jpg') }}');
+                background: url('{{ asset('images/cueva2.jpg') }}');
                 background-repeat: no-repeat;
                 background-size: cover
             }
         </style>
-        <style>
+        {{-- <style>
             .banner2 {
                 background: url('{{ asset('images/office.jpg') }}');
                 background-repeat: no-repeat;
                 background-size: cover
             }
-        </style>
+        </style> --}}
 
         <script src="//unpkg.com/alpinejs" defer></script>
 </body>
