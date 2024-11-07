@@ -143,10 +143,6 @@ class EventoController extends Controller
     $evento->imagen = $request->imagen;
     $evento->user_id = $request->user_id;
 
-    //restringir el tipo de imagen que se puede subir
-    $request->validate([
-        'imagen' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-    ]);
 
     // Guardar la imagen en la carpeta public/images
     $imagen = $request->file('imagen');

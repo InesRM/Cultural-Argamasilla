@@ -145,7 +145,7 @@
                         <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-first-name">
                             Imagen
                         </label>
-                        <input class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-red rounded py-3 px-4 mb-3" id="grid-first-name" type="file" name="imagen" required autofocus placeholder="">
+                        <input class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-red rounded py-3 px-4 mb-3" id="grid-first-name" type="file" name="imagen">
 
                     </div>
                     <input type="hidden" value="{{Auth::user()->id }}" name="user_id">
