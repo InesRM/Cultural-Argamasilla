@@ -17,7 +17,7 @@
 
 <body class="font-sans antialiased">
     <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
-        <header class="bg-black shadow bg-opacity-40">
+        <header class="bg-blue-600">
             <div class="container mx-auto px-4">
                 <div class="flex items-center justify-between py-4">
                     <a href="{{ route('welcome') }}">
@@ -58,19 +58,19 @@
                                 @csrf
                                 <h2 class="text-3xl font-serif font-bold text-white-500 my-1">Entrar</h2>
 
-                                <div class="pt-10 pr-20">
+                                <div class="pt-10 pr-20 text-white">
                                     <label class="text-sm font-sans font-medium" for="email">
                                         Email
                                     </label>
-                                    <input type="text" name="email" placeholder="Escribe tu email"
-                                        class="w-full bg-black py-3 px-12 border hover: border-gray-500 rounded-lg shadow text-base font-sans" />
+                                    <input type="text" name="email" placeholder="micorreo@ejemplo.com"
+                                        class="w-full bg-blue-600 py-3 px-12 border hover: border-white-500 rounded-lg text-base font-sans" />
                                 </div>
                                 <div class="pt-2 pr-20">
                                     <label class="text-sm font-sans font-medium" for="password">
                                         Contraseña
                                     </label>
-                                    <input type="password" name="password" placeholder="Escribe tu contraseña"
-                                        class=" w-full bg-black py-3 px-12 border hover: border-gray-500 rounded-lg shadow text-base font-sans" />
+                                    <input type="password" name="password" placeholder="Tu Contraseña"
+                                        class=" w-full bg-blue-600 py-3 px-12 border hover: border-white-500 rounded-lg text-base font-sans" />
 
                                 </div>
                                 <a href="{{ route('register') }}" class="text-sm font-sans font-medium">¿No

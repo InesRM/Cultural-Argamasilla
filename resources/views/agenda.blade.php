@@ -27,18 +27,18 @@
             <ul class="flex justify-end space-x-4 p-4">
                 <li>
                     <div class="text-xl text-center pt-4">
-                        <a href="{{ route('welcome') }}" class="text-lg text-white hover:text-red-900">Inicio</a>
+                        <a href="{{ route('welcome') }}" class="text-lg text-white hover:text-blue-400">Inicio</a>
                     </div>
                 </li>
                 <li>
                     <div class="text-xl text-center pt-4">
-                        <a href="{{ route('agenda') }}" class="text-lg text-white hover:text-red-900">Agenda</a>
+                        <a href="{{ route('agenda') }}" class="text-lg text-white hover:text-blue-400">Agenda</a>
                     </div>
                 </li>
                 <li>
                     <div class="text-xl text-center pt-4">
                         <a href="{{ route('experiencias.show') }}"
-                            class="text-lg text-white hover:text-red-900">Experiencias</a>
+                            class="text-lg text-white hover:text-blue-400">Experiencias</a>
                     </div>
                 </li>
             </ul>
