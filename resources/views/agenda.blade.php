@@ -22,23 +22,27 @@
                 <img src="{{ asset('/images/escudo-argamasilla.jpg') }}" class="w-12 h-auto" alt="Inicio">
             </a>
         </div>
+        <div class="w-full bg-red-600 bg-opacity-40">
+            <p class="text-4xl font-serif font-bold ml-4 text-left text-white p-2">Argamasilla de Calatrava</p>
+        </div>
         <nav class="w-full bg-gray-800 bg-opacity-40">
-            <p class="text-white text-left font-serif font-bold italic">Argamasilla de Calatrava</p>
-            <ul class="flex justify-end space-x-4 p-4">
+            <ul class="flex justify-end space-x-4 p-2 bg-gray-600 bg-opacity-40">
                 <li>
                     <div class="text-xl text-center pt-4">
-                        <a href="{{ route('welcome') }}" class="text-lg text-white hover:text-blue-400">Inicio</a>
+                        <a href="{{ route('welcome') }}"
+                            class="text-lg text-white font-bold hover:text-blue-200">Inicio</a>
                     </div>
                 </li>
                 <li>
                     <div class="text-xl text-center pt-4">
-                        <a href="{{ route('agenda') }}" class="text-lg text-white hover:text-blue-400">Agenda</a>
+                        <a href="{{ route('agenda') }}"
+                            class="text-lg text-white font-bold hover:text-blue-200">Agenda</a>
                     </div>
                 </li>
                 <li>
                     <div class="text-xl text-center pt-4">
                         <a href="{{ route('experiencias.show') }}"
-                            class="text-lg text-white hover:text-blue-400">Experiencias</a>
+                            class="text-lg text-white font-bold hover:text-blue-200">Experiencias</a>
                     </div>
                 </li>
             </ul>
@@ -87,7 +91,8 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 @foreach ($eventos as $evento)
-                    <div class="bg-blue-100 shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition duration-300">
+                    <div
+                        class="bg-blue-100 shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition duration-300">
                         <div class="img-container">
                             <img src="{{ asset('/images/' . $evento->imagen) }}" alt="{{ $evento->nombre }}">
                         </div>
@@ -136,19 +141,19 @@
                 @endforeach
             </div>
         </div>
-            <div class="mt-6">
-                {{ $eventos->links() }}
-            </div>
-
+        <div class="mt-6">
+            {{ $eventos->links() }}
         </div>
-        <style>
-            .banner {
-                background: url('{{ asset('images/cueva2.jpg') }}');
-                background-repeat: no-repeat;
-                background-size: cover
-            }
-        </style>
-        {{-- <style>
+
+    </div>
+    <style>
+        .banner {
+            background: url('{{ asset('images/cueva2.jpg') }}');
+            background-repeat: no-repeat;
+            background-size: cover
+        }
+    </style>
+    {{-- <style>
             .banner2 {
                 background: url('{{ asset('images/office.jpg') }}');
                 background-repeat: no-repeat;
@@ -156,7 +161,7 @@
             }
         </style> --}}
 
-        <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
 </body>
 
 </html>

@@ -21,8 +21,10 @@
                 <img src="{{ asset('/images/escudo-argamasilla.jpg') }}" class="w-12 h-auto" alt="Inicio">
             </a>
         </div>
+        <div class="w-full bg-red-600 bg-opacity-40">
+            <p class="text-4xl font-serif font-bold ml-4 text-left text-white p-2">Argamasilla de Calatrava</p>
+        </div>
         <nav class="w-full bg-gray-800 bg-opacity-40">
-            <p class="text-white text-left font-serif font-bold italic">Argamasilla de Calatrava</p>
             <ul class="flex justify-end space-x-4 p-4">
                 <li>
                     <div class="text-xl text-center pt-4">

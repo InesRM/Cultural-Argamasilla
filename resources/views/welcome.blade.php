@@ -17,7 +17,7 @@
 
 <body class="font-sans antialiased">
     <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
-        <header class="bg-blue-600">
+        <header class="bg-red-600 bg-opacity-20">
             <div class="container mx-auto px-4">
                 <div class="flex items-center justify-between py-4">
                     <a href="{{ route('welcome') }}">
@@ -28,7 +28,7 @@
                             <li>
                                 <div class="row-start-6 text-xl text-center pt-4">
                                     <a href="{{ route('agenda') }}"
-                                        class="text-lg text-white hover:text-blue-400">Agenda</a>
+                                        class="text-lg text-white hover:text-blue-200">Agenda</a>
                                 </div>
                             </li>
                             {{-- espacio --}}
@@ -37,7 +37,7 @@
                             <li>
                                 <div class="row-start-4 text-xl text-center pt-4">
                                     <a href="{{ route('experiencias.show') }}"
-                                        class="text-lg text-white hover:text-blue-400">Experiencias</a>
+                                        class="text-lg text-white hover:text-blue-200">Experiencias</a>
                                 </div>
                             </li>
                         </ul>
@@ -49,36 +49,36 @@
         <main>
             <div class='grid grid-cols-12 banner'>
 
-                <div class="col-span-4 text-white font-sans font-bold bg-black min-h-screen pl-7 bg-opacity-40">
+                <div class="col-span-6 text-white font-sans font-bold bg-black min-h-screen pl-7 bg-opacity-40">
                     <div class="grid grid-rows-6 grid-flow-col min-h-screen items-center justify-items-start">
 
-                        <i class="text-5xl font-serif font-bold italic ml-4 text-">Argamasilla Cultural</i>
+                        <i class="text-5xl font-serif font-bold italic ml-4 p-2">Argamasilla Cultural</i>
                         <div class="row-span-4 row-start-2 text-3xl">
                             <form method="POST" action="{{ route('login') }}">
                                 @csrf
-                                <h2 class="text-3xl font-serif font-bold text-white-500 my-1">Entrar</h2>
+                                <h2 class="text-3xl font-serif font-bold text-white-500 my-1">Identificación</h2>
 
-                                <div class="pt-10 pr-20 text-white">
+                                <div class="pt-10 pr-20 ">
                                     <label class="text-sm font-sans font-medium" for="email">
                                         Email
                                     </label>
                                     <input type="text" name="email" placeholder="micorreo@ejemplo.com"
-                                        class="w-full bg-blue-600 py-3 px-12 border hover: border-white-500 rounded-lg text-base font-sans" />
+                                        class="w-full bg-white py-3 px-12 border hover: border-red-600 rounded-lg text-gray-700 font-sans" />
                                 </div>
-                                <div class="pt-2 pr-20">
+                                <div class="pt-2 pr-20 text-grayt-600">
                                     <label class="text-sm font-sans font-medium" for="password">
                                         Contraseña
                                     </label>
                                     <input type="password" name="password" placeholder="Tu Contraseña"
-                                        class=" w-full bg-blue-600 py-3 px-12 border hover: border-white-500 rounded-lg text-base font-sans" />
+                                        class=" w-full bg-white py-3 px-12 border hover: border-red-600 rounded-lg text-gray-700 font-sans" />
 
                                 </div>
                                 <a href="{{ route('register') }}" class="text-sm font-sans font-medium">¿No
                                     tienes cuenta? Registrate</a>
                                 <div class="text-sm font-sans font-medium w-full pr-20 pt-14">
                                     <button type="submit"
-                                        class="text-center w-1/2 py-4 bg-blue-700 hover:bg-blue-400 rounded-lg text-white">
-                                        Log in
+                                        class="text-center w-1/2 py-4 bg-red-900 bg-opacity-60 hover:bg-gray-400 rounded-lg text-white">
+                                        Identificarse
                                     </button>
                                 </div>
                             </form>
