@@ -2,46 +2,67 @@
 
     <!-- Content -->
     <section class="container px-4 mx-auto">
-        <div class="sm:flex sm:items-center sm:justify-between">
-            <div class="flex items-center gap-x-3">
-                <h2 class="text-lg font-medium text-gray-800 dark:text-white">
-                    Inscripciones del evento "{{ $evento->nombre ?? 'Evento no especificado' }}"
-                </h2>
-            </div>
+
+        <!-- Título de la sección -->
+        <div class="flex justify-between items-center py-6">
+            <h2 class="text-2xl font-bold text-gray-800 dark:text-white">
+                Inscripciones del evento "{{ $evento->nombre ?? 'Evento no especificado' }}"
+            </h2>
         </div>
 
-        <div class="sm:flex sm:items-center sm:justify-between">
-            @if(isset($inscripciones) && count($inscripciones) > 0)
-                <form action="{{ route('admin.inscriptionsDelete') }}" method="post">
-                    @csrf
-                    <!-- Campo oculto para el ID del evento -->
-                    <input type="hidden" name="evento_id" value="{{ $evento->id }}">
+        <!-- Formulario de inscripciones -->
+        @if(isset($inscripciones) && count($inscripciones) > 0)
+            <form action="{{ route('admin.inscriptionsDelete') }}" method="post">
+                @csrf
+                <!-- Campo oculto para el ID del evento -->
+                <input type="hidden" name="evento_id" value="{{ $evento->id }}">
 
-                    <div class="flex flex-row flex-wrap">
-                        @foreach($inscripciones as $inscripcion)
-                            <div class="p-5 m-3 bg-slate-100 mt-10 rounded-xl">
-                                <ul>
-                                    <li>
-                                        <!-- Checkbox para seleccionar la inscripción -->
-                                        <input type="checkbox" value="{{ $inscripcion->id }}" name="eliminarInscripcion[]">
-                                        <p>Usuario inscrito: {{ $inscripcion->user->nombre }}</p>
-                                        <p>Número de entradas reservadas: {{ $inscripcion->numEntradas }}</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        @endforeach
-                    </div>
+                <div class="bg-white shadow rounded-lg overflow-hidden">
+                    <table class="min-w-full bg-white">
+                        <thead>
+                            <tr>
+                                <th class="py-3 px-4 text-left text-sm font-medium text-gray-500 uppercase">
+                                    Seleccionar
+                                </th>
+                                <th class="py-3 px-4 text-left text-sm font-medium text-gray-500 uppercase">
+                                    Usuario inscrito
+                                </th>
+                                <th class="py-3 px-4 text-left text-sm font-medium text-gray-500 uppercase">
+                                    Número de entradas
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach($inscripciones as $inscripcion)
+                                <tr class="border-b">
+                                    <td class="py-4 px-4">
+                                        <input type="checkbox" value="{{ $inscripcion->id }}" name="eliminarInscripcion[]" class="w-4 h-4">
+                                    </td>
+                                    <td class="py-4 px-4 text-gray-700">
+                                        {{ $inscripcion->user->nombre }}
+                                    </td>
+                                    <td class="py-4 px-4 text-gray-700">
+                                        {{ $inscripcion->numEntradas }}
+                                    </td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
 
-                    <!-- Botón para eliminar inscripciones seleccionadas -->
-                    <button type="submit"
-                        class="border-black rounded-xl flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-[#f84525] hover:bg-gray-50">
+                <!-- Botón para eliminar inscripciones -->
+                <div class="flex justify-end mt-4">
+                    <button type="submit" class="bg-red-500 text-white py-2 px-6 rounded-lg shadow hover:bg-red-600 transition">
                         Eliminar inscripciones marcadas
                     </button>
-                </form>
-            @else
+                </div>
+            </form>
+        @else
+            <!-- Mensaje cuando no hay inscripciones -->
+            <div class="bg-yellow-100 text-yellow-800 p-4 rounded-lg mt-6">
                 <p>No existen inscripciones para este evento.</p>
-            @endif
-        </div>
+            </div>
+        @endif
     </section>
     <!-- End Content -->
 
