@@ -21,7 +21,7 @@
                 <img src="{{ asset('/images/escudo-argamasilla.jpg') }}" class="w-12 h-auto" alt="Inicio">
             </a>
         </div>
-        <div class="w-full bg-red-600 bg-opacity-40">
+        <div class="w-full bg-red-900 bg-opacity-40">
             <p class="text-4xl font-serif font-bold ml-4 text-left text-white p-2">Argamasilla de Calatrava</p>
         </div>
         <nav class="w-full bg-gray-800 bg-opacity-40">
@@ -50,7 +50,7 @@
     <div class="container mx-auto p-8">
         <section class="bg-white rounded-lg shadow-lg bg-opacity-40"> <!-- Mantiene el fondo blanco -->
             <div class="w-full md:w-1/3 mb-8 md:mb-0 md:pr-8 bg-white">
-                <p class="text-blue-500 uppercase tracking-wide">Cronología</p>
+                <p class="text-red-900 uppercase tracking-wide">Empresas y Propuestas</p>
                 <h3 class="text-3xl font-bold text-gray-800 leading-snug mb-4">Agenda de experiencias</h3>
                 <p class="text-gray-600 mb-4">Explora las próximas experiencias que una selección de empresas
                     han programado para ti.</p>

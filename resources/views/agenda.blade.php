@@ -22,7 +22,7 @@
                 <img src="{{ asset('/images/escudo-argamasilla.jpg') }}" class="w-12 h-auto" alt="Inicio">
             </a>
         </div>
-        <div class="w-full bg-red-400 bg-opacity-60">
+        <div class="w-full bg-pink-900 bg-opacity-60">
             <p class="text-4xl font-serif font-bold ml-4 text-left text-white p-2">Argamasilla de Calatrava</p>
         </div>
         <nav class="w-full bg-gray-800 bg-opacity-30">
@@ -53,9 +53,9 @@
         <div class="py-8 px-4">
 
             <form action="{{ route('agenda') }}" method="get"
-                class="flex flex-col md:flex-row md:justify-center items-center mb-8 bg-blue-100 p-2">
+                class="flex flex-col md:flex-row md:justify-center items-center mb-8 bg-pink-900 p-2">
                 @csrf
-                <label for="categoria" class="text-blue-600 mr-2">Categoría:</label>
+                <label for="categoria" class="text-white mr-2">Categoría:</label>
                 <select name="categoria" class="rounded border-black shadow-sm mr-4 p-2">
                     <option value="">Todas las categorías</option>
                     @foreach ($categorias as $categoria)
@@ -65,7 +65,7 @@
                     @endforeach
                 </select>
 
-                <label for="tiempo" class="text-blue-600 mr-2">Fecha:</label>
+                <label for="tiempo" class="text-white mr-2">Fecha:</label>
                 <select name="tiempo" class="rounded border-black shadow-sm p-2">
                     <option value="">Cualquier momento</option>
                     <option value="semana" @if ($filtroTiempo === 'semana') selected @endif>Esta semana</option>
@@ -81,7 +81,7 @@
             <div class="flex flex-col md:flex-row items-center">
                 <!-- Sidebar Section -->
                 <div class="w-full md:w-1/3 mb-8 md:mb-0 md:pr-8 bg-white bg-opacity-50 p-4">
-                    <p class="text-blue-500 uppercase tracking-wide font-bold">Programación Cultural</p>
+                    <p class="text-red-900 uppercase tracking-wide font-bold">Programación Cultural</p>
                     <h3 class="text-3xl font-bold text-gray-800 leading-snug mb-4">Agenda De Eventos</h3>
                     <p class="text-gray-600 mb-4">Explora los próximos eventos que se han programado para ti.</p>
                     <img src="{{ asset('/images/office2.jpg') }}" alt="Experiencias">
@@ -91,7 +91,7 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 @foreach ($eventos as $evento)
-                    <div
+                    <di9
                         class="bg-blue-100 shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition duration-300">
                         <div class="img-container">
                             <img src="{{ asset('/images/' . $evento->imagen) }}" alt="{{ $evento->nombre }}">
@@ -111,7 +111,7 @@
                                 </button>
                             </div>
                         </div>
-                    </div>
+                    </di9>
 
                     <x-modal>
                         <x-slot name="name">{{ 'detalles-' . $evento->id }}</x-slot>
