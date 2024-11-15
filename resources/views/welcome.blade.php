@@ -62,15 +62,15 @@
                                     <label class="text-sm font-sans font-medium" for="email">
                                         Email
                                     </label>
-                                    <input type="text" name="email" placeholder="micorreo@ejemplo.com"
-                                        class="w-full bg-white py-3 px-12 border hover: border-red-600 rounded-lg text-gray-700 font-sans" />
+                                    <input type="text" name="email" placeholder="correo@ejemplo.com"
+                                        class="w-full bg-white py-2 px-10 border hover: border-red-600 rounded-lg text-gray-700 font-sans" />
                                 </div>
-                                <div class="pt-2 pr-20 text-grayt-600">
+                                <div class="pt-2 pr-20">
                                     <label class="text-sm font-sans font-medium" for="password">
                                         Contraseña
                                     </label>
                                     <input type="password" name="password" placeholder="Tu Contraseña"
-                                        class=" w-full bg-white py-3 px-12 border hover: border-red-600 rounded-lg text-gray-700 font-sans" />
+                                        class=" w-full bg-white py-2 px-10 border hover: border-red-600 rounded-lg text-gray-700 font-sans" />
 
                                 </div>
                                 <a href="{{ route('register') }}" class="text-sm font-sans font-medium">¿No
