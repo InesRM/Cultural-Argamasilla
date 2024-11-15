@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Inscripcion;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use App\Models\Evento;
 
 class InscripcionController extends Controller
 {
@@ -85,20 +86,26 @@ class InscripcionController extends Controller
 
     public function inscriptionsDelete(Request $request)
     {
-        //recorrer el array de checkboxes marcados para eliminar cada una de las inscripciones asociadas al evento
-
         if ($request->has('eliminarInscripcion')) {
-
+            // Obtener los IDs de las inscripciones seleccionadas
             $ids = $request->input('eliminarInscripcion');
 
-
-            foreach ($ids as $id) {
-
-                Inscripcion::destroy($id);
-            }
-            return view('admin.eventInscriptions');
-        } else {
-            echo "No se seleccionaron inscripciones para eliminar.";
+            // Eliminar las inscripciones seleccionadas
+            Inscripcion::destroy($ids);
         }
+
+        // Recuperar el evento asociado para recargar la vista
+        $eventoId = $request->input('evento_id'); // Asegúrate de enviar el ID del evento en el formulario
+        $evento = Evento::find($eventoId);
+
+        if (!$evento) {
+            return redirect()->route('admin.events')->with('error', 'Evento no encontrado.');
+        }
+
+        // Recuperar las inscripciones actualizadas
+        $inscripciones = $evento->inscripciones; // Asume una relación hasMany entre Evento e Inscripcion
+
+        return redirect()->route('admin.eventInscriptions', ['id' => $eventoId])
+        ->with('success', 'Inscripciones eliminadas correctamente.');
     }
 }
