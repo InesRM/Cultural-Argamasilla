@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Experiencias</title>
     <link rel="shortcut icon" href="{{ asset('/images/escudo-argamasilla.jpg') }}" type="image/x-icon">
-    @vite('resources/css/app.css')
-    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 <body class="banner2"> <!-- Cambiado a un fondo claro -->
@@ -21,7 +21,7 @@
                 <img src="{{ asset('/images/escudo-argamasilla.jpg') }}" class="w-12 h-auto" alt="Inicio">
             </a>
         </div>
-        <div class="w-full bg-red-900 bg-opacity-40">
+        <div class="w-full bg-pink-900 bg-opacity-60">
             <p class="text-4xl font-serif font-bold ml-4 text-left text-white p-2">Argamasilla de Calatrava</p>
         </div>
         <nav class="w-full bg-gray-800 bg-opacity-40">
@@ -50,9 +50,9 @@
     <div class="container mx-auto p-8">
         <section class="bg-white rounded-lg shadow-lg bg-opacity-40"> <!-- Mantiene el fondo blanco -->
             <div class="w-full md:w-1/3 mb-8 md:mb-0 md:pr-8 bg-white">
-                <p class="text-red-900 uppercase tracking-wide">Empresas y Propuestas</p>
-                <h3 class="text-3xl font-bold text-gray-800 leading-snug mb-4">Agenda de experiencias</h3>
-                <p class="text-gray-600 mb-4">Explora las próximas experiencias que una selección de empresas
+                <p class="text-white uppercase tracking-wide bg-pink-900 p-2">Empresas y Propuestas</p>
+                <h3 class="text-3xl font-bold text-gray-800 leading-snug mb-4 p-2">EcoTurismo</h3>
+                <p class="text-gray-600 mb-4 p-2">Explora las próximas experiencias que una selección de empresas
                     han programado para ti.</p>
             </div>
 
@@ -79,12 +79,12 @@
                                     <div class="flex space-x-4">
                                         <a href="{{ $experiencia->empresa->web }}" target="_blank"
                                             rel="noopener noreferrer"
-                                            class="bg-blue-500 hover:bg-green-500 text-white rounded-lg px-4 py-2 border border-blue-500 transition">
+                                            class="bg-green-500 hover:bg-blue-500 text-white rounded-lg px-4 py-2 border border-white transition">
                                             Inscríbete
                                         </a>
                                         <a href="#" x-data
                                             x-on:click="$dispatch('open-modal', '{{ 'modal-' . $experiencia->id }}')"
-                                            class="bg-blue-500 hover:bg-green-500 text-white rounded-lg px-4 py-2 border border-blue-500 transition">
+                                            class="bg-blue-500 hover:bg-green-500 text-white rounded-lg px-4 py-2 border border-white transition">
                                             Info
                                         </a>
                                     </div>
