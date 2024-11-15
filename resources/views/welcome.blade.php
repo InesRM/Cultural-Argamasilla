@@ -63,21 +63,21 @@
                                         Email
                                     </label>
                                     <input type="text" name="email" placeholder="correo@ejemplo.com"
-                                        class="w-full bg-white py-2 px-10 border hover: border-pink-900 rounded-lg text-gray-700 font-sans" />
+                                        class="w-full bg-white py-2 px-10 border hover: border-pink-900 rounded-lg text-gray-700 font-sans text-sm" />
                                 </div>
                                 <div class="pt-2 pr-20 text-grayt-600">
                                     <label class="text-sm font-sans font-medium" for="password">
                                         Contraseña
                                     </label>
                                     <input type="password" name="password" placeholder="Tu Contraseña"
-                                        class=" w-full bg-white py-3 px-12 border hover: border-red-600 rounded-lg text-gray-700 font-sans" />
+                                        class=" w-full bg-white py-2 px-10 border hover: border-pink-900 rounded-lg text-gray-700 font-sans text-sm" />
 
                                 </div>
                                 <a href="{{ route('register') }}" class="text-sm font-sans font-medium">¿No
                                     tienes cuenta? Registrate</a>
-                                <div class="text-sm font-sans font-medium w-full pr-20 pt-14">
+                                <div class="text-sm font-sans font-medium w-full pr-20 pt-9">
                                     <button type="submit"
-                                        class="text-center w-1/2 py-4 bg-pink-900 bg-opacity-60 hover:bg-gray-400 rounded-lg text-white">
+                                        class="text-center w-1/2 py-4 bg-pink-900 bg-opacity-60 hover:bg-blue-400 rounded-lg text-white">
                                         Identificarse
                                     </button>
                                 </div>

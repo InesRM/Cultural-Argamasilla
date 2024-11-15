@@ -20,14 +20,14 @@
 
 <body class="font-inter">
     <!--sidenav -->
-    <div class="fixed left-0 top-0 w-56 h-full bg-[#f8f4f3] p-4 z-50 sidebar-menu transition-transform">
+    <div class="fixed left-0 top-0 w-56 h-full bg-blue-100 p-4 z-50 sidebar-menu transition-transform">
         <a href="#" class="flex items-center pb-4 border-b border-b-gray-800">
 
             <img src="{{asset('/images/escudo-argamasilla.jpg')}}" alt="logo" class="w-8 h-12 rounded-full" />
             <span class="text-lg font-bold ms-2">Gestión</span>
         </a>
         <ul class="mt-4">
-            <span class="text-blue-600 font-bold">ADMINISTRADOR</span>
+            <span class="text-pink-900 font-bold">ADMINISTRADOR</span>
             <li class="mb-1 group">
                 <a href="{{route('admin.dashboard')}}" class="flex font-semibold items-center py-2 px-4 text-gray-900 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -140,17 +140,17 @@
                             <p class="text-xs text-gray-500">Administrador</p>
                         </div>
                     </button>
-                    <ul class="dropdown-menu shadow-md shadow-black/5 z-30 hidden py-1.5 rounded-md bg-white border border-gray-100 w-full max-w-[140px]">
+                    <ul class="dropdown-menu shadow-md shadow-black/5 z-30 hidden py-1.5 rounded-md bg-pink-900 border border-gray-100 w-full max-w-[140px]">
                         <li>
-                            <a href="#" class="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-[#f84525] hover:bg-gray-50">Profile</a>
+                            <a href="#" class="flex items-center text-[13px] py-1.5 px-4 text-gray-100 hover:text-blue-300 hover:bg-gray-50">Profile</a>
                         </li>
                         <li>
-                            <a href="#" class="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-[#f84525] hover:bg-gray-50">Settings</a>
+                            <a href="#" class="flex items-center text-[13px] py-1.5 px-4 text-gray-100 hover:text-blue-300 hover:bg-gray-50">Settings</a>
                         </li>
                         <li>
                             <form method="POST" action="{{ route('logout') }}">
                                 @csrf
-                                <button class="w-full"> <a class="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-[#f84525] hover:bg-gray-50" :href="route('logout')" onclick="event.preventDefault();
+                                <button class="w-full"> <a class="flex items-center text-[13px] py-1.5 px-4 text-gray-100 hover:text-blue-300 hover:bg-gray-50" :href="route('logout')" onclick="event.preventDefault();
                                                 this.closest('form').submit();">
                                         {{ __('Log Out') }}
                                     </a></button>
