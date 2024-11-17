@@ -1,10 +1,10 @@
 <x-layout-admin>
     <!-- Content -->
-    <section class="container px-4 mx-auto">
+    <section class="container px-4 mx-auto bg-pink-100">
         <div class="sm:flex sm:items-center sm:justify-between">
             <div>
                 <div class="flex items-center gap-x-3">
-                    <h2 class="text-lg font-medium text-gray-800 dark:text-white">Modificar evento</h2>
+                    <h2 class="text-lg font-medium text-gray-800 dark:text-gray-600">Actualizar Eventos</h2>
 
                 </div>
 
@@ -21,9 +21,8 @@
                             d="M19 19H8.158c-.026 0-.053.01-.079.01-.033 0-.066-.009-.1-.01H5V5h6.847l2-2H5c-1.103 0-2 .896-2 2v14c0 1.104.897 2 2 2h14a2 2 0 0 0 2-2v-8.668l-2 2V19z">
                         </path>
                     </svg>
+                        <span>Modificar evento</span>
 
-
-                    <span>Modificar evento</span>
                 </button>
 
                 <button

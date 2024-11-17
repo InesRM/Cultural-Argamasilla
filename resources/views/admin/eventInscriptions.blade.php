@@ -5,7 +5,7 @@
 
         <!-- Título de la sección -->
         <div class="flex justify-between items-center py-6">
-            <h2 class="text-2xl font-bold text-gray-800 dark:text-white">
+            <h2 class="text-2xl font-bold text-pink-800 dark:text-pink-900">
                 Inscripciones del evento "{{ $evento->nombre ?? 'Evento no especificado' }}"
             </h2>
         </div>
@@ -17,8 +17,8 @@
                 <!-- Campo oculto para el ID del evento -->
                 <input type="hidden" name="evento_id" value="{{ $evento->id }}">
 
-                <div class="bg-white shadow rounded-lg overflow-hidden">
-                    <table class="min-w-full bg-white">
+                <div class="bg-pink-100 shadow rounded-lg overflow-hidden">
+                    <table class="min-w-full bg-pink-100">
                         <thead>
                             <tr>
                                 <th class="py-3 px-4 text-left text-sm font-medium text-gray-500 uppercase">
@@ -53,13 +53,13 @@
                 <!-- Botón para eliminar inscripciones -->
                 <div class="flex justify-end mt-4">
                     <button type="submit" class="bg-red-500 text-white py-2 px-6 rounded-lg shadow hover:bg-red-600 transition">
-                        Eliminar inscripciones marcadas
+                        Eliminar Selección
                     </button>
                 </div>
             </form>
         @else
             <!-- Mensaje cuando no hay inscripciones -->
-            <div class="bg-yellow-100 text-yellow-800 p-4 rounded-lg mt-6">
+            <div class="bg-pink-100 text-pink-800 p-4 rounded-lg mt-6">
                 <p>No existen inscripciones para este evento.</p>
             </div>
         @endif
