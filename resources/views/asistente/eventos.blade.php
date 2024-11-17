@@ -3,7 +3,7 @@
         <div class="flex flex-col md:flex-row items-center">
             <!-- Sidebar Section -->
             <div class="w-full md:w-1/3 mb-8 md:mb-0 md:pr-8 bg-white bg-opacity-50 p-4">
-                <p class="text-blue-500 uppercase tracking-wide font-bold">Programación Cultural</p>
+                <p class="text-pink-900 uppercase tracking-wide font-bold">Programación Cultural</p>
                 <h3 class="text-3xl font-bold text-gray-800 leading-snug mb-4">Agenda De Eventos</h3>
                 <p class="text-gray-600 mb-4">Explora los próximos eventos que se han programado para ti e inscríbete, puedes solicitar hasta 5 entradas.</p>
                 <img src="{{ asset('/images/office2.jpg') }}" alt="Experiencias">
@@ -40,13 +40,11 @@
     </x-slot>
 
     <div class="py-10 bg-white">
-
-
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="bg-gray-200 shadow-xl rounded-lg p-8">
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     @foreach ($eventos as $evento)
-                        <div class="bg-blue-100 rounded-lg shadow-md hover:shadow-lg transition transform hover:-translate-y-1">
+                        <div class="bg-pink-50 rounded-lg shadow-md hover:shadow-lg transition transform hover:-translate-y-1">
                             <img class="w-full h-52 object-cover rounded-t-lg" src="{{ asset('/images/' . $evento->imagen) }}" alt="{{ $evento->nombre }}">
                             <div class="p-6">
                                 <h3 class="font-semibold text-lg text-gray-800">{{ $evento->nombre }}</h3>
@@ -89,7 +87,7 @@
                                         </div>
                                     </x-modal>
 
-                                    <button class="bg-blue-600 text-white rounded-lg px-3 py-1 text-sm" x-data x-on:click="$dispatch('open-modal', '{{ 'detalles-' . $evento->id }}')">Info</button>
+                                    <button class="bg-pink-600 text-white rounded-lg px-3 py-1 text-sm" x-data x-on:click="$dispatch('open-modal', '{{ 'detalles-' . $evento->id }}')">Info</button>
                                 </div>
                             </div>
                         </div>

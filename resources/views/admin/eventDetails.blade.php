@@ -2,7 +2,7 @@
 
     <!-- Content -->
     <section class="container px-4 mx-auto">
-        <div class="flex flex-col lg:flex-row items-center lg:items-start gap-6 bg-slate-100 p-6 mt-10 rounded-xl">
+        <div class="flex flex-col lg:flex-row items-center lg:items-start gap-6 bg-pink-100 p-6 mt-10 rounded-xl">
 
             <!-- Imagen del evento -->
             <div class="flex-shrink-0">
@@ -21,7 +21,7 @@
                     <p class="text-gray-700 mt-1">{{ $evento->descripcion }}</p>
                 </div>
 
-                <!-- Agregar otros detalles si es necesario -->
+                <!-- Fecha-->
                 <div>
                     <h2 class="text-lg font-semibold text-gray-600">Fecha:</h2>
                     <p class="text-gray-700 mt-1">{{ $evento->fecha }}</p>

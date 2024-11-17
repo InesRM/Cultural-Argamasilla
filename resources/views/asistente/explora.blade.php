@@ -1,27 +1,27 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-bold text-xl text-gray-800 dark:text-gray-900 leading-tight">
-            {{ __('Explora') }}
-        </h2>
         <div class="bg-white p-2">
             <img src="{{ asset('/images/explora.jpg') }}" alt="explora" class="w-40 h-40">
         </div>
+        <h2 class="font-bold text-xl text-gray-800 dark:text-gray-900 leading-tight">
+            {{ __('Explora los lugares más emblemáticos de Argamasilla de Calatrava.') }}
+        </h2>
     </x-slot>
 
     <div class="py-12 bg-white">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-
-                <section class="relative  bg-gray-100">
+                
+                <section class="relative bg-pink-50">
                     <div class="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75">
                         <div class="absolute top-0 w-full h-full bg-center bg-cover"
-                            style="background-image: url({{ asset('/images/collage.jpg') }});">
-                            <span id="blackOverlay" class="w-full h-full absolute opacity-45 bg-black"></span>
-                        </div>
-                        <div class="container relative mx-auto">
-                            <div class="items-center flex flex-wrap">
-                                <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
-                                    <div class="pr-12">
+                        style="background-image: url({{ asset('/images/collage.jpg') }});">
+                        <span id="blackOverlay" class="w-full h-full absolute opacity-45 bg-black"></span>
+                    </div>
+                    <div class="container relative mx-auto">
+                        <div class="items-center flex flex-wrap">
+                            <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
+                                <div class="pr-12">
                                         <h1 class="text-white font-semibold text-5xl">
                                             Descubre Argamasilla de Calatrava
                                         </h1>
