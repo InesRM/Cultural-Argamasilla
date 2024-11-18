@@ -1,22 +1,21 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-black leading-tight">
-            {{ __('Experiencias') }}
-        </h2>
     </x-slot>
 
     <div class="p-8 rounded-lg bg-white">
         <div class="w-full lg:w-1/3 mb-8">
-            <p class="text-blue-500 uppercase tracking-loose">Qué hacer</p>
+            <p class="text-pink-900 uppercase tracking-loose text-3xl">Qué hacer</p>
             <p class="text-3xl md:text-4xl leading-normal md:leading-relaxed mb-4">EcoTurismo</p>
             <p class="text-sm md:text-base mb-4">
                 Ecoturismo en Castilla-La Mancha, es el viaje para disfrutar de lo mejor de su naturaleza con las
                 empresas turísticas comprometidas con su conservación.
             </p>
-            <img src="{{ asset('/images/brujula.jpg') }}" alt="Experiencias" class="object-cover w-full h-full">
+            <div class="flex flex-col md:flex-row items-center">
+                <img src="{{ asset('/images/eco2.jpg') }}" alt="Experiencias" class="w-100 h-50">
+            </div>
         </div>
         <section>
-            <div class="bg-gray-100 py-8">
+            <div class="bg-pink-900 py-8">
                 <div class="container mx-auto flex flex-col items-start my-12 md:my-24 px-8">
 
                     <!-- Grid de tarjetas para las experiencias -->

@@ -26,7 +26,7 @@
             <form action="{{ route(Route::currentRouteName()) }}" method="get" class="flex items-center">
                 @csrf
                 <label for="categoria" class="text-white mr-2">Categorías:</label>
-                <select name="categoria" class="w-48 rounded-lg p-2 bg-gray-200">
+                <select name="categoria" class="w-48 rounded-lg p-2 bg-blue-100">
                     <option selected value="todas">Todas las categorías</option>
                     @foreach($categorias as $categoria)
                         <option value="{{ $categoria->id }}">{{ $categoria->nombre }}</option>
@@ -41,7 +41,7 @@
 
     <div class="py-10 bg-white">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="bg-gray-200 shadow-xl rounded-lg p-8">
+            <div class="bg-pink-900 shadow-xl rounded-lg p-8">
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     @foreach ($eventos as $evento)
                         <div class="bg-pink-50 rounded-lg shadow-md hover:shadow-lg transition transform hover:-translate-y-1">

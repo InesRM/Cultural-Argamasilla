@@ -7,10 +7,10 @@
 
     <div class="py-12 bg-white">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white dark:bg-gray-300 overflow-hidden shadow-sm sm:rounded-lg">
+            <div class="bg-white dark:bg-pink-900 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-6 text-gray-900 dark:text-gray-800">
                     @foreach ($inscripciones as $inscripcion)
-                    <div class="flex flex-col justify-between rounded-lg overflow-hidden shadow-lg bg-white dark:bg-blue-200 transition hover:shadow-xl">
+                    <div class="flex flex-col justify-between rounded-lg overflow-hidden shadow-lg bg-white dark:bg-pink-50 transition hover:shadow-xl">
 
                         <!-- Event Image -->
                         <img class="w-full h-48 object-cover" src="{{ asset('/images/' . $inscripcion->evento->imagen) }}" alt="Imagen del evento">
@@ -43,7 +43,7 @@
                         <!-- Tags and Button -->
                         <div class="px-6 pb-4 flex flex-col items-center">
                             <span class="inline-block bg-blue-300 dark:bg-blue-600 rounded-full px-3 py-1 text-sm font-semibold text-blue-700 dark:text-gray-100 mb-2">#{{ $inscripcion->evento->categoria->nombre }}</span>
-                            <p class="text-gray-500 dark:text-gray-400 mb-4">Entradas reservadas: <span class="bg-indigo-500 text-white rounded px-2 py-1">{{ $inscripcion->numEntradas }}</span></p>
+                            <p class="text-gray-800 dark:text-gray-800 mb-4">Entradas reservadas: <span class="bg-green-500 text-white rounded px-2 py-1">{{ $inscripcion->numEntradas }}</span></p>
 
                             <!-- Info Modal Button -->
                             <x-modal>

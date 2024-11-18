@@ -1,11 +1,11 @@
 <section>
     <header>
-        <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100">
+        <h2 class="text-lg font-medium text-gray-100 dark:text-gray-100">
             {{ __('Actualiza la contraseña') }}
         </h2>
 
-        <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
-            {{ __('Asegurate de que tu cuenta usa una contraseña confiable y robusta') }}
+        <p class="mt-1 text-sm text-gray-600 dark:text-gray-100">
+            {{ __('Asegurate de crear una contraseña fiable y robusta') }}
         </p>
     </header>
 
