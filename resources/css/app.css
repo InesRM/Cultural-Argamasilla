@@ -3,3 +3,9 @@
 @tailwind utilities;
 
 
+.banner {
+    background: url('../images/cueva2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover
+}
+

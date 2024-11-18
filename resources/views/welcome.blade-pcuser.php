@@ -65,7 +65,7 @@
                                     <input type="text" name="email" placeholder="correo@ejemplo.com"
                                         class="w-full bg-white py-2 px-10 border hover: border-pink-900 rounded-lg text-gray-700 font-sans" />
                                 </div>
-                                <div class="pt-2 pr-20 text-grayt-600">
+                                <div class="pt-2 pr-20 text-gray-600">
                                     <label class="text-sm font-sans font-medium" for="password">
                                         Contraseña
                                     </label>
@@ -104,13 +104,25 @@
                 </div>
             </div>
 
-            <style>
-                .banner {
-                    background: url('{{ asset('images/cueva2.jpg') }}');
-                    background-repeat: no-repeat;
-                    background-size: cover
-                }
-            </style>
+          <!-- <script>
+            document.getElementById('login').addEventListener('submit', function(e) {
+                e.preventDefault();
+                let formData = new FormData(this);
+                fetch(this.action, {
+                        method: this.method,
+                        body: formData
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.status === 'success') {
+                            window.location.href = data.url;
+                        } else {
+                            alert(data.message);
+                        }
+                    });
+            });
+
+          </script> -->
 
         </main>
     </div>
