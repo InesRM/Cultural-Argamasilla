@@ -2,7 +2,7 @@
     <!-- Content -->
 
     <!-- component -->
-    <section class="container px-4 mx-auto bg-pink-100">
+    <section class="container px-4 mx-auto bg-pink-50">
         <div class="sm:flex sm:items-center sm:justify-between">
             <div>
                 <div class="flex items-center gap-x-3">

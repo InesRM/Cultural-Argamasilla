@@ -2,7 +2,7 @@
 
     <!-- Content -->
     <section class="container px-4 mx-auto">
-        <div class="flex flex-col lg:flex-row items-center lg:items-start gap-6 bg-pink-100 p-6 mt-10 rounded-xl">
+        <div class="flex flex-col lg:flex-row items-center lg:items-start gap-6 bg-pink-50 p-6 mt-10 rounded-xl">
 
             <!-- Imagen del evento -->
             <div class="flex-shrink-0">

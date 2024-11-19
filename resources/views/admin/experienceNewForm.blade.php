@@ -139,10 +139,8 @@
                                 </svg>
                             </div>
                         </div>
-                        <p class="mt-3 text-grey-dark text-xs italic">Selecciona la empresa asociada al usuario</p>
+                        <p class="mt-3 text-grey-dark text-xs italic">Selecciona la empresa</p>
                     </div>
-
-
                 </div>
 
 

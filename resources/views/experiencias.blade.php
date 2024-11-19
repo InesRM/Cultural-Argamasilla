@@ -113,20 +113,20 @@
             </div>
         </section>
     </div>
-    <style>
+    {{-- <style>
         .banner {
             background: url('{{ asset('images/cueva2.jpg') }}');
             background-repeat: no-repeat;
             background-size: cover
         }
-    </style>
-    <style>
+    </style> --}}
+    {{-- <style>
         .banner2 {
             background: url('{{ asset('images/brujula2.jpg') }}');
             background-repeat: no-repeat;
             background-size: cover
         }
-    </style>
+    </style> --}}
 </body>
 
 </html>

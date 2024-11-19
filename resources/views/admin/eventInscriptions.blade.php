@@ -17,8 +17,8 @@
                 <!-- Campo oculto para el ID del evento -->
                 <input type="hidden" name="evento_id" value="{{ $evento->id }}">
 
-                <div class="bg-pink-100 shadow rounded-lg overflow-hidden">
-                    <table class="min-w-full bg-pink-100">
+                <div class="bg-pink-50 shadow rounded-lg overflow-hidden">
+                    <table class="min-w-full bg-pink-50">
                         <thead>
                             <tr>
                                 <th class="py-3 px-4 text-left text-sm font-medium text-gray-500 uppercase">
@@ -59,7 +59,7 @@
             </form>
         @else
             <!-- Mensaje cuando no hay inscripciones -->
-            <div class="bg-pink-100 text-pink-800 p-4 rounded-lg mt-6">
+            <div class="bg-pink-50 text-pink-800 p-4 rounded-lg mt-6">
                 <p>No existen inscripciones para este evento.</p>
             </div>
         @endif

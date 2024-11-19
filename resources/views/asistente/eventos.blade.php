@@ -41,7 +41,7 @@
 
     <div class="py-10 bg-white">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="bg-pink-100 shadow-xl rounded-lg p-8">
+            <div class="bg-pink-50 shadow-xl rounded-lg p-8">
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     @foreach ($eventos as $evento)
                         <div class="bg-blue-100 rounded-lg shadow-md hover:shadow-lg transition transform hover:-translate-y-1">

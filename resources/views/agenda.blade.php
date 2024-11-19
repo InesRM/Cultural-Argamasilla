@@ -53,7 +53,7 @@
         <div class="py-8 px-4">
 
             <form action="{{ route('agenda') }}" method="get"
-                class="flex flex-col md:flex-row md:justify-center items-center mb-8 bg-pink-900 p-2">
+                class="flex flex-col md:flex-row md:justify-center items-center mb-8 bg-gradient-to-r from-blue-200 to-purple-400 rounded-lg shadow-lg p-8">
                 @csrf
                 <label for="categoria" class="text-white mr-2">Categoría:</label>
                 <select name="categoria" class="rounded border-black shadow-sm mr-4 p-2">
@@ -116,24 +116,24 @@
                     <x-modal>
                         <x-slot name="name">{{ 'detalles-' . $evento->id }}</x-slot>
 
-                        <div class="p-6">
+                        <div class="p-4">
                             <h3 class="text-lg font-bold mb-2">Detalles del Evento</h3>
-                            <div class="text-white mb-2">
+                            <div class="text-gray-800 mb-2">
                                 <span class="font-bold">Fecha:</span> {{ $evento->fecha }}
                             </div>
-                            <div class="text-white mb-2">
+                            <div class="text-gray-800 mb-2">
                                 <span class="font-bold">Hora:</span> {{ $evento->hora }}
                             </div>
-                            <div class="text-white mb-2">
+                            <div class="text-gray-800 mb-2">
                                 <span class="font-bold">Ciudad:</span> {{ $evento->ciudad }}
                             </div>
-                            <div class="text-white mb-2">
+                            <div class="text-gray-800 mb-2">
                                 <span class="font-bold">Dirección:</span> {{ $evento->direccion }}
                             </div>
-                            <div class="text-white mb-2">
+                            <div class="text-gray-800 mb-2">
                                 <span class="font-bold">Aforo Máximo:</span> {{ $evento->aforoMax }}
                             </div>
-                            <div class="text-white">
+                            <div class="text-gray-800">
                                 <span class="font-bold">Estado:</span> {{ $evento->estado }}
                             </div>
                         </div>

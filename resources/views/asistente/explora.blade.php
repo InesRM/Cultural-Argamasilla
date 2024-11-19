@@ -11,7 +11,7 @@
     <div class="py-12 bg-white">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                
+
                 <section class="relative bg-pink-50">
                     <div class="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75">
                         <div class="absolute top-0 w-full h-full bg-center bg-cover"
@@ -144,7 +144,7 @@
 
                 </div>
 
-                <script>
+                {{-- <script>
                     let elements = document.querySelectorAll("[data-menu]");
                     for (let i = 0; i < elements.length; i++) {
                         let main = elements[i];
@@ -161,7 +161,7 @@
                             indicators[0].classList.toggle("rotate-180");
                         });
                     }
-                </script>
+                </script> --}}
             </div>
         </div>
         <footer class="relative  pt-8 pb-6 mt-1">

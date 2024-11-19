@@ -3,7 +3,7 @@
     <!-- Content -->
 
     <!-- component -->
-    <section class="container px-4 mx-auto bg-pink-100">
+    <section class="container px-4 mx-auto bg-pink-50">
         <div class="sm:flex sm:items-center sm:justify-between">
             <div>
                 <div class="flex items-center gap-x-3">
@@ -101,7 +101,7 @@
                                     </td>
                                     <td class="px-3 py-4 text-sm font-medium whitespace-nowrap">
                                         <div
-                                            class="inline px-3 py-1 text-sm font-normal text-pink-100 rounded-full gap-x-2 dark:bg-gray-800">
+                                            class="inline px-3 py-1 text-sm font-normal text-pink-50 rounded-full gap-x-2 dark:bg-gray-800">
                                             @if(strcmp($user->empresa->nombre, 'asistente')==0)
                                             No pertenece a ninguna
                                             @else

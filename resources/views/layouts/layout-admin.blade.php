@@ -13,6 +13,9 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
 
+    {{-- Incluir los assets con Vite --}}
+    @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/js/admin.js'])
+
     <title>Admin Panel</title>
 
 
@@ -108,7 +111,7 @@
                         <path d="M5 5h5V3H3v7h2zm5 14H5v-5H3v7h7zm11-5h-2v5h-5v2h7zm-2-4h2V3h-7v2h5z"></path>
                     </svg>
                 </button>
-                <script>
+                {{-- <script>
                     const fullscreenButton = document.getElementById('fullscreen-button');
 
                     fullscreenButton.addEventListener('click', toggleFullscreen);
@@ -122,7 +125,7 @@
                             document.documentElement.requestFullscreen();
                         }
                     }
-                </script>
+                </script> --}}
 
                 <li class="dropdown ml-3">
                     <button type="button" class="dropdown-toggle flex items-center">
@@ -169,10 +172,10 @@
         <!-- End Content -->
     </main>
 
-    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    {{-- <script src="https://unpkg.com/@popperjs/core@2"></script> --}}
 
 
-    <script>
+    {{-- <script>
         // start: Popper
         const popperInstance = {}
         document.querySelectorAll('.dropdown').forEach(function(item, index) {
@@ -350,7 +353,7 @@
 
         })
         //Fin mostrar selector de empresas
-    </script>
+    </script> --}}
 
 </body>
 
