@@ -49,35 +49,36 @@
         <main>
             <div class='grid grid-cols-12 banner'>
 
-                <div class="col-span-6 text-white font-sans font-bold bg-black min-h-screen pl-7 bg-opacity-40">
+                <div class="col-span-5 text-white font-sans font-bold bg-black min-h-screen pl-7 bg-opacity-40">
                     <div class="grid grid-rows-6 grid-flow-col min-h-screen items-center justify-items-start">
 
-                        <i class="text-5xl font-serif font-bold italic ml-4 p-2">Argamasilla Cultural</i>
-                        <div class="row-span-4 row-start-2 text-3xl">
-                            <form method="POST" action="{{ route('login') }}">
+                        <h1 class="text-5xl font-serif font-bold italic ml-2 p-2">Argamasilla Cultural</h1>
+
+                        <div class="row-span-2 row-start-2 text-3xl">
+                            <form method="POST" action="{{ route('login') }}" class="bg-white bg-opacity-40 p-4 rounded-lg">
                                 @csrf
-                                <h2 class="text-3xl font-serif font-bold text-white-500 my-1">Identificación</h2>
+                                <h2 class="text-3xl font-serif font-bold text-pink-900 my-1 text-center">Identificación</h2>
 
                                 <div class="pt-10 pr-20 ">
-                                    <label class="text-sm font-sans" for="email">
+                                    <label class="text-sm font-sans text-gray-700 font-bold" for="email">
                                         Email
                                     </label>
                                     <input type="text" name="email" placeholder="correo@ejemplo.com"
-                                        class="w-full bg-white py-2 px-10 border hover: border-pink-900 rounded-lg text-gray-700 font-sans text-sm" />
+                                        class="w-full bg-white py-2 px-10 border-pink-900 hover: border-blue-900 rounded-lg text-gray-700 font-sans text-sm" />
                                 </div>
-                                <div class="pt-2 pr-20 text-grayt-600">
-                                    <label class="text-sm font-sans font-medium" for="password">
+                                <div class="pt-2 pr-20 text-gray-800">
+                                    <label class="text-sm font-sans text-gray-700 font-bold" for="password">
                                         Contraseña
                                     </label>
                                     <input type="password" name="password" placeholder="Tu Contraseña"
                                         class=" w-full bg-white py-2 px-10 border hover: border-pink-900 rounded-lg text-gray-700 font-sans text-sm" />
 
                                 </div>
-                                <a href="{{ route('register') }}" class="text-sm font-sans font-medium">¿No
+                                <a href="{{ route('register') }}" class="text-sm font-sans text-gray-700">¿No
                                     tienes cuenta? Registrate</a>
                                 <div class="text-sm font-sans font-medium w-full pr-20 pt-9">
                                     <button type="submit"
-                                        class="text-center w-1/2 py-4 bg-pink-900 bg-opacity-60 hover:bg-blue-400 rounded-lg text-white">
+                                        class="text-center w-1/2 py-4 bg-pink-900 bg-opacity-60 hover:bg-gray-700 rounded-lg text-white">
                                         Identificarse
                                     </button>
                                 </div>
