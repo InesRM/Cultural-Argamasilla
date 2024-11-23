@@ -49,12 +49,12 @@
         <main>
             <div class='grid grid-cols-12 banner'>
 
-                <div class="col-span-5 text-white font-sans font-bold bg-black min-h-screen pl-7 bg-opacity-40">
+                <div class="col-span-7 text-white font-sans font-bold min-h-screen bg-gray-700 bg-opacity-40 pl-7">
                     <div class="grid grid-rows-6 grid-flow-col min-h-screen items-center justify-items-start">
 
-                        <h1 class="text-5xl font-serif font-bold italic ml-2 p-2">Argamasilla Cultural</h1>
+                        <h1 class="text-5xl font-serif font-bold italic ml-2 p-2 text-white">Argamasilla Cultural</h1>
 
-                        <div class="row-span-2 row-start-2 text-3xl">
+                        <div class="row-span-3 row-start-3 text-3xl">
                             <form method="POST" action="{{ route('login') }}" class="bg-white bg-opacity-40 p-4 rounded-lg">
                                 @csrf
                                 <h2 class="text-3xl font-serif font-bold text-pink-900 my-1 text-center">Identificación</h2>

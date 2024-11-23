@@ -16,3 +16,11 @@
     background-position: center
 
 }
+
+.banner3 {
+    background: url('../../public/images/musica.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: center */
+
+}
