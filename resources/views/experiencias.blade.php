@@ -115,7 +115,22 @@
     </div>
 </body>
 {{-- footer --}}
-<footer class="bg-gray-800 bg-opacity-40 p-4">
+<footer class="bg-gradient-to-r from-pink-50 to-pink-900 py-6 bg-opacity-40">
+     <!-- Redes Sociales -->
+     <div class="flex justify-center space-x-6 mb-4">
+        <a href="https://www.facebook.com/biblioteca.argamasillacva" target="_blank" class="hover:scale-110">
+            <img src="{{ asset('/images/facebook.png') }}" class="w-8 h-8" alt="Facebook">
+        </a>
+        <a href="https://web.whatsapp.com/" target="_blank" class="hover:scale-110">
+            <img src="{{ asset('/images/whatsapp.png') }}" class="w-8 h-8" alt="WhatsApp">
+        </a>
+        <a href="https://www.instagram.com/bibliotecargamasillacva/" target="_blank" class="hover:scale-110">
+            <img src="{{ asset('/images/instagram.png') }}" class="w-8 h-8" alt="Instagram">
+        </a>
+        <a href="https://biblioteca-argamasilla.blogspot.com/" target="_blank" class="hover:scale-110">
+            <img src="{{ asset('/images/argamasilla.png') }}" class="w-8 h-8" alt="Blog">
+        </a>
+    </div>
     <div class="container mx-auto">
         <p class="text-center text-white">© 2024 Argamasilla Cultural</p>
     </div>
