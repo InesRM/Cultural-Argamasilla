@@ -49,7 +49,7 @@
         </nav>
 
     </header>
-    <div class="container mx-auto p-6 bg-white">
+    <div class="container mx-auto p-6">
         <div class="py-8 px-4">
 
             <form action="{{ route('agenda') }}" method="get"
@@ -81,7 +81,7 @@
             <div class="flex flex-col md:flex-row items-center">
                 <!-- Sidebar Section -->
                 <div class="w-full md:w-1/3 mb-8 md:mb-0 md:pr-8 bg-white bg-opacity-50 p-4">
-                    <p class="text-red-900 uppercase tracking-wide font-bold">Programación Cultural</p>
+                    <p class="text-white bg-pink-900 uppercase tracking-wide font-bold p-2">Programación Cultural</p>
                     <h3 class="text-3xl font-bold text-gray-800 leading-snug mb-4">Agenda De Eventos</h3>
                     <p class="text-gray-600 mb-4">Explora los próximos eventos que se han programado para ti.</p>
                     <img src="{{ asset('/images/office2.jpg') }}" alt="Experiencias">
@@ -89,7 +89,7 @@
             </div>
 
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 bg-pink-50">
                 @foreach ($eventos as $evento)
                     <di9
                         class="bg-blue-100 shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition duration-300">

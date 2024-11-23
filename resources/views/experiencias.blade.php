@@ -13,7 +13,7 @@
 <body class="banner2"> <!-- Cambiado a un fondo claro -->
     <!-- Header -->
     <header class="bg-white shadow p-6 banner">
-        <h2 class="text-4xl font-serif font-bold ml-4 text-center text-white">
+        <h2 class="text-4xl font-serif font-bold ml-4 text-center text-white font-bold">
             {{ __('Empresas y Experiencias') }}
         </h2>
         <div class="flex items-left justify-between p-4">
@@ -48,11 +48,11 @@
     </header>
 
     <div class="container mx-auto p-8">
-        <section class="bg-white rounded-lg shadow-lg bg-opacity-40"> <!-- Mantiene el fondo blanco -->
-            <div class="w-full md:w-1/3 mb-8 md:mb-0 md:pr-8 bg-white">
-                <p class="text-white uppercase tracking-wide bg-pink-900 p-2">Empresas y Propuestas</p>
-                <h3 class="text-3xl font-bold text-gray-800 leading-snug mb-4 p-2">EcoTurismo</h3>
-                <p class="text-gray-600 mb-4 p-2">Explora las próximas experiencias que una selección de empresas
+        <section class="bg-white rounded-lg shadow-lg bg-opacity-60 p-2"> <!-- Mantiene el fondo blanco -->
+            <div class="w-full md:w-1/3 mb-8 md:mb-0 md:pr-8">
+                <p class="text-white uppercase tracking-wide bg-pink-900 font-bold p-2">Empresas y Propuestas</p>
+                <h3 class="text-3xl font-bold text-black leading-snug mb-4 p-2">EcoTurismo</h3>
+                <p class="text-gray-900 font-bold mb-4 p-2">Explora las próximas experiencias que una selección de empresas
                     han programado para ti.</p>
             </div>
 
@@ -99,9 +99,9 @@
                                         alt="Imagen de {{ $experiencia->nombre }}" class="w-full rounded-lg">
                                 </div>
                                 <div class="p-4">
-                                    <p class="font-bold bg-green-500 text-lg mb-2">Precio: {{ $experiencia->precio }} €
+                                    <p class="font-bold bg-pink-900 text-lg mb-2 text-white p-2">Precio: {{ $experiencia->precio }} €
                                     </p>
-                                    <p class="text-blue-800">{{ $experiencia->descripcionLarga }}</p>
+                                    <p class="text-blue-800 font-bold">{{ $experiencia->descripcionLarga }}</p>
                                 </div>
                                 <x-primary-button x-data
                                     x-on:click="$dispatch('close-modal', '{{ 'modal-' . $experiencia->id }}')"
