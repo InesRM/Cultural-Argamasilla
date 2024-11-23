@@ -105,17 +105,35 @@
                 </div>
             </div>
 
-            {{-- <style>
-                .banner {
-                    background: url('{{ asset('images/cueva2.jpg') }}');
-                    background-repeat: no-repeat;
-                    background-size: cover
-                }
-            </style> --}}
-
         </main>
     </div>
 
 </body>
+{{-- footer --}}
+<footer class="bg-gradient-to-r from-pink-50 to-pink-100 py-6">
+    <div class="container mx-auto px-6">
+        <!-- Redes Sociales -->
+        <div class="flex justify-center space-x-6 mb-4">
+            <a href="https://www.facebook.com/biblioteca.argamasillacva" target="_blank" class="hover:scale-110">
+                <img src="{{ asset('/images/facebook.png') }}" class="w-8 h-8" alt="Facebook">
+            </a>
+            <a href="https://web.whatsapp.com/" target="_blank" class="hover:scale-110">
+                <img src="{{ asset('/images/whatsapp.png') }}" class="w-8 h-8" alt="WhatsApp">
+            </a>
+            <a href="https://www.instagram.com/bibliotecargamasillacva/" target="_blank" class="hover:scale-110">
+                <img src="{{ asset('/images/instagram.png') }}" class="w-8 h-8" alt="Instagram">
+            </a>
+            <a href="https://biblioteca-argamasilla.blogspot.com/" target="_blank" class="hover:scale-110">
+                <img src="{{ asset('/images/argamasilla.png') }}" class="w-8 h-8" alt="Blog">
+            </a>
+        </div>
+
+        <!-- Derechos y Créditos -->
+        <div class="text-center text-pink-900">
+            <p>Desarrollado por <a href="#" class="font-bold text-gray-700 hover:text-blue-600">Inés Ruiz</a></p>
+            <p class="text-sm">&copy; 2024 Argamasilla Cultural</p>
+        </div>
+    </div>
+</footer>
 
 </html>

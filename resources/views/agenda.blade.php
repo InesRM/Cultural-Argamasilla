@@ -59,7 +59,6 @@
                     <p class="text-white bg-pink-900 uppercase tracking-wide font-bold p-2">Programación Cultural</p>
                     <h3 class="text-3xl font-bold text-gray-800 leading-snug mb-4">Agenda De Eventos</h3>
                     <p class="text-gray-600 mb-4">Explora los próximos eventos que se han programado para ti.</p>
-                    {{-- <img src="{{ asset('/images/office2.jpg') }}" alt="Experiencias"> --}}
                 </div>
             </div>
 
@@ -88,11 +87,9 @@
                     <i class="fas fa-search mr-2"></i> Filtrar
                 </button>
             </form>
-
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 bg-opacity-40">
                 @foreach ($eventos as $evento)
-                    <div
-                        class="bg-blue-100 shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition duration-300 bg-opacity-40">
+                    <div class="bg-blue-100 shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition duration-300 bg-opacity-40">
                         <div class="img-container">
                             <img src="{{ asset('/images/' . $evento->imagen) }}" alt="{{ $evento->nombre }}">
                         </div>
@@ -146,21 +143,11 @@
         </div>
 
     </div>
-    {{-- <style>
-        .banner {
-            background: url('{{ asset('images/cueva2.jpg') }}');
-            background-repeat: no-repeat;
-            background-size: cover
-        }
-    </style> --}}
-    {{-- <style>
-            .banner2 {
-                background: url('{{ asset('images/office.jpg') }}');
-                background-repeat: no-repeat;
-                background-size: cover
-            }
-        </style> --}}
-
+    <footer class="bg-gray-800 bg-opacity-40 p-4">
+        <div class="container mx-auto">
+            <p class="text-center text-white">Argamasilla de Calatrava - Ciudad Real</p>
+        </div>
+    </footer>
     <script src="//unpkg.com/alpinejs" defer></script>
 </body>
 
