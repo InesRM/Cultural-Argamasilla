@@ -49,8 +49,8 @@
         </nav>
 
     </header>
-    <div class="container mx-auto p-6">
-        <div class="py-8 px-4">
+    <div class="container mx-auto p-6 bg-pink-50">
+        <div class="py-8 px-4 bg-white rounded-lg shadow-lg bg-opacity-40 p-2">
 
             <form action="{{ route('agenda') }}" method="get"
                 class="flex flex-col md:flex-row md:justify-center items-center mb-8 bg-gradient-to-r from-blue-200 to-purple-400 rounded-lg shadow-lg p-8">
@@ -80,7 +80,7 @@
 
             <div class="flex flex-col md:flex-row items-center">
                 <!-- Sidebar Section -->
-                <div class="w-full md:w-1/3 mb-8 md:mb-0 md:pr-8 bg-white bg-opacity-50 p-4">
+                <div class="w-full md:w-1/3 mb-8 md:mb-0 md:pr-8 p-4 bg-opacity-40">
                     <p class="text-white bg-pink-900 uppercase tracking-wide font-bold p-2">Programación Cultural</p>
                     <h3 class="text-3xl font-bold text-gray-800 leading-snug mb-4">Agenda De Eventos</h3>
                     <p class="text-gray-600 mb-4">Explora los próximos eventos que se han programado para ti.</p>
@@ -91,7 +91,7 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 bg-pink-50">
                 @foreach ($eventos as $evento)
-                    <di9
+                    <div
                         class="bg-blue-100 shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition duration-300">
                         <div class="img-container">
                             <img src="{{ asset('/images/' . $evento->imagen) }}" alt="{{ $evento->nombre }}">
@@ -111,7 +111,7 @@
                                 </button>
                             </div>
                         </div>
-                    </di9>
+                    </div>
 
                     <x-modal>
                         <x-slot name="name">{{ 'detalles-' . $evento->id }}</x-slot>
