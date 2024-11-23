@@ -22,7 +22,7 @@
             </a>
         </div>
         <div class="w-full bg-pink-900 bg-opacity-60">
-            <p class="text-4xl font-serif font-bold ml-4 text-left text-white p-2">Argamasilla de Calatrava</p>
+            <p class="text-4xl font-serif font-bold ml-4 text-left text-white p-2">Argamasilla Cultural</p>
         </div>
         <nav class="w-full bg-gray-800 bg-opacity-40">
             <ul class="flex justify-end space-x-4 p-4">
@@ -113,20 +113,11 @@
             </div>
         </section>
     </div>
-    {{-- <style>
-        .banner {
-            background: url('{{ asset('images/cueva2.jpg') }}');
-            background-repeat: no-repeat;
-            background-size: cover
-        }
-    </style> --}}
-    {{-- <style>
-        .banner2 {
-            background: url('{{ asset('images/brujula2.jpg') }}');
-            background-repeat: no-repeat;
-            background-size: cover
-        }
-    </style> --}}
 </body>
+{{-- footer --}}
+<footer class="bg-gray-800 bg-opacity-40 p-4">
+    <div class="container mx-auto">
+        <p class="text-center text-white">© 2024 Argamasilla Cultural</p>
+    </div>
 
 </html>

@@ -110,7 +110,7 @@
 
 </body>
 {{-- footer --}}
-<footer class="bg-gradient-to-r from-pink-50 to-pink-100 py-6">
+<footer class="bg-gradient-to-r from-pink-50 to-pink-900 py-6 bg-opacity-10">
     <div class="container mx-auto px-6">
         <!-- Redes Sociales -->
         <div class="flex justify-center space-x-6 mb-4">
@@ -129,7 +129,7 @@
         </div>
 
         <!-- Derechos y Créditos -->
-        <div class="text-center text-pink-900">
+        <div class="text-center text-white">
             <p>Desarrollado por <a href="#" class="font-bold text-gray-700 hover:text-blue-600">Inés Ruiz</a></p>
             <p class="text-sm">&copy; 2024 Argamasilla Cultural</p>
         </div>

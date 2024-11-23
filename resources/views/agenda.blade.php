@@ -25,7 +25,7 @@
             </a>
         </div>
         <div class="w-full bg-pink-900 bg-opacity-60">
-            <p class="text-4xl font-serif font-bold ml-4 text-left text-white p-2">Argamasilla de Calatrava</p>
+            <p class="text-4xl font-serif font-bold ml-4 text-left text-white p-2">Argamasilla Cultural</p>
         </div>
         <nav class="w-full bg-gray-800 bg-opacity-30">
             <ul class="flex justify-end space-x-4 p-2 bg-gray-600 bg-opacity-40">
@@ -89,63 +89,70 @@
             </form>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 bg-opacity-40">
                 @foreach ($eventos as $evento)
-                    <div class="bg-blue-100 shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition duration-300 bg-opacity-40">
+                    <div
+                        class="bg-blue-100 shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition duration-300 bg-opacity-40 min-h-[450px] flex flex-col">
+                        <!-- Imagen del evento -->
                         <div class="img-container">
                             <img src="{{ asset('/images/' . $evento->imagen) }}" alt="{{ $evento->nombre }}">
                         </div>
-                        <div class="p-4">
-                            <h2 class="text-xl font-semibold text-blue-800 mb-2">{{ $evento->nombre }}</h2>
-                            <p class="text-gray-600 text-base mb-3">
-                                {{ \Illuminate\Support\Str::limit($evento->descripcion, 100) }}</p>
-                            <div class="flex items-center justify-between">
-                                <span class="bg-blue-400 rounded-full px-3 py-1 text-sm font-semibold text-white">
-                                    #{{ $evento->categoria->nombre }}
-                                </span>
-                                <button
-                                    class="bg-green-600 hover:bg-blue-800 text-white font-semibold py-2 px-4 rounded transition"
-                                    x-data x-on:click="$dispatch('open-modal', '{{ 'detalles-' . $evento->id }}')">
-                                    Info
-                                </button>
+
+                        <!-- Contenido de la tarjeta -->
+                        <div class="p-4 flex-grow flex flex-col justify-between">
+                            <div>
+                                <h2 class="text-xl font-semibold text-blue-800 mb-2">{{ $evento->nombre }}</h2>
+                                <p class="text-gray-600 text-base mb-3">
+                                    {{ \Illuminate\Support\Str::limit($evento->descripcion, 100) }}
+                                </p>
+                            </div>
+                            <div>
+                                <div class="flex items-center justify-between mb-4">
+                                    <span class="bg-blue-400 rounded-full px-3 py-1 text-sm font-semibold text-white">
+                                        #{{ $evento->categoria->nombre }}
+                                    </span>
+                                    <button
+                                        class="bg-green-600 hover:bg-blue-800 text-white font-semibold py-2 px-4 rounded transition"
+                                        x-data x-on:click="$dispatch('open-modal', '{{ 'detalles-' . $evento->id }}')">
+                                        Info
+                                    </button>
+                                </div>
+
+                                <!-- Iconos de redes sociales -->
+                                <div class="flex justify-center space-x-4 mt-4">
+                                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(url()->current()) }}"
+                                        target="_blank" class="hover:scale-110">
+                                        <img src="{{ asset('/images/facebook.png') }}" class="w-6 h-6"
+                                            alt="Compartir en Facebook">
+                                    </a>
+                                    <a href="https://api.whatsapp.com/send?text={{ urlencode(url()->current()) }}"
+                                        target="_blank" class="hover:scale-110">
+                                        <img src="{{ asset('/images/whatsapp.png') }}" class="w-6 h-6"
+                                            alt="Compartir en WhatsApp">
+                                    </a>
+                                    <a href="https://www.instagram.com/" target="_blank" class="hover:scale-110">
+                                        <img src="{{ asset('/images/instagram.png') }}" class="w-6 h-6"
+                                            alt="Compartir en Instagram">
+                                    </a>
+                                    <a href="https://biblioteca-argamasilla.blogspot.com/" target="_blank"
+                                        class="hover:scale-110">
+                                        <img src="{{ asset('/images/argamasilla.png') }}" class="w-6 h-6"
+                                            alt="Blog">
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                    <x-modal>
-                        <x-slot name="name">{{ 'detalles-' . $evento->id }}</x-slot>
-
-                        <div class="p-4">
-                            <h3 class="text-lg font-bold mb-2">Detalles del Evento</h3>
-                            <div class="text-gray-800 mb-2">
-                                <span class="font-bold">Fecha:</span> {{ $evento->fecha }}
-                            </div>
-                            <div class="text-gray-800 mb-2">
-                                <span class="font-bold">Hora:</span> {{ $evento->hora }}
-                            </div>
-                            <div class="text-gray-800 mb-2">
-                                <span class="font-bold">Ciudad:</span> {{ $evento->ciudad }}
-                            </div>
-                            <div class="text-gray-800 mb-2">
-                                <span class="font-bold">Dirección:</span> {{ $evento->direccion }}
-                            </div>
-                            <div class="text-gray-800 mb-2">
-                                <span class="font-bold">Aforo Máximo:</span> {{ $evento->aforoMax }}
-                            </div>
-                            <div class="text-gray-800">
-                                <span class="font-bold">Estado:</span> {{ $evento->estado }}
-                            </div>
-                        </div>
-                    </x-modal>
                 @endforeach
             </div>
+
         </div>
         <div class="mt-6">
             {{ $eventos->links() }}
         </div>
 
     </div>
-    <footer class="bg-gray-800 bg-opacity-40 p-4">
+    <footer class="bg-gray-400 bg-opacity-40 p-4">
         <div class="container mx-auto">
-            <p class="text-center text-white">Argamasilla de Calatrava - Ciudad Real</p>
+            <p class="text-center text-pink-900">© 2024 Argamasilla Cultural</p>
         </div>
     </footer>
     <script src="//unpkg.com/alpinejs" defer></script>
