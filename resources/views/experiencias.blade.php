@@ -24,7 +24,7 @@
         <div class="w-full bg-pink-900 bg-opacity-60">
             <p class="text-4xl font-serif font-bold ml-4 text-left text-white p-2">Argamasilla Cultural</p>
         </div>
-        <nav class="w-full bg-gray-800 bg-opacity-40">
+        <nav class="w-full bg-gray-800 bg-opacity-40 font-bold">
             <ul class="flex justify-end space-x-4 p-4">
                 <li>
                     <div class="text-xl text-center pt-4">

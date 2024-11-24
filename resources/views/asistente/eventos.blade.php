@@ -3,10 +3,10 @@
         <div class="flex flex-col md:flex-row items-center">
             <!-- Sidebar Section -->
             <div class="w-full md:w-1/3 mb-8 md:mb-0 md:pr-8 bg-white bg-opacity-50 p-4">
+                <img src="{{ asset('/images/office2.jpg') }}" alt="Experiencias">
                 <p class="text-pink-900 uppercase tracking-wide font-bold">Programación Cultural</p>
                 <h3 class="text-3xl font-bold text-gray-800 leading-snug mb-4">Agenda De Eventos</h3>
                 <p class="text-gray-600 mb-4">Explora los próximos eventos que se han programado para ti e inscríbete, puedes solicitar hasta 5 entradas.</p>
-                <img src="{{ asset('/images/office2.jpg') }}" alt="Experiencias">
             </div>
         </div>
         <!-- Navigation Links -->
