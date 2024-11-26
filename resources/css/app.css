@@ -4,7 +4,7 @@
 
 
 .banner {
-    background: url('../../public/images/cueva2.jpg');
+    background: url('../../public/images/antigua.jpg');
     background-repeat: no-repeat;
     background-size: cover
 }
@@ -23,4 +23,11 @@
     background-size: cover;
     /* background-position: center */
 
+}
+
+.banner4{
+    background: url('../../public/images/header.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: center */
 }

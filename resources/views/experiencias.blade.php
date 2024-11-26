@@ -10,42 +10,42 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="banner2"> <!-- Cambiado a un fondo claro -->
-    <!-- Header -->
-    <header class="bg-white shadow p-6 banner">
-        <h2 class="text-4xl font-serif font-bold ml-4 text-center text-white font-bold">
-            {{ __('Empresas y Experiencias') }}
-        </h2>
-        <div class="flex items-left justify-between p-4">
-            <a href="{{ route('welcome') }}">
-                <img src="{{ asset('/images/escudo-argamasilla.jpg') }}" class="w-12 h-auto" alt="Inicio">
-            </a>
-        </div>
-        <div class="w-full bg-pink-900 bg-opacity-60">
-            <p class="text-4xl font-serif font-bold ml-4 text-left text-white p-2">Argamasilla Cultural</p>
-        </div>
-        <nav class="w-full bg-gray-800 bg-opacity-40 font-bold">
-            <ul class="flex justify-end space-x-4 p-4">
-                <li>
-                    <div class="text-xl text-center pt-4">
-                        <a href="{{ route('welcome') }}" class="text-lg text-white hover:text-blue-400">Inicio</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="text-xl text-center pt-4">
-                        <a href="{{ route('agenda') }}" class="text-lg text-white hover:text-blue-400">Agenda</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="text-xl text-center pt-4">
-                        <a href="{{ route('experiencias.show') }}"
-                            class="text-lg text-white hover:text-blue-400">Experiencias</a>
-                    </div>
-                </li>
-            </ul>
-        </nav>
+<!-- Header -->
+<header class="bg-white shadow p-6 banner4">
+    <h2 class="text-4xl font-serif font-bold ml-4 text-center text-white font-bold">
+        {{ __('Empresas y Experiencias') }}
+    </h2>
+    <div class="flex items-left justify-between p-4">
+        <a href="{{ route('welcome') }}">
+            <img src="{{ asset('/images/escudo-argamasilla.jpg') }}" class="w-12 h-auto" alt="Inicio">
+        </a>
+    </div>
+    <div class="w-full bg-pink-900 bg-opacity-60">
+        <p class="text-4xl font-serif font-bold ml-4 text-left text-white p-2">Argamasilla Cultural</p>
+    </div>
+    <nav class="w-full bg-gray-800 bg-opacity-40 font-bold">
+        <ul class="flex justify-end space-x-4 p-4">
+            <li>
+                <div class="text-xl text-center pt-4">
+                    <a href="{{ route('welcome') }}" class="text-lg text-white hover:text-pink-900">Inicio</a>
+                </div>
+            </li>
+            <li>
+                <div class="text-xl text-center pt-4">
+                    <a href="{{ route('agenda') }}" class="text-lg text-white hover:text-pink-900">Agenda</a>
+                </div>
+            </li>
+            <li>
+                <div class="text-xl text-center pt-4">
+                    <a href="{{ route('experiencias.show') }}"
+                    class="text-lg text-white hover:text-pink-900">Experiencias</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
 
-    </header>
+</header>
+<body class="banner2"> <!-- Cambiado a un fondo claro -->
 
     <div class="container mx-auto p-8">
         <section class="bg-white rounded-lg shadow-lg bg-opacity-60 p-2"> <!-- Mantiene el fondo blanco -->

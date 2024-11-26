@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <div class="bg-white p-2">
-            <img src="{{ asset('/images/explora.jpg') }}" alt="explora" class="w-40 h-40">
+            <img src="{{ asset('/images/brujula.jpg') }}" alt="explora" class="w-100 h-40">
         </div>
         <h2 class="font-bold text-xl text-gray-800 dark:text-gray-900 leading-tight">
             {{ __('Explora los lugares más emblemáticos de Argamasilla de Calatrava.') }}
@@ -15,7 +15,7 @@
                 <section class="relative bg-pink-50">
                     <div class="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75">
                         <div class="absolute top-0 w-full h-full bg-center bg-cover"
-                        style="background-image: url({{ asset('/images/collage.jpg') }});">
+                        style="background-image: url({{ asset('/images/tren-calza.jpg') }});">
                         <span id="blackOverlay" class="w-full h-full absolute opacity-45 bg-black"></span>
                     </div>
                     <div class="container relative mx-auto">

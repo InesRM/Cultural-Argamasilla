@@ -15,7 +15,7 @@
             </div>
         </div>
         <section>
-            <div class="bg-pink-900 py-8">
+            <div class="bg-pink-900 py-8 banner2">
                 <div class="container mx-auto flex flex-col items-start my-12 md:my-24 px-8">
 
                     <!-- Grid de tarjetas para las experiencias -->

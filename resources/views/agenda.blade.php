@@ -32,19 +32,19 @@
                 <li>
                     <div class="text-xl text-center pt-4">
                         <a href="{{ route('welcome') }}"
-                            class="text-lg text-white font-bold hover:text-blue-200">Inicio</a>
+                            class="text-lg text-white font-bold hover:text-pink-900">Inicio</a>
                     </div>
                 </li>
                 <li>
                     <div class="text-xl text-center pt-4">
                         <a href="{{ route('agenda') }}"
-                            class="text-lg text-white font-bold hover:text-blue-200">Agenda</a>
+                            class="text-lg text-white font-bold hover:text-pink-900">Agenda</a>
                     </div>
                 </li>
                 <li>
                     <div class="text-xl text-center pt-4">
                         <a href="{{ route('experiencias.show') }}"
-                            class="text-lg text-white font-bold hover:text-blue-200">Experiencias</a>
+                            class="text-lg text-white font-bold hover:text-pink-900">Experiencias</a>
                     </div>
                 </li>
             </ul>

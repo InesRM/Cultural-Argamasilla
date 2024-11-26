@@ -28,7 +28,7 @@
                             <li>
                                 <div class="row-start-6 text-xl text-center pt-4">
                                     <a href="{{ route('agenda') }}"
-                                        class="text-lg text-white hover:text-blue-200">Agenda</a>
+                                        class="text-lg text-white hover:text-pink-500">Agenda</a>
                                 </div>
                             </li>
                             {{-- espacio --}}
@@ -37,7 +37,7 @@
                             <li>
                                 <div class="row-start-4 text-xl text-center pt-4">
                                     <a href="{{ route('experiencias.show') }}"
-                                        class="text-lg text-white hover:text-blue-200">Experiencias</a>
+                                        class="text-lg text-white hover:text-pink-500">Experiencias</a>
                                 </div>
                             </li>
                         </ul>
