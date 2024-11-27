@@ -115,7 +115,18 @@
                                         Info
                                     </button>
                                 </div>
-
+                                {{-- Modal de detalles --}}
+                                <x-modal>
+                                    <x-slot name="name">{{ 'detalles-' . $evento->id }}</x-slot>
+                                    <div class="p-4 relative text-center">
+                                        <button class="absolute top-2 right-2 text-gray-400 hover:text-gray-600" x-on:click="$dispatch('close')">&times;</button>
+                                        <h3 class="text-xl font-semibold mb-4">Detalles del Evento</h3>
+                                        <p><strong>Cuándo:</strong> {{ $evento->fecha }} - {{ $evento->hora }}</p>
+                                        <p><strong>Dónde:</strong> {{ $evento->ciudad }}, {{ $evento->direccion }}</p>
+                                        <p><strong>Aforo máximo:</strong> {{ $evento->aforoMax }}</p>
+                                        <p><strong>Estado:</strong> {{ $evento->estado }}</p>
+                                    </div>
+                                </x-modal>
                                 <!-- Iconos de redes sociales -->
                                 <div class="flex justify-center space-x-4 mt-4">
                                     <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(url()->current()) }}"
