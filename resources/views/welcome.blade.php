@@ -12,10 +12,14 @@
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
     <script src="https://cdn.tailwindcss.com"></script>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/css/app.css', 'resources/js/app.js','resources/js/welcome.js'])
 </head>
 
 <body class="font-sans antialiased">
+    <div id="cookie-consent-banner" class="fixed bottom-0 left-0 w-full bg-gray-800 text-white py-4 px-6 flex justify-between items-center">
+        <p>Este sitio utiliza cookies para mejorar tu experiencia. Al continuar navegando, aceptas nuestro uso de cookies.</p>
+        <button id="accept-cookies" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">Aceptar</button>
+    </div>
     <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
         <header class="bg-red-600 bg-opacity-20">
             <div class="container mx-auto px-4">
