@@ -52,8 +52,9 @@
             <div class="w-full md:w-1/3 mb-8 md:mb-0 md:pr-8">
                 <p class="text-white uppercase tracking-wide bg-pink-900 font-bold p-2">Empresas y Propuestas</p>
                 <h3 class="text-3xl font-bold text-black leading-snug mb-4 p-2">EcoTurismo</h3>
-                <p class="text-gray-900 font-bold mb-4 p-2">Explora las próximas experiencias que una selección de empresas
-                    han programado para ti.</p>
+                <p class="text-gray-700 font-bold mb-4 p-2">Te invitamos a conocer, recorrer y disfrutar de la naturaleza protegida de Argamsilla de Calatrava, a través de una selección de experiencias
+                    de ecoturismo en espacioes protegidos de la Red Natura 2000. Un abanico dew actividades ofrecidas or empresas turísticas comprometidas con la conservación de la biodiversidad.
+                </p>
             </div>
 
             <div class="py-8 px-4">
