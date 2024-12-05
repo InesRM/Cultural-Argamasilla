@@ -58,16 +58,16 @@
                 <div class="w-full md:w-1/3 mb-8 md:mb-0 md:pr-8 p-4 bg-opacity-40">
                     <p class="text-white bg-pink-900 uppercase tracking-wide font-bold p-2">Programación Cultural</p>
                     <h3 class="text-3xl font-bold text-gray-800 leading-snug mb-4">Agenda De Eventos</h3>
-                    <p class="text-gray-600 mb-4">Explora los próximos eventos que se han programado para ti.</p>
+                    <p class="text-gray-600 mb-4">Explora los próximos eventos que se han programado para ti. Puedes registrarte para recibir las próximas programaciones culturales de nuestra localidad y podrás también inscribirte en aquellas que quieras.</p>
                 </div>
             </div>
 
             <form action="{{ route('agenda') }}" method="get"
-                class="flex flex-col md:flex-row md:justify-center items-center mb-8 bg-gradient-to-r from-blue-200 to-purple-400 rounded-lg shadow-lg p-8">
+                class="flex flex-col md:flex-row md:justify-end items-left mb-6 bg-gradient-to-r from-blue-200 to-purple-400 rounded-lg shadow-lg p-4 max-w-2xl mx-auto">
                 @csrf
                 <label for="categoria" class="text-white mr-2 p-2">Categoría:</label>
-                <select name="categoria" class="rounded border-black shadow-sm  p-3">
-                    <option value="">Elige</option>
+                <select name="categoria" class="rounded border-black shadow-sm p-2">
+                    <option value="">Select</option>
                     @foreach ($categorias as $categoria)
                         <option value="{{ $categoria->id }}" @if ($categoriaFiltro == $categoria->id) selected @endif>
                             {{ $categoria->nombre }}
@@ -76,14 +76,14 @@
                 </select>
 
                 <label for="tiempo" class="text-white mr-2 p-2">Fecha:</label>
-                <select name="tiempo" class="rounded border-black shadow-sm p-3">
+                <select name="tiempo" class="rounded border-black shadow-sm p-2">
                     <option value="">Fecha</option>
                     <option value="semana" @if ($filtroTiempo === 'semana') selected @endif>Esta semana</option>
                     <option value="mes" @if ($filtroTiempo === 'mes') selected @endif>Este mes</option>
                 </select>
 
                 <button type="submit"
-                    class="bg-blue-600 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded shadow-md mt-4 md:mt-0 md:ml-4">
+                    class="bg-blue-600 hover:bg-pink-800 text-white font-bold py-2 px-4 rounded shadow-md mt-4 md:mt-0 md:ml-4">
                     <i class="fas fa-search mr-2"></i> Filtrar
                 </button>
             </form>
@@ -110,7 +110,7 @@
                                         #{{ $evento->categoria->nombre }}
                                     </span>
                                     <button
-                                        class="bg-green-600 hover:bg-blue-800 text-white font-semibold py-2 px-4 rounded transition"
+                                        class="bg-pink-900 hover:bg-purple-400 text-white font-semibold py-2 px-4 rounded transition"
                                         x-data x-on:click="$dispatch('open-modal', '{{ 'detalles-' . $evento->id }}')">
                                         Info
                                     </button>
