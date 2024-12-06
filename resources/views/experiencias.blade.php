@@ -83,8 +83,8 @@
                                                 <div class="flex space-x-4">
                                                     <a href="{{ $experiencia->empresa->web }}" target="_blank"
                                                         rel="noopener noreferrer"
-                                                        class="bg-green-500 hover:bg-blue-500 text-white rounded-lg px-4 py-2 border border-white transition">
-                                                        Inscríbete
+                                                        class="bg-pink-900 hover:bg-pink-500 text-white rounded-lg px-4 py-2 border border-white transition">
+                                                        Solicitar
                                                     </a>
                                                     <a href="#" x-data
                                                         x-on:click="$dispatch('open-modal', '{{ 'modal-' . $experiencia->id }}')"
