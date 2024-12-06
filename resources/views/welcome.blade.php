@@ -12,12 +12,14 @@
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
     <script src="https://cdn.tailwindcss.com"></script>
-    @vite(['resources/css/app.css', 'resources/js/app.js','resources/js/welcome.js'])
+    @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/js/welcome.js'])
 </head>
 
 <body class="font-sans antialiased">
-    <div id="cookie-consent-banner" class="fixed bottom-0 left-0 w-full bg-gray-800 text-white py-4 px-6 flex justify-between items-center">
-        <p>Este sitio utiliza cookies para mejorar tu experiencia. Al continuar navegando, aceptas nuestro uso de cookies.</p>
+    <div id="cookie-consent-banner"
+        class="fixed bottom-0 left-0 w-full bg-gray-800 text-white py-4 px-6 flex justify-between items-center">
+        <p>Este sitio utiliza cookies para mejorar tu experiencia. Al continuar navegando, aceptas nuestro uso de
+            cookies.</p>
         <button id="accept-cookies" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">Aceptar</button>
     </div>
     <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
@@ -59,9 +61,11 @@
                         <h1 class="text-5xl font-serif font-bold italic ml-2 p-2 text-white">Argamasilla Cultural</h1>
 
                         <div class="row-span-3 row-start-3 text-3xl">
-                            <form method="POST" action="{{ route('login') }}" class="bg-white bg-opacity-40 p-4 rounded-lg">
+                            <form method="POST" action="{{ route('login') }}"
+                                class="bg-white bg-opacity-40 p-4 rounded-lg">
                                 @csrf
-                                <h2 class="text-3xl font-serif font-bold text-pink-900 my-1 text-center">Identificación</h2>
+                                <h2 class="text-3xl font-serif font-bold text-pink-900 my-1 text-center">Identificación
+                                </h2>
 
                                 <div class="pt-10 pr-20 ">
                                     <label class="text-sm font-sans text-gray-700 font-bold" for="email">
