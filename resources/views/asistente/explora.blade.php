@@ -141,27 +141,8 @@
                 <!-- component -->
                 <div class="lg:container lg:mx-auto lg:py-16 md:py-12 md:px-6 py-12 px-4">
 
-
                 </div>
 
-                {{-- <script>
-                    let elements = document.querySelectorAll("[data-menu]");
-                    for (let i = 0; i < elements.length; i++) {
-                        let main = elements[i];
-
-                        main.addEventListener("click", function() {
-                            let element = main.parentElement.parentElement;
-                            let indicators = main.querySelectorAll("img");
-                            let child = element.querySelector("#menu");
-                            let h = element.querySelector("#mainHeading>div>p");
-
-                            h.classList.toggle("font-semibold");
-                            child.classList.toggle("hidden");
-                            // console.log(indicators[0]);
-                            indicators[0].classList.toggle("rotate-180");
-                        });
-                    }
-                </script> --}}
             </div>
         </div>
         <footer class="relative  pt-8 pb-6 mt-1">

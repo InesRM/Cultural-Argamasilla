@@ -39,3 +39,18 @@
     background-repeat: no-repeat;
 }
 
+/* Puedes agregar estas reglas en tu archivo CSS */
+.nav-link-active {
+    background: linear-gradient(to right, #f7c2d0, #ff80aa); /* El gradiente de rosa */
+    color: white; /* Texto blanco */
+}
+
+.nav-link:hover {
+    background: #e6e6e6; /* Gris claro al pasar el mouse */
+    color: #333; /* Texto oscuro */
+}
+
+.nav-link:focus {
+    background: linear-gradient(to right, #f7c2d0, #ff80aa); /* Mantener el gradiente en foco */
+    color: white;
+}

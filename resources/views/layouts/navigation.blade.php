@@ -11,23 +11,23 @@
                 </div>
 
                 <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex hover:bg-gradient-to-r from-pink-200 via-pink-400 to-pink-900 text-white p-2">
                     <x-nav-link :href="route('welcome')" :active="request()->routeIs('welcome')">
                         {{ __('Inicio') }}
                     </x-nav-link>
                 </div>
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex hover:bg-gradient-to-r from-pink-200 via-pink-400 to-pink-900 text-white p-2">
                     <x-nav-link :href="route('asistente.eventos')"
                         :active="Str::of(request()->route()->getName())->is(['asistente.eventos', 'asistente.eventos.semana', 'asistente.eventos.mes'])">
                         {{ __('Agenda') }}
                     </x-nav-link>
                 </div>
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex hover:bg-gradient-to-r from-pink-200 via-pink-400 to-pink-900 text-white p-2">
                     <x-nav-link :href="route('asistente.explora')" :active="request()->routeIs('asistente.explora')">
                         {{ __('Explora') }}
                     </x-nav-link>
                 </div>
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex hover:bg-gradient-to-r from-pink-200 via-pink-400 to-pink-900 text-white p-2">
                     <x-nav-link :href="route('asistente.experiencias')"
                         :active="request()->routeIs('asistente.experiencias')">
                         {{ __('Experiencias') }}
@@ -40,7 +40,7 @@
                 <x-dropdown align="right" width="48">
                     <x-slot name="trigger">
                         <button
-                            class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-white bg-blue-600 hover:text-blue-700 dark:hover:text-blue-300 focus:outline-none transition ease-in-out duration-150">
+                            class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-white bg-blue-600 hover:bg-gradient-to-r from-blue-200 via-blue-400 to-blue-700 text-white p-2">
                             <div>{{ Auth::user()->nombre }}</div>
 
                             <div class="ms-1">
@@ -79,7 +79,7 @@
             <!-- Hamburger -->
             <div class="-me-2 flex items-center sm:hidden">
                 <button @click="open = ! open"
-                    class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 dark:text-gray-500 hover:text-gray-500 dark:hover:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-900 focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-900 focus:text-gray-500 dark:focus:text-gray-400 transition duration-150 ease-in-out">
+                    class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 dark:bg-gradient-to-r from-pink-200 via-pink-400 to-pink-900 text-white p-2 hover:dark:hover:text-gray-400 hover:bg-gray-100 dark:hover:bg-gradient-to-r from-pink-200 via-pink-400 to-pink-900 text-white p-2">
                     <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                         <path :class="{'hidden': open, 'inline-flex': ! open }" class="inline-flex"
                             stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -93,7 +93,7 @@
     </div>
 
     <!-- Responsive Navigation Menu -->
-    <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
+    <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden hover:bg-gradient-to-r from-pink-200 via-pink-400 to-pink-900 text-white p-2">
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('asistente.eventos')" :active="request()->routeIs('asistente.eventos')">
                 {{ __('Agenda de eventos') }}

@@ -40,7 +40,7 @@
                 <li>
                     <div class="text-xl text-center pt-4">
                         <a href="{{ route('agenda') }}"
-                            class="text-lg text-white font-bold hover:text-pink-900 {{ request()->routeIs('agenda') ? 'bg-gradient-to-r from-pink-900 via-pink-400 to-pink-200 text-white p-2' : '' }}">Agenda</a>
+                            class="text-lg text-white font-bold hover:bg-gradient-to-r from-pink-900 via-pink-400 to-pink-200 text-white p-2 {{ request()->routeIs('agenda') ? 'bg-gradient-to-r from-pink-900 via-pink-400 to-pink-200 text-white p-2' : '' }}">Agenda</a>
                     </div>
                 </li>
                 <li>
