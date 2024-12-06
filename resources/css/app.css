@@ -26,14 +26,14 @@
 }
 
 .banner4{
-    background: url('../../public/images/header.jpg');
+    background: url('../../public/images/rosales.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     /* background-position: center */
 }
 
 .bg-argamasilla{
-    background: url('../../public/images/nicolas-argamasilla3.jpg');
+    background: url('../../public/images/registro.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -53,4 +53,11 @@
 .nav-link:focus {
     background: linear-gradient(to right, #f7c2d0, #ff80aa); /* Mantener el gradiente en foco */
     color: white;
+}
+
+.bg-inscripciones{
+    background: url('../../public/images/musica.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }

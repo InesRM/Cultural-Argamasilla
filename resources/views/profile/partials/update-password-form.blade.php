@@ -1,4 +1,4 @@
-<section>
+<section class="bg-pink-900 bg-opacity-70 p-4">
     <header>
         <h2 class="text-lg font-medium text-gray-100 dark:text-gray-100">
             {{ __('Actualiza la contraseña') }}

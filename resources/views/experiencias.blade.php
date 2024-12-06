@@ -20,7 +20,7 @@
             <img src="{{ asset('/images/escudo-argamasilla.jpg') }}" class="w-12 h-auto" alt="Inicio">
         </a>
     </div>
-    <div class="w-full bg-pink-900 bg-opacity-60">
+    <div class="w-full bg-pink-900 bg-opacity-70">
         <p class="text-4xl font-serif font-bold ml-4 text-left text-white p-2">Argamasilla Cultural</p>
     </div>
     <nav class="w-full bg-gray-800 bg-opacity-40 font-bold">
@@ -46,7 +46,6 @@
 
 </header>
 <body class="banner2"> <!-- Cambiado a un fondo claro -->
-
     <div class="container mx-auto p-8">
         <section class="bg-white rounded-lg shadow-lg bg-opacity-60 p-2"> <!-- Mantiene el fondo blanco -->
             <div class="w-full md:w-1/3 mb-8 md:mb-0 md:pr-8">

@@ -5,9 +5,9 @@
         </h2>
     </x-slot>
 
-    <div class="py-12 bg-white">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white dark:bg-pink-900 overflow-hidden shadow-sm sm:rounded-lg">
+    <div class="py-12 bg-inscripciones">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 bg-opacity-40">
+            <div class=" bg-pink-900 bg-opacity-40 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-6 text-gray-900 dark:text-gray-800">
                     @foreach ($inscripciones as $inscripcion)
                     <div class="flex flex-col justify-between rounded-lg overflow-hidden shadow-lg bg-white dark:bg-pink-50 transition hover:shadow-xl">

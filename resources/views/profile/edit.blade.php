@@ -8,13 +8,13 @@
     <div class="py-12 bg-white">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6">
 
-            <div class="p-4 sm:p-8 bg-white dark:bg-pink-900 shadow sm:rounded-lg">
+            <div class="p-4 sm:p-8 bg-inscripciones dark:bg-inscripciones shadow sm:rounded-lg">
                 <div class="max-w-xl">
                     @include('profile.partials.update-password-form')
                 </div>
             </div>
 
-            <div class="p-4 sm:p-8 bg-white dark:bg-pink-100 shadow sm:rounded-lg">
+            <div class="p-4 sm:p-8 bg-white dark:bg-gray-200 bg-opacity-40 shadow sm:rounded-lg">
                 <div class="max-w-xl">
                     @include('profile.partials.delete-user-form')
                 </div>
