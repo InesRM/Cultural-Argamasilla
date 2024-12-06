@@ -61,3 +61,10 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+
+.bg-inscrito{
+    background: url('../../public/images/header.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

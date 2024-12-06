@@ -86,7 +86,7 @@
                         </div>
                     </div>
                     <!-- FALTAN LOS ENLACES -->
-                    <a href="{{ route('inscripciones.index') }}" class="text-pink-900 font-medium text-lg hover:text-pink-400">Ver</a>
+                    <a href="{{ route('inscripciones') }}" class="text-pink-900 font-medium text-lg hover:text-pink-400">Ver</a>
                 </div>
             </div>
 

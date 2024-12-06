@@ -94,7 +94,7 @@ Route::prefix('admin')->middleware(['auth', 'verified', 'mdrol:admin'])->group(f
     Route::get('/empresa/nuevo', [EmpresaController::class, 'companyNewForm'])->name('admin.companyNewForm');
     Route::get('/empresa/Delete/{id}', [EmpresaController::class, 'companyDelete'])->name('admin.companyDelete');
     Route::post('/empresa/save', [EmpresaController::class, 'storeCompany'])->name('admin.storeCompany');
-    Route::get('/inscripciones', [InscripcionController::class, 'index2'])->name('inscripciones.index');
+    Route::get('/inscripciones', [InscripcionController::class, 'index2'])->name('inscripciones');
 });
 
 
