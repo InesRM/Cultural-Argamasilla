@@ -52,17 +52,19 @@
     </header>
     <!-- Contenido de la página -->
     <div class="container mx-auto p-6 bg-pink-50 bg-opacity-40">
-        
-    <div class="flex flex-col md:flex-row items-center">
-                            <!-- Sidebar Section -->
-                            <div class="w-full md:w-1/3 mb-8 md:mb-0 md:pr-8 p-4 bg-opacity-40">
-                                <p class="text-white bg-pink-900 uppercase tracking-wide font-bold p-2">Programación Cultural</p>
-                                <h3 class="text-3xl font-bold text-gray-800 leading-snug mb-4">Agenda De Eventos</h3>
-                                <p class="text-gray-600 mb-4">Explora los próximos eventos que se han programado para ti. Puedes registrarte para recibir las próximas programaciones culturales de nuestra localidad y podrás también inscribirte en aquellas que quieras.</p>
-                            </div>
-   
-    <form action="{{ route('agenda') }}" method="get"
-                class="flex flex-col md:flex-row md:justify-end items-left mb-6 bg-gradient-to-r from-blue-200 to-purple-400 rounded-lg shadow-lg p-4 max-w-2xl mx-auto">
+
+        <div class="flex flex-col md:flex-row items-center">
+            <!-- Sidebar Section -->
+            <div class="w-full md:w-1/3 mb-8 md:mb-0 md:pr-8 p-4 bg-opacity-40">
+                <p class="text-white bg-pink-900 uppercase tracking-wide font-bold p-2">Programación Cultural</p>
+                <h3 class="text-3xl font-bold text-gray-800 leading-snug mb-4">Agenda De Eventos</h3>
+                <p class="text-gray-600 mb-4">Explora los próximos eventos que se han programado para ti. Puedes
+                    registrarte para recibir las próximas programaciones culturales de nuestra localidad y podrás
+                    también inscribirte en aquellas que quieras.</p>
+            </div>
+
+            <form action="{{ route('agenda') }}" method="get"
+                class="flex flex-col md:flex-row md:justify-end items-left mb-6 bg-gradient-to-r from-pink-900 to-pink-200 rounded-lg shadow-lg p-4 max-w-2xl mx-auto">
                 @csrf
                 <label for="categoria" class="text-white mr-2 p-2">Categoría:</label>
                 <select name="categoria" class="rounded border-black shadow-sm p-2">
@@ -82,11 +84,11 @@
                 </select>
 
                 <button type="submit"
-                    class="bg-blue-600 hover:bg-pink-800 text-white font-bold py-2 px-4 rounded shadow-md mt-4 md:mt-0 md:ml-4">
+                    class="bg-blue-400 hover:bg-pink-500 text-white font-bold py-2 px-4 rounded shadow-md mt-4 md:mt-0 md:ml-4">
                     <i class="fas fa-search mr-2"></i> Filtrar
                 </button>
-    </form>
-    </div>      
+            </form>
+        </div>
         <div class="py-8 px-4 bg-white rounded-lg shadow-lg bg-opacity-40 p-2">
 
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 bg-opacity-40">
@@ -121,7 +123,8 @@
                                 <x-modal>
                                     <x-slot name="name">{{ 'detalles-' . $evento->id }}</x-slot>
                                     <div class="p-4 relative text-center">
-                                        <button class="absolute top-2 right-2 text-gray-400 hover:text-gray-600" x-on:click="$dispatch('close')">&times;</button>
+                                        <button class="absolute top-2 right-2 text-gray-400 hover:text-gray-600"
+                                            x-on:click="$dispatch('close')">&times;</button>
                                         <h3 class="text-xl font-semibold mb-4">Detalles del Evento</h3>
                                         <p><strong>Cuándo:</strong> {{ $evento->fecha }} - {{ $evento->hora }}</p>
                                         <p><strong>Dónde:</strong> {{ $evento->ciudad }}, {{ $evento->direccion }}</p>
@@ -164,8 +167,8 @@
 
     </div>
     <footer class="bg-gradient-to-r from-pink-50 to-pink-900 py-6 bg-opacity-10">
-         <!-- Redes Sociales -->
-         <div class="flex justify-center space-x-6 mb-4">
+        <!-- Redes Sociales -->
+        <div class="flex justify-center space-x-6 mb-4">
             <a href="https://www.facebook.com/biblioteca.argamasillacva" target="_blank" class="hover:scale-110">
                 <img src="{{ asset('/images/facebook.png') }}" class="w-8 h-8" alt="Facebook">
             </a>
