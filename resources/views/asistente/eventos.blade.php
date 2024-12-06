@@ -8,10 +8,10 @@
                 <h3 class="text-3xl font-bold text-gray-800 leading-snug mb-4">Agenda De Eventos</h3>
                 <p class="text-gray-600 mb-4">Explora los próximos eventos que se han programado para ti e inscríbete, puedes solicitar hasta 5 entradas.</p>
             </div>
-        </div>
+
         <!-- Navigation Links -->
-        <div class="flex justify-between items-center p-6 bg-gradient-to-r from-blue-200 to-purple-400 rounded-lg shadow-lg">
-            <div class="flex space-x-8">
+        <div class="flex flex-col md:flex-row md:justify-end items-left mb-6 bg-gradient-to-r from-pink-900 to-pink-200 rounded-lg shadow-lg p-4 max-w-2xl mx-auto">
+            <div class="flex space-x-4 p-2">
                 <x-subnav-link :href="route('asistente.eventos')" :active="request()->routeIs('asistente.eventos')">
                     {{ __('Todos') }}
                 </x-subnav-link>
@@ -22,21 +22,23 @@
                     {{ __('Este Mes') }}
                 </x-subnav-link>
             </div>
-
+           &nbsp;
+           &nbsp;
             <form action="{{ route(Route::currentRouteName()) }}" method="get" class="flex items-center">
                 @csrf
                 <label for="categoria" class="text-white mr-2">Categorías:</label>
-                <select name="categoria" class="w-48 rounded-lg p-2 bg-blue-100">
+                <select name="categoria" class="w-48 rounded-lg p-2 bg-pink-100">
                     <option selected value="todas">Todas las categorías</option>
                     @foreach($categorias as $categoria)
                         <option value="{{ $categoria->id }}">{{ $categoria->nombre }}</option>
                     @endforeach
                 </select>
-                <button class="ml-2 bg-blue-500 text-white rounded-lg px-4 py-2 hover:bg-teal-600 transition" type="submit">
+                <button class="ml-2 bg-pink-900 text-white rounded-lg px-4 py-2 hover:bg-pink-500 transition" type="submit">
                     Filtrar
                 </button>
             </form>
         </div>
+    </div>
     </x-slot>
 
     <div class="py-10 bg-white">

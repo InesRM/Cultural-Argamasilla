@@ -9,11 +9,12 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+
 </head>
 
 <body class="bg-gray-100 font-sans leading-normal tracking-normal banner3">
     <!-- Header -->
-    <header class="bg-white shadow p-6 banner">
+    <header class="bg-white shadow p-6 banner {{ request()->routeIs('welcome') ? 'home-header' : '' }}">
         {{-- foto de agenda --}}
         {{-- <img src="{{ asset('images/agenda.jpg') }}" alt="Agenda de Eventos" class="w-24 h-12"> --}}
         <h1 class="text-4xl font-serif font-bold ml-4 text-center text-white">
@@ -27,24 +28,25 @@
         <div class="w-full bg-pink-900 bg-opacity-60">
             <p class="text-4xl font-serif font-bold ml-4 text-left text-white p-2">Argamasilla Cultural</p>
         </div>
+
         <nav class="w-full bg-gray-800 bg-opacity-30">
             <ul class="flex justify-end space-x-4 p-2 bg-gray-600 bg-opacity-40">
                 <li>
                     <div class="text-xl text-center pt-4">
                         <a href="{{ route('welcome') }}"
-                            class="text-lg text-white font-bold hover:text-pink-900">Inicio</a>
+                            class="text-lg text-white font-bold hover:bg-gradient-to-r from-pink-900 via-pink-400 to-pink-200 text-white p-2 {{ request()->routeIs('welcome') ? 'bg-gradient-to-r from-pink-200 via-pink-800 to-pink-900 text-white p-2' : '' }}">Inicio</a>
                     </div>
                 </li>
                 <li>
                     <div class="text-xl text-center pt-4">
                         <a href="{{ route('agenda') }}"
-                            class="text-lg text-white font-bold hover:text-pink-900">Agenda</a>
+                            class="text-lg text-white font-bold hover:text-pink-900 {{ request()->routeIs('agenda') ? 'bg-gradient-to-r from-pink-900 via-pink-400 to-pink-200 text-white p-2' : '' }}">Agenda</a>
                     </div>
                 </li>
                 <li>
                     <div class="text-xl text-center pt-4">
                         <a href="{{ route('experiencias.show') }}"
-                            class="text-lg text-white font-bold hover:text-pink-900">Experiencias</a>
+                            class="text-lg text-white font-bold hover:bg-gradient-to-r from-pink-900 via-pink-400 to-pink-200 text-white p-2 {{ request()->routeIs('experiencias.show') ? 'bg-gradient-to-r from-pink-200 via-pink-400 to-pink-900 text-white p-2' : '' }}">Experiencias</a>
                     </div>
                 </li>
             </ul>

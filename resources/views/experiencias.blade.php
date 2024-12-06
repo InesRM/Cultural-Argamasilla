@@ -27,18 +27,18 @@
         <ul class="flex justify-end space-x-4 p-4">
             <li>
                 <div class="text-xl text-center pt-4">
-                    <a href="{{ route('welcome') }}" class="text-lg text-white hover:text-pink-900">Inicio</a>
+                    <a href="{{ route('welcome') }}" class="text-lg text-white hover:bg-gradient-to-r from-pink-900 via-pink-400 to-pink-200 text-white p-2">Inicio</a>
                 </div>
             </li>
             <li>
                 <div class="text-xl text-center pt-4">
-                    <a href="{{ route('agenda') }}" class="text-lg text-white hover:text-pink-900">Agenda</a>
+                    <a href="{{ route('agenda') }}" class="text-lg text-white hover:bg-gradient-to-r from-pink-900 via-pink-400 to-pink-200 text-white p-2">Agenda</a>
                 </div>
             </li>
             <li>
                 <div class="text-xl text-center pt-4">
                     <a href="{{ route('experiencias.show') }}"
-                    class="text-lg text-white hover:text-pink-900">Experiencias</a>
+                        class="text-lg text-white font-bold hover:text-pink-900 {{ request()->routeIs('experiencias.show') ? 'bg-gradient-to-r from-pink-900 via-pink-400 to-pink-200 text-white p-2' : '' }}">Experiencias</a>
                 </div>
             </li>
         </ul>
