@@ -47,68 +47,78 @@
 </header>
 <body class="banner2"> <!-- Cambiado a un fondo claro -->
     <div class="container mx-auto p-8">
-        <section class="bg-white rounded-lg shadow-lg bg-opacity-60 p-2"> <!-- Mantiene el fondo blanco -->
-            <div class="w-full md:w-1/3 mb-8 md:mb-0 md:pr-8">
-                <p class="text-white uppercase tracking-wide bg-pink-900 font-bold p-2">Empresas y Propuestas</p>
-                <h3 class="text-3xl font-bold text-black leading-snug mb-4 p-2">EcoTurismo</h3>
-                <p class="text-gray-700 font-bold mb-4 p-2">Te invitamos a conocer, recorrer y disfrutar de la naturaleza protegida de Argamsilla de Calatrava, a través de una selección de experiencias
-                    de ecoturismo en espacios protegidos de la Red Natura 2000. Un abanico de actividades ofrecidas or empresas turísticas comprometidas con la conservación de la biodiversidad.
-                </p>
-            </div>
-
-            <div class="py-8 px-4">
-                <div class="flex flex-col md:flex-row items-start">
-                    <!-- Sidebar Section -->
-
-                    <!-- Timeline Section -->
-                    <div class="w-full md:w-2/3 bg-white bg-opacity-50">
-                        @php $contador = 0; @endphp
-                        @foreach ($experiencias as $experiencia)
-                            @php $contador++; @endphp
-                            <div
-                                class="grid md:grid-cols-2 mb-8 items-center {{ $contador % 2 == 0 ? 'md:grid-cols-2-reverse' : '' }} gap-4">
-                                <div class="p-4">
-                                    <img src="{{ asset('/images/' . $experiencia->imagen) }}"
-                                        alt="Imagen de {{ $experiencia->nombre }}" class="w-full rounded-lg">
-                                </div>
-                                <div class="p-4">
-                                    <p class="text-base text-blue-500 mb-2">{{ $experiencia->fechaInicio }}</p>
-                                    <h4 class="font-semibold text-lg md:text-xl text-gray-800 mb-2">
-                                        {{ $experiencia->nombre }}</h4>
-                                    <p class="text-gray-600 mb-4">{{ $experiencia->descripcionLarga }}</p>
-                                    <div class="flex space-x-4">
-                                        <a href="{{ $experiencia->empresa->web }}" target="_blank"
-                                            rel="noopener noreferrer"
-                                            class="bg-green-500 hover:bg-blue-500 text-white rounded-lg px-4 py-2 border border-white transition">
-                                            Inscríbete
-                                        </a>
-                                        <a href="#" x-data
-                                            x-on:click="$dispatch('open-modal', '{{ 'modal-' . $experiencia->id }}')"
-                                            class="bg-blue-500 hover:bg-green-500 text-white rounded-lg px-4 py-2 border border-white transition">
-                                            Info
-                                        </a>
-                                    </div>
-                                </div>
+                        <section class="bg-white rounded-lg shadow-lg bg-opacity-60 p-2">
+                            <div class="w-full md:w-1/3 mb-8 md:mb-0 md:pr-8">
+                                <p class="text-white uppercase tracking-wide bg-pink-900 font-bold p-2">Empresas y Propuestas</p>
+                                <h3 class="text-3xl font-bold text-black leading-snug mb-4 p-2">EcoTurismo</h3>
+                                <p class="text-gray-700 font-bold mb-4 p-2">
+                                    Te invitamos a conocer, recorrer y disfrutar de la naturaleza protegida de Argamsilla de Calatrava,
+                                    a través de una selección de experiencias de ecoturismo en espacios protegidos de la Red Natura 2000.
+                                    Un abanico de actividades ofrecidas por empresas turísticas comprometidas con la conservación de la biodiversidad.
+                                </p>
                             </div>
 
-                            <!-- Modal -->
-                            <x-modal>
-                                <x-slot name="name">{{ 'modal-' . $experiencia->id }}</x-slot>
-                                <div class="p-4">
-                                    <img src="{{ asset('/images/' . $experiencia->imagen) }}"
-                                        alt="Imagen de {{ $experiencia->nombre }}" class="w-full rounded-lg">
+                            <div class="py-8 px-4">
+                                <!-- Contenedor con diseño de rejilla -->
+                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                    @foreach ($experiencias as $experiencia)
+                                        <!-- Cada experiencia -->
+                                        <div class="bg-white bg-opacity-70 rounded-lg shadow-md p-4">
+                                            <!-- Imagen -->
+                                            <div>
+                                                <img src="{{ asset('/images/' . $experiencia->imagen) }}"
+                                                    alt="Imagen de {{ $experiencia->nombre }}"
+                                                    class="w-full h-40 object-cover rounded-lg">
+                                            </div>
+                                            <!-- Detalles -->
+                                            <div class="mt-4">
+                                                <p class="text-base text-blue-500 mb-2">{{ $experiencia->fechaInicio }}</p>
+                                                <h4 class="font-semibold text-lg md:text-xl text-gray-800 mb-2">
+                                                    {{ $experiencia->nombre }}
+                                                </h4>
+                                                <p class="text-gray-600 mb-4">
+                                                    {{ Str::limit($experiencia->descripcionLarga, 100, '...') }}
+                                                </p>
+                                                <!-- Botones -->
+                                                <div class="flex space-x-4">
+                                                    <a href="{{ $experiencia->empresa->web }}" target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        class="bg-pink-900 hover:bg-pink-500 text-white rounded-lg px-4 py-2 border border-white transition">
+                                                        Solicitar
+                                                    </a>
+                                                    <a href="#" x-data
+                                                        x-on:click="$dispatch('open-modal', '{{ 'modal-' . $experiencia->id }}')"
+                                                        class="bg-blue-500 hover:bg-green-500 text-white rounded-lg px-4 py-2 border border-white transition">
+                                                        Info
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Modal -->
+                                        <x-modal>
+                                            <x-slot name="name">{{ 'modal-' . $experiencia->id }}</x-slot>
+                                            <div class="p-4">
+                                                <img src="{{ asset('/images/' . $experiencia->imagen) }}"
+                                                    alt="Imagen de {{ $experiencia->nombre }}"
+                                                    class="w-full rounded-lg">
+                                            </div>
+                                            <div class="p-4">
+                                                <p class="font-bold bg-pink-900 text-lg mb-2 text-white p-2">Precio: {{ $experiencia->precio }} €</p>
+                                                <p class="text-blue-800 font-bold">{{ $experiencia->descripcionLarga }}</p>
+                                            </div>
+                                            <x-primary-button x-data
+                                                x-on:click="$dispatch('close-modal', '{{ 'modal-' . $experiencia->id }}')"
+                                                class="mt-4">
+                                                Cerrar
+                                            </x-primary-button>
+                                        </x-modal>
+                                    @endforeach
                                 </div>
-                                <div class="p-4">
-                                    <p class="font-bold bg-pink-900 text-lg mb-2 text-white p-2">Precio: {{ $experiencia->precio }} €
-                                    </p>
-                                    <p class="text-blue-800 font-bold">{{ $experiencia->descripcionLarga }}</p>
-                                </div>
-                                <x-primary-button x-data
-                                    x-on:click="$dispatch('close-modal', '{{ 'modal-' . $experiencia->id }}')"
-                                    class="mt-4">Cerrar</x-primary-button>
-                            </x-modal>
-                        @endforeach
+                            </div>
+                        </section>
                     </div>
+
                 </div>
             </div>
         </section>

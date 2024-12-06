@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
+    <link rel="shortcut icon" href="{{ asset('/images/escudo-argamasilla.jpg') }}" type="image/x-icon">
     <title>{{ config('app.name', 'Argamasilla Cultural') }}</title>
 
     <!-- Fonts -->
@@ -18,7 +18,14 @@
 
 <body class="font-sans text-gray-900 antialiased bg-pink-200">
       <nav class="w-full bg-pink-900">
-            <ul class="flex justify-end space-x-4 p-2 bg-gray-600 bg-opacity-40">
+        <div class="flex items-left justify-between p-4">
+            <a href="{{ route('welcome') }}">
+                <img src="{{ asset('/images/escudo-argamasilla.jpg') }}" class="w-12 h-auto" alt="Inicio">
+            </a>
+
+
+            <ul class="flex justify-end space-x-4 p-4">
+
                 <li>
                     <div class="text-xl text-center pt-4">
                         <a href="{{ route('welcome') }}"
@@ -38,6 +45,7 @@
                     </div>
                 </li>
             </ul>
+        </div>
         </nav>
     <div class="min-h-screen flex flex-col sm:justify-center pt-6 sm:pt-0 bg-argamasilla dark:bg-argamasilla items-center">
         <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-gray-400 dark:bg-pink-900 shadow-md overflow-hidden sm:rounded-lg dark:bg-opacity-70">
