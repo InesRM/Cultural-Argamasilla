@@ -1,10 +1,10 @@
 <x-layout-admin>
     <!-- Content -->
-    <section class="container px-4 mx-auto bg-pink-50">
+    <section class="container px-4 mx-auto">
         <div class="sm:flex sm:items-center sm:justify-between">
             <div>
                 <div class="flex items-center gap-x-3">
-                    <h2 class="text-lg font-medium text-gray-800 dark:text-gray-600">Actualizar Eventos</h2>
+                    <h2 class="text-lg font-medium text-gray-800 dark:text-gray-100">Actualizar Evento</h2>
 
                 </div>
 

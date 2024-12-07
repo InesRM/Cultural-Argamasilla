@@ -1,13 +1,11 @@
 <x-layout-admin>
-
-    <!-- Content -->
-    <section class="container px-4 mx-auto">
-
+    <!-- Contenido principal -->
+    <section class="container px-6 py-8 mx-auto">
         <!-- Título de la sección -->
         <div class="flex justify-between items-center py-6">
-            <h2 class="text-2xl font-bold text-pink-800 dark:text-pink-900">
-                Inscripciones del evento "{{ $evento->nombre ?? 'Evento no especificado' }}"
-            </h2>
+            <h1 class="text-2xl font-extrabold text-white">
+                Inscripciones para el evento "{{ $evento->nombre ?? 'Evento no especificado' }}"
+            </h1>
         </div>
 
         <!-- Formulario de inscripciones -->
@@ -17,31 +15,36 @@
                 <!-- Campo oculto para el ID del evento -->
                 <input type="hidden" name="evento_id" value="{{ $evento->id }}">
 
-                <div class="bg-pink-50 shadow rounded-lg overflow-hidden">
-                    <table class="min-w-full bg-pink-50">
-                        <thead>
+                <div class="bg-white shadow-lg rounded-xl overflow-hidden">
+                    <table class="min-w-full bg-white">
+                        <thead class="bg-pink-900 text-white">
                             <tr>
-                                <th class="py-3 px-4 text-left text-sm font-medium text-gray-500 uppercase">
+                                <th class="py-4 px-6 text-left text-sm font-semibold uppercase tracking-wider">
                                     Seleccionar
                                 </th>
-                                <th class="py-3 px-4 text-left text-sm font-medium text-gray-500 uppercase">
-                                    Usuario inscrito
+                                <th class="py-4 px-6 text-left text-sm font-semibold uppercase tracking-wider">
+                                    Usuario Inscrito
                                 </th>
-                                <th class="py-3 px-4 text-left text-sm font-medium text-gray-500 uppercase">
-                                    Número de entradas
+                                <th class="py-4 px-6 text-left text-sm font-semibold uppercase tracking-wider">
+                                    Número de Entradas
                                 </th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="divide-y divide-gray-200">
                             @foreach($inscripciones as $inscripcion)
-                                <tr class="border-b">
-                                    <td class="py-4 px-4">
-                                        <input type="checkbox" value="{{ $inscripcion->id }}" name="eliminarInscripcion[]" class="w-4 h-4">
+                                <tr class="hover:bg-indigo-50 transition-colors">
+                                    <!-- Checkbox de selección -->
+                                    <td class="py-4 px-6">
+                                        <input type="checkbox" value="{{ $inscripcion->id }}" name="eliminarInscripcion[]" class="w-4 h-4 text-indigo-600 border-gray-300 rounded">
                                     </td>
-                                    <td class="py-4 px-4 text-gray-700">
+
+                                    <!-- Nombre del usuario -->
+                                    <td class="py-4 px-6 text-gray-800">
                                         {{ $inscripcion->user->nombre }}
                                     </td>
-                                    <td class="py-4 px-4 text-gray-700">
+
+                                    <!-- Número de entradas -->
+                                    <td class="py-4 px-6 text-gray-800">
                                         {{ $inscripcion->numEntradas }}
                                     </td>
                                 </tr>
@@ -51,19 +54,19 @@
                 </div>
 
                 <!-- Botón para eliminar inscripciones -->
-                <div class="flex justify-end mt-4">
-                    <button type="submit" class="bg-red-500 text-white py-2 px-6 rounded-lg shadow hover:bg-red-600 transition">
+                <div class="flex justify-end mt-6">
+                    <button type="submit" 
+                        class="px-6 py-3 bg-red-600 text-white font-semibold rounded-lg shadow-md hover:bg-red-700 transition-all">
                         Eliminar Selección
                     </button>
                 </div>
             </form>
         @else
-            <!-- Mensaje cuando no hay inscripciones -->
-            <div class="bg-pink-50 text-pink-800 p-4 rounded-lg mt-6">
-                <p>No existen inscripciones para este evento.</p>
+            <!-- Mensaje de no hay inscripciones -->
+            <div class="flex justify-center items-center bg-yellow-100 text-yellow-800 p-6 rounded-lg mt-10">
+                <p class="text-lg font-semibold">No existen inscripciones para este evento.</p>
             </div>
         @endif
     </section>
-    <!-- End Content -->
-
 </x-layout-admin>
+

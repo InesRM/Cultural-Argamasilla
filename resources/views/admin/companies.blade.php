@@ -2,13 +2,13 @@
     <!-- Content -->
 
     <!-- component -->
-    <section class="container px-4 mx-auto bg-pink-50">
+    <section class="container px-4 mx-auto bg-white p-4">
         <div class="sm:flex sm:items-center sm:justify-between">
             <div>
                 <div class="flex items-center gap-x-3">
                     <h2 class="text-lg font-medium text-gray-800 dark:text-black">Total Empresas:</h2>
 
-                    <span class="px-3 py-1 text-xs text-blue-600 bg-blue-100 rounded-full dark:bg-gray-800 dark:text-blue-400">{{$totalCompanies}}
+                    <span class="px-3 py-1 text-xs text-blue-600 bg-blue-100 rounded-full dark:bg-gray-800 dark:text-blue-100">{{$totalCompanies}}
                         Registradas</span>
                 </div>
 

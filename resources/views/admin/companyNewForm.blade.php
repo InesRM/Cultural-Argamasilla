@@ -5,7 +5,7 @@
         <div class="sm:flex sm:items-center sm:justify-between">
             <div>
                 <div class="flex items-center gap-x-3">
-                    <h2 class="text-lg font-medium text-black">Datos De La Nueva Empresa</h2>
+                    <h2 class="text-lg font-medium text-white">Datos De La Nueva Empresa</h2>
 
                 </div>
 
@@ -72,7 +72,7 @@
 
                 <div class="-mx-3 md:flex mb-6">
                     <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-last-name">
-                        Información Extra
+                        Información Detallada
                     </label>
                     <textarea class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4" id="grid-last-name" name="informacionExtra" required autofocus placeholder="Acerca de la empresa..."></textarea>
                 </div>

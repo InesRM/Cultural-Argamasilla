@@ -3,14 +3,14 @@
     <!-- Content -->
 
     <!-- component -->
-    <section class="container px-4 mx-auto bg-pink-50">
+    <section class="container px-4 mx-auto bg-white">
         <div class="sm:flex sm:items-center sm:justify-between">
             <div>
                 <div class="flex items-center gap-x-3">
                     <h2 class="text-lg font-medium text-gray-800 dark:text-black">Total Usuarios:</h2>
 
                     <span
-                        class="px-3 py-1 text-xs text-blue-600 bg-gray-600 rounded-full dark:bg-gray-700 dark:text-blue-400">{{$totalUsers}}
+                        class="px-3 py-1 text-xs text-blue-600 bg-gray-600 rounded-full dark:bg-gray-700 dark:text-blue-200">{{$totalUsers}}
                         registrados</span>
                 </div>
 
@@ -35,8 +35,6 @@
         </div>
 
         <div class="mt-6 md:flex md:items-center md:justify-between">
-
-
 
         </div>
 
@@ -101,7 +99,7 @@
                                     </td>
                                     <td class="px-3 py-4 text-sm font-medium whitespace-nowrap">
                                         <div
-                                            class="inline px-3 py-1 text-sm font-normal text-pink-50 rounded-full gap-x-2 dark:bg-gray-800">
+                                            class="inline px-3 py-1 text-sm font-normal text-white rounded-full gap-x-2 dark:bg-gray-900">
                                             @if(strcmp($user->empresa->nombre, 'asistente')==0)
                                             No pertenece a ninguna
                                             @else
@@ -145,8 +143,8 @@
 
                                     <td class="px-3 py-4 text-sm whitespace-nowrap">
                                         <div>
-                                            <p class="text-blue-300">Teléfono: <a class="text-white">{{$user->telefono}}</a></p>
-                                            <p class="text-blue-300">Email: <a class="text-white">{{$user->email}}</a></p>
+                                            <p class="text-blue-300">📞Teléfono: <a class="text-white">{{$user->telefono}}</a></p>
+                                            <p class="text-blue-300">✉️Email: <a class="text-white">{{$user->email}}</a></p>
                                         </div>
                                     </td>
 

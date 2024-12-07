@@ -5,7 +5,7 @@
         <div class="sm:flex sm:items-center sm:justify-between">
             <div>
                 <div class="flex items-center gap-x-3">
-                    <h2 class="text-lg font-medium text-gray-800 dark:text-pink-900">Modificar usuario</h2>
+                    <h2 class="text-lg font-medium text-gray-800 dark:text-white">Modificar usuario</h2>
 
                 </div>
 
