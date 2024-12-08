@@ -34,24 +34,70 @@
                             <li>
                                 <div class="row-start-6 text-xl text-center pt-4">
                                     <a href="{{ route('agenda') }}"
-                                        class="text-lg text-white hover:bg-gradient-to-r from-pink-900 via-pink-400 to-pink-200 text-white p-2">Agenda</a>
+                                        class="text-lg text-white hover:bg-gradient-to-r from-pink-900 via-pink-400 to-pink-200 text-white p-2">
+                                        Agenda
+                                    </a>
                                 </div>
                             </li>
-                            {{-- espacio --}}
-                            &nbsp;
-                            &nbsp;
+                            &nbsp; &nbsp;
                             <li>
                                 <div class="row-start-4 text-xl text-center pt-4">
                                     <a href="{{ route('experiencias.show') }}"
-                                        class="text-lg text-white hover:bg-gradient-to-r from-pink-900 via-pink-400 to-pink-200 text-white p-2">Experiencias</a>
+                                        class="text-lg text-white hover:bg-gradient-to-r from-pink-900 via-pink-400 to-pink-200 text-white p-2">
+                                        Experiencias
+                                    </a>
                                 </div>
                             </li>
+
+                            <!-- Opción "Mi Cuenta" solo si el usuario está autenticado -->
+                            <li>
+                                <div class="row-start-4 text-xl text-center pt-4">
+                                    @auth
+                                        @if (auth()->user()->rol === 'admin')
+                                            <a href="{{ route('admin.dashboard') }}"
+                                                class="text-lg text-white hover:bg-gradient-to-r from-pink-900 via-pink-400 to-pink-200 text-white p-2">
+                                                Mi Cuenta
+                                            </a>
+                                        @elseif (auth()->user()->rol=== 'asistente')
+                                            <a href="{{ route('asistente.eventos') }}"
+                                                class="text-lg text-white hover:bg-gradient-to-r from-pink-900 via-pink-400 to-pink-200 text-white p-2">
+                                                Mi Cuenta
+                                            </a>
+                                        @endif
+                                    @endauth
+                                </div>
+                            </li>
+                            <!-- Opción "Iniciar Sesión" solo si el usuario no está autenticado -->
+                            <li>
+                                <div class="row-start-4 text-xl text-center pt-4">
+                                    @guest
+                                        <a href="{{ route('login') }}"
+                                            class="text-lg text-white hover:bg-gradient-to-r from-pink-900 via-pink-400 to-pink-200 text-white p-2">
+                                            Iniciar Sesión
+                                        </a>
+                                    @endguest
+                                </div>
+                            </li>
+                            <!-- Opción "Cerrar Sesión" solo si el usuario está autenticado -->
+                            <li>
+                                <div class="row-start-4 text-xl text-center pt-4">
+                                    @auth
+                                        <form method="POST" action="{{ route('logout') }}">
+                                            @csrf
+                                            <button type="submit"
+                                                class="text-lg text-white hover:bg-gradient-to-r from-pink-900 via-pink-400 to-pink-200 text-white p-2">
+                                                Cerrar Sesión
+                                            </button>
+                                        </form>
+                                    @endauth
+                                </div>
+                            </li>
+
                         </ul>
                     </nav>
                 </div>
             </div>
         </header>
-
         <main>
             <div class='grid grid-cols-12 banner'>
 
@@ -138,7 +184,8 @@
 
         <!-- Derechos y Créditos -->
         <div class="text-center text-white">
-            <p>Desarrollado por <a href="#" class="font-bold text-gray-700 hover:text-blue-600">Inés Ruiz</a></p>
+            <p>Desarrollado por <a href="#" class="font-bold text-gray-700 hover:text-blue-600">Inés Ruiz</a>
+            </p>
             <p class="text-sm">&copy; 2024 Argamasilla Cultural</p>
         </div>
     </div>
