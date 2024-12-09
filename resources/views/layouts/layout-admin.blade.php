@@ -84,8 +84,8 @@
 
     <main class="w-full md:w-[calc(100%-224px)] md:ml-56 bg-gray-700 min-h-screen transition-all main">
         <!-- navbar -->
-        <div class="py-2 px-6 bg-purple-200 flex items-center shadow-md shadow-black/5 sticky top-0 left-0 z-30">
-            <button type="button" class="text-lg text-gray-900 font-semibold sidebar-toggle">
+        <div class="py-2 px-6 bg-blue-400 bg-opacity-40 flex items-center shadow-md shadow-black/5 sticky top-0 left-0 z-30">
+            <button type="button" class="text-lg text-gray-100 font-semibold sidebar-toggle">
                 <i class="ri-menu-line"></i>
             </button>
 
@@ -101,7 +101,7 @@
                         <form action="" class="p-4 border-b border-b-gray-900">
                             <div class="relative w-full">
                                 <input type="text" class="py-2 pr-4 pl-10 bg-gray-100 w-full outline-none border border-gray-900 rounded-md text-sm focus:border-blue-500" placeholder="Search...">
-                                <i class="ri-search-line absolute top-1/2 left-4 -translate-y-1/2 text-gray-900"></i>
+                                <i class="ri-search-line absolute top-1/2 left-4 -translate-y-1/2 text-white"></i>
                             </div>
                         </form>
                     </div>
@@ -141,7 +141,7 @@
                         </div>
                         <div class="p-2 md:block text-left">
                             <h2 class="text-sm font-semibold text-pink-400">{{ Auth::user()->nombre }}</h2>
-                            <p class="text-xs text-gray-900">Administrador</p>
+                            <p class="text-xs text-gray-100">Administrador</p>
                         </div>
                     </button>
                     <ul class="dropdown-menu shadow-md shadow-black/5 z-30 hidden py-1.5 rounded-md bg-pink-900 border border-gray-100 w-full max-w-[140px]">
