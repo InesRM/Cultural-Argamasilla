@@ -112,6 +112,22 @@
                         <path d="M5 5h5V3H3v7h2zm5 14H5v-5H3v7h7zm11-5h-2v5h-5v2h7zm-2-4h2V3h-7v2h5z"></path>
                     </svg>
                 </button>
+                {{-- <script>
+                    const fullscreenButton = document.getElementById('fullscreen-button');
+
+                    fullscreenButton.addEventListener('click', toggleFullscreen);
+
+                    function toggleFullscreen() {
+                        if (document.fullscreenElement) {
+                            // If already in fullscreen, exit fullscreen
+                            document.exitFullscreen();
+                        } else {
+                            // If not in fullscreen, request fullscreen
+                            document.documentElement.requestFullscreen();
+                        }
+                    }
+                </script> --}}
+
                 <li class="dropdown ml-3">
                     <button type="button" class="dropdown-toggle flex items-center">
                         <div class="flex-shrink-0 w-10 h-10 relative">
@@ -129,8 +145,14 @@
                         </div>
                     </button>
                     <ul class="dropdown-menu shadow-md shadow-black/5 z-30 hidden py-1.5 rounded-md bg-pink-900 border border-gray-100 w-full max-w-[140px]">
-                           <li>
-                        <form method="POST" action="{{ route('logout') }}">
+                        <li>
+                            <a href="#" class="flex items-center text-[13px] py-1.5 px-4 text-gray-100 hover:text-blue-300 hover:bg-gray-50">Profile</a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center text-[13px] py-1.5 px-4 text-gray-100 hover:text-blue-300 hover:bg-gray-50">Settings</a>
+                        </li>
+                        <li>
+                            <form method="POST" action="{{ route('logout') }}">
                                 @csrf
                                 <button class="w-full"> <a class="flex items-center text-[13px] py-1.5 px-4 text-gray-100 hover:text-blue-300 hover:bg-gray-50" :href="route('logout')" onclick="event.preventDefault();
                                                 this.closest('form').submit();">
