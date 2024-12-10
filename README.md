@@ -140,5 +140,6 @@ Este proyecto está licenciado bajo la licencia MIT, lo que significa que puedes
 Para cualquier duda o consulta, contacta a:
 
 Nombre del desarrollador: Inés Ruiz
+
 Correo electrónico: daw20252026@gmail.com
 
