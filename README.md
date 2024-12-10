@@ -12,12 +12,12 @@ Este proyecto web permite al Ayuntamiento de Argamasilla de CVA publicar y difun
 *Inscripciones a Eventos: Los usuarios pueden inscribirse a los eventos. Estas inscripciones son de carácter estadístico (no se realizan pagos ni ventas).
 
 ⚙️ Requisitos del Sistema
--PHP: >= 8.4
--Laravel: 11.x
--Composer: Requerido para la instalación de dependencias.
--Base de Datos: MySQL o MariaDB.
--Servidor Web: Apache o Nginx.
--Node.js y NPM: Requeridos para compilar los assets de Tailwind CSS.
+<p>-PHP: >= 8.4</p>
+<p>-Laravel: 11.x</p>
+<p>-Composer: Requerido para la instalación de dependencias.</p>
+<p>-Base de Datos: MySQL o MariaDB.</p>
+<p>-Servidor Web: Apache o Nginx.</p>
+<p>-Node.js y NPM: Requeridos para compilar los assets de Tailwind CSS.</p>
 
 
 📦 Instalación
