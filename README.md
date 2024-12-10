@@ -1,66 +1,123 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
-## About Laravel
+📘 Proyecto Web para la Gestión de Actos Culturales
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Este proyecto web permite al Ayuntamiento de [Nombre del Pueblo] publicar y difundir actos culturales. La aplicación permite a los administradores gestionar eventos, empresas y usuarios, mientras que los usuarios pueden registrarse e inscribirse en los eventos.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+🚀 Características Principales
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+*Gestión de Eventos: Los administradores pueden crear, modificar y consultar la programación de eventos.
+*Gestión de Empresas: Se permite a las empresas consultar sus actividades o eventos. El registro lo realizan los administradores
+*Gestión de Usuarios: Los usuarios pueden registrarse, modificar su contraseña o eliminar su cuenta.
+*Inscripciones a Eventos: Los usuarios pueden inscribirse a los eventos. Estas inscripciones son de carácter estadístico (no se realizan pagos ni ventas).
 
-## Learning Laravel
+⚙️ Requisitos del Sistema
+PHP: >= 8.4
+-Laravel: 11.x
+-Composer: Requerido para la instalación de dependencias.
+-Base de Datos: MySQL o MariaDB.
+-Servidor Web: Apache o Nginx.
+-Node.js y NPM: Requeridos para compilar los assets de Tailwind CSS.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+📦 Instalación
+Clonar el repositorio
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+git clone https://github.com/tu_usuario/tu_proyecto.git
+cd tu_proyecto
+Instalar las dependencias de Composer
 
-## Laravel Sponsors
+composer install
+Instalar las dependencias de Node.js
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
 
-### Premium Partners
+npm install
+Configurar el archivo de entorno .env
+Copiar el archivo de ejemplo:
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+cp .env.example .env
+Luego, configurar las credenciales de la base de datos en el archivo .env:
 
-## Contributing
+env
+Copiar código
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=nombre_de_tu_base_de_datos
+DB_USERNAME=tu_usuario
+DB_PASSWORD=tu_contraseña
+Generar la clave de la aplicación
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+php artisan key:generate
+Ejecutar las migraciones y los seeders
 
-## Code of Conduct
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+php artisan migrate --seed
+Compilar los assets de Tailwind CSS
 
-## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+npm run dev
+Levantar el servidor de desarrollo
 
-## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+php artisan serve
+Accede a la aplicación desde: http://localhost:8000
+
+🧪 Usuarios de Prueba
+Para facilitar la evaluación de la aplicación, se han creado los siguientes usuarios de prueba:
+
+Rol	Usuario	Contraseña
+Administrador	admin@example.com	admin123
+Asistente	user@example.com	user123
+Nota: Se recomienda cambiar estas credenciales si la aplicación se sube a un entorno de producción.
+
+📋 Estructura de la Aplicación
+El proyecto sigue la arquitectura tradicional de Laravel. Aquí se destacan algunos directorios importantes:
+
+app/Http/Controllers: Controladores de la aplicación, como EventoController, CarrouselController, AuthenticatedSessionController.
+app/Models: Modelos de la aplicación, como User, Evento, Empresa.
+resources/views: Vistas Blade de la aplicación, con plantillas para welcome, admin.dashboard, asistente.eventos, entre otras.
+public/: Carpeta pública donde se encuentran los archivos accesibles desde el navegador.
+routes/web.php: Archivo de rutas de la aplicación.
+🔐 Roles y Permisos
+La aplicación incluye control de acceso basado en roles. Los roles actuales son:
+
+Administrador: Tiene acceso total a la creación, modificación y eliminación de eventos, empresas y usuarios.
+Asistente: Accede a la página de eventos e interactúa con la aplicación mediante la inscripción en eventos.
+El middleware RolMiddleware gestiona los accesos de acuerdo con la propiedad rol de la base de datos.
+
+🔥 Rutas Principales
+Estas son algunas de las rutas más importantes de la aplicación:
+
+Ruta	Método	Acción
+/	GET	Página de inicio (welcome) con el carrusel de eventos.
+/login	GET, POST	Inicio de sesión de usuarios.
+/register	GET, POST	Registro de nuevos usuarios.
+/eventos	GET	Página con la lista de eventos disponibles.
+/admin/dashboard	GET	Panel de control del administrador.
+/admin/eventCreateForm	GET, POST	Crear un nuevo evento.
+/eventos/delete/{id}	GET	Eliminar un evento por ID.
+🌐 Subdominio
+El proyecto está configurado para funcionar con el subdominio:
+
+Copiar código
+argamasillacva.iruizm.es
+El subdominio se configura con la redirección al directorio public utilizando un archivo .htaccess.
+
+📄 Personalización de Idioma
+El idioma predeterminado es español. Se pueden personalizar los mensajes de error y autenticación en el archivo App\Exceptions\Handler.php, ya que la carpeta resources/lang no está disponible en el proyecto.
+
+📚 Cómo Contribuir
+Si deseas contribuir al proyecto, sigue estos pasos:
+
+Realiza un fork del repositorio.
+Crea una nueva rama para tu función (git checkout -b feature/tu-funcion).
+Realiza tus cambios y haz un commit (git commit -m 'Agrega tu función').
+Envía tu rama (git push origin feature/tu-funcion).
+Crea una Pull Request para revisión.
+🛠️ Solución de Problemas
+Si encuentras algún problema, asegúrate de:
+
+Revisar los registros de errores de Laravel en storage/logs/laravel.log.
+Comprobar que las migraciones se ejecutaron correctamente (php artisan migrate).
+Verificar las dependencias de Composer y NPM.
