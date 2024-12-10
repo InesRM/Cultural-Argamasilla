@@ -31,7 +31,7 @@ Instalar las dependencias de Composer
 Instalar las dependencias de Node.js
 
 
-npm install
+    npm install
 Configurar el archivo de entorno .env
 Copiar el archivo de ejemplo:
 cp .env.example .env
