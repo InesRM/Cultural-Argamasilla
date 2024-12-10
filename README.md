@@ -1,8 +1,8 @@
 
 
-📘 Proyecto Web para la Gestión de Actos Culturales
+<h1>📘 Proyecto Web para la Gestión de Actos Culturales</h1>
 
-Este proyecto web permite al Ayuntamiento de [Nombre del Pueblo] publicar y difundir actos culturales. La aplicación permite a los administradores gestionar eventos, empresas y usuarios, mientras que los usuarios pueden registrarse e inscribirse en los eventos.
+Este proyecto web permite al Ayuntamiento de Argamasilla de CVA publicar y difundir actos culturales. La aplicación permite a los administradores gestionar eventos, empresas y usuarios, mientras que los usuarios pueden registrarse e inscribirse en los eventos.
 
 🚀 Características Principales
 
@@ -12,7 +12,7 @@ Este proyecto web permite al Ayuntamiento de [Nombre del Pueblo] publicar y difu
 *Inscripciones a Eventos: Los usuarios pueden inscribirse a los eventos. Estas inscripciones son de carácter estadístico (no se realizan pagos ni ventas).
 
 ⚙️ Requisitos del Sistema
-PHP: >= 8.4
+-PHP: >= 8.4
 -Laravel: 11.x
 -Composer: Requerido para la instalación de dependencias.
 -Base de Datos: MySQL o MariaDB.
@@ -24,43 +24,46 @@ PHP: >= 8.4
 Clonar el repositorio
 
 git clone https://github.com/tu_usuario/tu_proyecto.git
-cd tu_proyecto
+    cd tu_proyecto
 Instalar las dependencias de Composer
 
-composer install
+    composer install
 Instalar las dependencias de Node.js
 
 
 npm install
 Configurar el archivo de entorno .env
 Copiar el archivo de ejemplo:
-
 cp .env.example .env
 Luego, configurar las credenciales de la base de datos en el archivo .env:
 
-env
-Copiar código
 DB_CONNECTION=mysql
+
 DB_HOST=127.0.0.1
+
 DB_PORT=3306
+
 DB_DATABASE=nombre_de_tu_base_de_datos
+
 DB_USERNAME=tu_usuario
+
 DB_PASSWORD=tu_contraseña
+
 Generar la clave de la aplicación
 
-php artisan key:generate
-Ejecutar las migraciones y los seeders
+    php artisan key:generate
+Ejecutar las migraciones y los seeders.
 
 
-php artisan migrate --seed
+    php artisan migrate --seed
 Compilar los assets de Tailwind CSS
 
 
-npm run dev
+    npm run dev
 Levantar el servidor de desarrollo
 
 
-php artisan serve
+    php artisan serve
 Accede a la aplicación desde: http://localhost:8000
 
 🧪 Usuarios de Prueba
@@ -79,6 +82,7 @@ app/Models: Modelos de la aplicación, como User, Evento, Empresa.
 resources/views: Vistas Blade de la aplicación, con plantillas para welcome, admin.dashboard, asistente.eventos, entre otras.
 public/: Carpeta pública donde se encuentran los archivos accesibles desde el navegador.
 routes/web.php: Archivo de rutas de la aplicación.
+
 🔐 Roles y Permisos
 La aplicación incluye control de acceso basado en roles. Los roles actuales son:
 
@@ -89,18 +93,23 @@ El middleware RolMiddleware gestiona los accesos de acuerdo con la propiedad rol
 🔥 Rutas Principales
 Estas son algunas de las rutas más importantes de la aplicación:
 
-Ruta	Método	Acción
-/	GET	Página de inicio (welcome) con el carrusel de eventos.
-/login	GET, POST	Inicio de sesión de usuarios.
-/register	GET, POST	Registro de nuevos usuarios.
-/eventos	GET	Página con la lista de eventos disponibles.
-/admin/dashboard	GET	Panel de control del administrador.
-/admin/eventCreateForm	GET, POST	Crear un nuevo evento.
-/eventos/delete/{id}	GET	Eliminar un evento por ID.
+/GET	                Página de inicio              (welcome).
+
+/login	                GET, POST	            Inicio de sesión de usuarios.
+
+/register	            GET, POST	            Registro de nuevos usuarios.
+
+/eventos	            GET	                    Página con la lista de eventos disponibles.
+
+/admin/dashboard	    GET	                    Panel de control del administrador.
+
+/admin/eventCreateForm	GET, POST	            Crear un nuevo evento.
+
+/eventos/delete/{id}	GET	                    Eliminar un evento por ID.
+
 🌐 Subdominio
 El proyecto está configurado para funcionar con el subdominio:
 
-Copiar código
 argamasillacva.iruizm.es
 El subdominio se configura con la redirección al directorio public utilizando un archivo .htaccess.
 
@@ -110,14 +119,26 @@ El idioma predeterminado es español. Se pueden personalizar los mensajes de err
 📚 Cómo Contribuir
 Si deseas contribuir al proyecto, sigue estos pasos:
 
-Realiza un fork del repositorio.
-Crea una nueva rama para tu función (git checkout -b feature/tu-funcion).
-Realiza tus cambios y haz un commit (git commit -m 'Agrega tu función').
-Envía tu rama (git push origin feature/tu-funcion).
-Crea una Pull Request para revisión.
+    Realiza un fork del repositorio.
+    Crea una nueva rama para tu función (git checkout -b feature/tu-funcion).
+    Realiza tus cambios y haz un commit (git commit -m 'Agrega tu función').
+    Envía tu rama (git push origin feature/tu-funcion).
+    Crea una Pull Request para revisión.
+    
 🛠️ Solución de Problemas
 Si encuentras algún problema, asegúrate de:
 
 Revisar los registros de errores de Laravel en storage/logs/laravel.log.
 Comprobar que las migraciones se ejecutaron correctamente (php artisan migrate).
 Verificar las dependencias de Composer y NPM.
+Si la aplicación está en producción, asegúrate de ejecutar php artisan config:cache y php artisan route:cache.
+
+📜 Licencia
+Este proyecto está licenciado bajo la licencia MIT, lo que significa que puedes modificarlo y distribuirlo libremente.
+
+✉️ Contacto
+Para cualquier duda o consulta, contacta a:
+
+Nombre del desarrollador: Inés Ruiz
+Correo electrónico: daw20252026@gmail.com
+
