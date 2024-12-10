@@ -110,8 +110,8 @@ Estas son algunas de las rutas más importantes de la aplicación:
 🌐 Subdominio
 El proyecto está configurado para funcionar con el subdominio:
 
-argamasillacva.iruizm.es
-El subdominio se configura con la redirección al directorio public utilizando un archivo .htaccess.
+<p>argamasillacva.iruizm.es</p>
+<p>El subdominio se configura con la redirección al directorio public utilizando un archivo .htaccess.</p>
 
 📄 Personalización de Idioma
 El idioma predeterminado es español. Se pueden personalizar los mensajes de error y autenticación en el archivo App\Exceptions\Handler.php, ya que la carpeta resources/lang no está disponible en el proyecto.
