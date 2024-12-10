@@ -16,7 +16,7 @@ Este proyecto web permite al Ayuntamiento de Argamasilla de CVA publicar y difun
 <p>-Laravel: 11.x</p>
 <p>-Composer: Requerido para la instalación de dependencias.</p>
 <p>-Base de Datos: MySQL o MariaDB.</p>
-<p>-Servidor Web: Apache o Nginx.</p>
+<p>-Servidor Web: Apache</p>
 <p>-Node.js y NPM: Requeridos para compilar los assets de Tailwind CSS.</p>
 
 
